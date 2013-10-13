@@ -35,7 +35,7 @@ lib32-zlib python-pip catalyst-hook catalyst-utils-pxp linux-headers os-prober
 mesa-libgl xf86-video-intel intel-dri clang cmake wgetpaste net-tools
 teamviewer opera nodejs fcitx-rime gstramer0.10-base-plugins
 gstreamer0.10-base-plugins gstreamer0.10-good kingsoft-office firefox cmatrix
-fceux 
+fceux stow
 
 add catalyst repo
 
