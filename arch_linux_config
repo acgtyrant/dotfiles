@@ -19,44 +19,39 @@ vim /etc/sudoers
 chmod u-w /etc/sudoers
 su acgtyrant
 
-sudo pacman -S git
-sudo pacman -S git-doc git-svn git-email git-gui 
-sudo pacman -S wqy-microhei wqy-zenhei
-sudo pacman -S python2 goagent
-sudo pacman -S dmenu
-sudo pacman -S rxvt-unicode
-sudo pacman -S yaourt
-sudo pacman -S i3
-sudo pacman -S xorg-xrandr arandr
-sudo pacman -S vim
-sudo pacman -S gvim
-sudo pacman -S feh
-sudo pacman -S baobab
-sudo pacman -S gksu
-sudo pacman -S fakeroot
-sudo pacman -S hexchat
-sudo pacman -S enchant
-sudo pacman -S goagent
-sudo pacman -S fcitx-im
-sudo pacman -S dzen2
-sudo pacman -S ntp
-sudo pacman -S gimp
-sudo pacman -S tmux
-sudo pacman -S htop
-sudo pacman -S pinfo
-sudo pacman -S urxvt-perls
+open multilab repository
 
-yaourt chromium-pepper-flash-stable
-yaourt fcitx-configtool
-yaourt ttf-mac-fonts
+sudo pacman -S reflector
+
+sudo reflector --verbose -l 200 -p http --sort rate --save /etc/pacman.d/mirrorl ist
+sudo pacman -S pacmatic 
+sudo pacmatic -S git git-doc git-svn git-email git-gui wqy-microhei wqy-zenhei
+python2 goagent dmenu rxvt-unicode yaourt i3 xorg-xrandr arandr vim gvim feh
+gksu fakeroot enchant goagent fcitx-im dzen2 gimp tmux pinfo urxvt-perls ruby
+openssh xclip htop mtr powertop ranger alsi scrot lolcat fcitx-im
+fcitx-configtool dig lynx highlight libcaca atool poppler transmission-cli
+mediainfo ntp mplayer urxvt -perls gcc binutils gdb make gdb mlocate html2text
+lib32-zlib python-pip catalyst-hook catalyst-utils-pxp linux-headers os-prober
+mesa-libgl xf86-video-intel intel-dri clang cmake wgetpaste net-tools
+teamviewer opera nodejs fcitx-rime gstramer0.10-base-plugins
+gstreamer0.10-base-plugins gstreamer0.10-good kingsoft-office firefox cmatrix
+fceux 
+
+add catalyst repo
+
+yaourt -S google-chrome fcitx-configtool ttf-mac-fonts gt5 katawa-shoujo
+texworks acroread acroread-fonts mentohust-bin wpsforlinux
+mediterraneannight-theme haroopad insync
 
 /etc/pacman.conf
 /etc/goagent
 
-~/.bashrc
-~/.xinitrc
-~/bin/*
-~/.config
-~/.gitconfig
+git clone git@github.com/acgtyrant/bin.git ~/bin
+git clone git@github.com/acgtyrant/dotfiles.git ~/dotfiles
+
+/*~/.bashrc*/
+/*~/.xinitrc*/
+/*~/.config*/
+/*~/.gitconfig*/
 
 systemctl enable /etc/systemd/system/suspend@acgtyrant.service
