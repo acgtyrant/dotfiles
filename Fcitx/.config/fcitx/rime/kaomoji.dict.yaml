@@ -1,0 +1,109 @@
+# Rime dictionary - kaomoji
+# encoding: utf-8
+# ref: http://www.facemark.jp/
+# ---
+name: kaomoji
+version: "0.3"
+sort: origin
+...
+# emoji
+<( ￣＾￣)>  heng  10
+o(￣ヘ￣o＃)   heng  10
+╮(￣▽￣)╭  hehe  10
+≧▽≦  hehe  10
+〒▽〒  wuwu  10
+┬＿┬ wuwu  10
+＞﹏＜ wuwu  10
+ˊ_>ˋ gx  10
+( ・ˍ・) deng  10
+(●′ω`●)  xixi  10
+(つД`) ku  10
+(つ。⊂)  hx  10
+(＃°Д°)  jing  10
+∑(ﾟдﾟ;)  jing  10
+∑(￣ﾛ￣||) jing  10
+ヽ(ﾟ∀ﾟ*)ﾉ  aiya  10
+･ﾟ･(ﾉД`;)･ﾟ  wa  10
+／人◕‿‿◕人＼ qb  10
+(<ゝω·)☆绮罗星~  xxy  10
+( ╯-_-)╯~┴—┴   xz  10
+_(:з」∠)_  gui  10
+╧═╧╰（`□′╰） xz  10
+（T_ T(○=(＞_＜o zj  10
+（╬￣皿￣）＝○＃（￣＃）３￣） zj  10
+～(￣▽￣～)(～￣▽￣)～ hehe  10
+# symbol 
+°  du  10
+♂  nan 10
+♀  nv  10
+↑  shang 10
+↓  xia 10
+♥  xin 10
+★  xing  10
+✩  xing  10
+♪  yin fu  10
+♫  yin fu  10
+→  you 10
+↗  you shang 10
+↘  you xia 10
+←  zuo 10
+↖  zuo shang 10
+↙  zuo xia 10
+# math symbol
+∵  because
+∴  therefore
+~  sim
+∈  in
+⊂  subset
+⊆  subseteq
+∑  sum
+∏  prod
+∫  int
+Α  alpha 10
+Β  beta  10
+Γ  gamma 10
+Δ  delta 10
+Ε  epsilon 10
+Ζ  zeta  10
+Η  eta 10
+Θ  theta 10
+Ι  iota  10
+Κ  kappa 10
+Λ  lambda  10
+Μ  mu  10
+Ν  nu  10
+Ξ  xi  10
+Ο  omicron 10
+Π  pi  10
+Ρ  rho 10
+Σ  sigma 10
+Τ  tau 10
+Υ  upsilon 10
+Φ  phi 10
+Χ  chi 10
+Ψ  psi 10
+Ω  omega 10
+α  alpha 10
+β  beta  10
+γ  gamma 10
+δ  delta 10
+ε  epsilon 10
+ζ  zeta  10
+η  eta 10
+θ  theta 10
+ι  iota  10
+κ  kappa 10
+λ  lambda  10
+μ  mu  10
+ν  nu  10
+ξ  xi  10
+ο  omicron 10
+π  pi  10
+ρ  rho 10
+σ  sigma 10
+τ  tau 10
+υ  upsilon 10
+φ  phi 10
+χ  chi 10
+ψ  psi 10
+ω  omega 10

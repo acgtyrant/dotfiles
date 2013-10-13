@@ -1,0 +1,176 @@
+URxvt.preeditType: Root
+
+! transparent
+URxvt*transparent: true
+URxvt*.shading: 30
+
+URxvt.inputMethod:fcitx
+
+! -*- { Xft settings
+Xft*dpi:        96
+Xft*antialias:  true
+Xft*hinting:    true
+! -*- }
+
+!URxvt*font: xft: Dejavu Sans Mono:bold, xft:Droid Sans Mono for powerline:pixelsize=15, xft:WenQuanYi Micro Hei Mono:pixelsize=15
+URxvt*font: xft: Dejavu Sans Mono:bold, xft:Droid Sans Mono for powerline:pixelsize=15, xft: 方正兰亭黑_GBK
+
+URxvt.scrollstyle:       rxvt
+URxvt.scrollBar:         false
+URxvt*scrollTtyOutput:   false
+URxvt*scrollWithBuffer:  true
+URxvt*scrollTtyKeypress: true
+URxvt.perl-ext-common:  defalut,matcher
+URxvt.url-launcher:     /usr/bin/google-chrome -new-tab
+URxvt.matcher.button:   1
+URxvt.colorUL: #4682B4
+
+URxvt.perl-ext:      default,url-select
+URxvt.keysym.M-u:    perl:url-select:select_next
+URxvt.url-select.launcher:  /usr/bin/google-chrome -new-tab
+URxvt.url-select.underline: true
+
+URxvt.cursorBlink:True
+URxvt.saveLines:65535
+URxvt.borderLess:False
+
+Urxvt.inLocale: zh_CN.UTF-8
+
+! -*- { theming tango
+
+*background: #0f0f0f
+*foreground: #c8c8c8
+
+! black
+*color0:    #2E3436
+*color8:    #555753
+
+! red
+*color1:    #a40000
+*color9:    #EF2929
+
+! green
+*color2:    #4ea906
+*color10:   #8ae234
+
+! yellow
+*color3:    #c4a000
+*color11:   #fce94f
+
+! blue
+*color4:    #3465a4
+*color11:   #729fcf
+
+! purple
+*color5:    #75507b
+*color13:   #ad7fa8
+
+! orange
+*color6:    #ce5c00
+*color14:   #fcaf3e
+
+! white
+*color7:    #babdb9
+*color15:   #eeeeec
+
+! -*- }
+
+! -*- { theme snowcherry / yukisakura
+
+! black
+*color0:    #000000
+*color8:    #454545
+! red
+*color1:    #FF3333
+*color9:    #F53D3D
+! green
+*color2:    #83ED12
+*color10:   #9BE64A
+! yellow
+*color3:    #FF8D00
+*color11:   #F49725
+! blue
+*color4:    #258CF4
+*color12:   #66B2FF
+! purple
+*color5:    #8C1AFF
+*color13:   #B26EF7
+! aqua
+*color6:    #33FFFF
+*color14:   #8CF2F2
+! white
+*color7:    #D9D9D9
+*color15:   #FFFFFF
+! -*- }
+
+
+! ! Solarized color scheme for the X Window System
+! !
+! ! http://ethanschoonover.com/solarized
+! 
+! 
+! ! Common
+! 
+! #define S_yellow        #b58900
+! #define S_orange        #cb4b16
+! #define S_red           #dc322f
+! #define S_magenta       #d33682
+! #define S_violet        #6c71c4
+! #define S_blue          #268bd2
+! #define S_cyan          #2aa198
+! #define S_green         #859900
+! 
+! 
+! ! Dark
+! 
+! #define S_base03        #002b36
+! #define S_base02        #073642
+! #define S_base01        #586e75
+! #define S_base00        #657b83
+! #define S_base0         #839496
+! #define S_base1         #93a1a1
+! #define S_base2         #eee8d5
+! #define S_base3         #fdf6e3
+! 
+! 
+! ! Light
+! 
+! ! #define S_base03        #fdf6e3
+! ! #define S_base02        #eee8d5
+! ! #define S_base01        #93a1a1
+! ! #define S_base00        #839496
+! ! #define S_base0         #657b83
+! ! #define S_base1         #586e75
+! ! #define S_base2         #073642
+! ! #define S_base3         #002b36
+! 
+! 
+! ! To only apply colors to your terminal, for example, prefix
+! ! the color assignment statement with its name. Example:
+! !
+! ! URxvt*background:            S_base03
+! 
+! *background:              S_base03
+! *foreground:              S_base0
+! *fading:                  40
+! *fadeColor:               S_base03
+! *cursorColor:             S_base1
+! *pointerColorBackground:  S_base01
+! *pointerColorForeground:  S_base1
+! 
+! *color0:                  S_base02
+! *color1:                  S_red
+! *color2:                  S_green
+! *color3:                  S_yellow
+! *color4:                  S_blue
+! *color5:                  S_magenta
+! *color6:                  S_cyan
+! *color7:                  S_base2
+! *color9:                  S_orange
+! *color8:                  S_base03
+! *color10:                 S_base01
+! *color11:                 S_base00
+! *color12:                 S_base0
+! *color13:                 S_violet
+! *color14:                 S_base1
+! *color15:                 S_base3

@@ -1,0 +1,17 @@
+#
+# ~/.bashrc
+#
+
+export PATH=$PATH:~/bin
+export HISTCONTROL=ignoreboth
+export EDITOR=vim
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias l='ls --color=auto'
+alias ll='ls -alFh --color=auto'
+alias vi='vim'
+alias grep='grep --color'
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

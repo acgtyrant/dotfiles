@@ -1,0 +1,62 @@
+nano /etc/locale.gen 
+locale-gen 
+ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+hwclock --systohc --utc
+echo ThinkPad.acgtyrant.com > /etc/hostname
+systemctl enable dhcpcd@eth0.service
+passwd 
+pacman -S grub-bios
+grub-install --recheck /dev/sda
+cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo
+pacman -S os-prober
+grub-mkconfig -o /boot/grub/grub.cfg
+useradd -m -g users -G wheel,storage,power -s /bin/bash acgtyrant
+systemctl enable dhcpcd@eth0.service
+pacman -S vim
+pacman -S sudo
+chmod u+w /etc/sudoers
+vim /etc/sudoers
+chmod u-w /etc/sudoers
+su acgtyrant
+
+sudo pacman -S git
+sudo pacman -S git-doc git-svn git-email git-gui 
+sudo pacman -S wqy-microhei wqy-zenhei
+sudo pacman -S python2 goagent
+sudo pacman -S dmenu
+sudo pacman -S rxvt-unicode
+sudo pacman -S yaourt
+sudo pacman -S i3
+sudo pacman -S xorg-xrandr arandr
+sudo pacman -S vim
+sudo pacman -S gvim
+sudo pacman -S feh
+sudo pacman -S baobab
+sudo pacman -S gksu
+sudo pacman -S fakeroot
+sudo pacman -S hexchat
+sudo pacman -S enchant
+sudo pacman -S goagent
+sudo pacman -S fcitx-im
+sudo pacman -S dzen2
+sudo pacman -S ntp
+sudo pacman -S gimp
+sudo pacman -S tmux
+sudo pacman -S htop
+sudo pacman -S pinfo
+sudo pacman -S urxvt-perls
+
+yaourt chromium-pepper-flash-stable
+yaourt fcitx-configtool
+yaourt ttf-mac-fonts
+
+/etc/pacman.conf
+/etc/goagent
+
+~/.bashrc
+~/.xinitrc
+~/bin/*
+~/.config
+~/.gitconfig
+
+systemctl enable /etc/systemd/system/suspend@acgtyrant.service

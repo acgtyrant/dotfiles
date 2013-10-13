@@ -1,0 +1,2 @@
+#!/bin/bash
+$(echo -en "i3 exit\nreboot\npoweroff" | dmenu -fn 'Sans-10' -nf '#FFFFFF' -sb '#00002A' -nb '#447C73' -p 'Exit Menu')

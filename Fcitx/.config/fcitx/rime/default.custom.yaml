@@ -1,0 +1,6 @@
+punctuator:
+  import_preset: default
+patch:
+  schema_list:
+    - schema: luna_pinyin_tw
+    - schema: luna_pinyin_simp
