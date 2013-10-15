@@ -96,7 +96,7 @@ Bundle 'bling/vim-airline'
 
 "The c.vim script from vim-scripts is out of date
 "So using it which has updated to version 6.0
-Bundle 'blak3mill3r/c.vim'
+"Bundle 'blak3mill3r/c.vim'
 
 " vim-scripts repos
 " it looks like some library
@@ -161,8 +161,6 @@ set nosplitbelow
 set nosplitright
 nnoremap <leader>s <C-w>v<C-w>l
 nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 " }
 
