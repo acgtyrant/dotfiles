@@ -1,0 +1,298 @@
+FUNCTION  airline#statusline()
+Called 2 times
+Total time:   0.000111
+ Self time:   0.000111
+
+count  total (s)   self (s)
+    2              0.000043   if has_key(s:contexts, a:winnr)
+    2              0.000051     return '%{airline#check_mode('.a:winnr.')}'.s:contexts[a:winnr].line
+                              endif
+                            
+                              " in rare circumstances this happens...see #276
+                              return ''
+
+FUNCTION  airline#check_mode()
+Called 2 times
+Total time:   0.000453
+ Self time:   0.000453
+
+count  total (s)   self (s)
+    2              0.000035   let context = s:contexts[a:winnr]
+                            
+    2              0.000019   if get(w:, 'airline_active', 1)
+    2              0.000018     let l:m = mode()
+    2              0.000012     if l:m ==# "i"
+                                  let l:mode = ['insert']
+                                elseif l:m ==# "R"
+                                  let l:mode = ['replace']
+                                elseif l:m =~# '\v(v|V||s|S|)'
+                                  let l:mode = ['visual']
+                                else
+    2              0.000014       let l:mode = ['normal']
+    2              0.000004     endif
+    2              0.000027     let w:airline_current_mode = get(g:airline_mode_map, l:m, l:m)
+    2              0.000004   else
+                                let l:mode = ['inactive']
+                                let w:airline_current_mode = get(g:airline_mode_map, '__')
+                              endif
+                            
+    2              0.000010   if g:airline_detect_modified
+    2              0.000014     if &modified
+                                  call add(l:mode, 'modified')
+                                endif
+    2              0.000003   endif
+                            
+    2              0.000010   if g:airline_detect_paste && &paste
+                                call add(l:mode, 'paste')
+                              endif
+                            
+    2              0.000024   let mode_string = join(l:mode)
+    2              0.000023   if get(w:, 'airline_lastmode', '') != mode_string
+                                call airline#highlighter#highlight_modified_inactive(context.bufnr)
+                                call airline#highlighter#highlight(l:mode)
+                                let w:airline_lastmode = mode_string
+                              endif
+                            
+    2              0.000006   return ''
+
+FUNCTION  airline#util#append()
+Called 4 times
+Total time:   0.000142
+ Self time:   0.000142
+
+count  total (s)   self (s)
+    4              0.000024   if a:minwidth > 0 && winwidth(0) < a:minwidth
+                                return ''
+                              endif
+    4              0.000047   let prefix = s:spc == "\ua0" ? s:spc : s:spc.s:spc
+    4              0.000041   return empty(a:text) ? '' : prefix.g:airline_left_alt_sep.s:spc.a:text
+
+FUNCTION  airline#parts#filetype()
+Called 2 times
+Total time:   0.000015
+ Self time:   0.000015
+
+count  total (s)   self (s)
+    2              0.000011   return &filetype
+
+FUNCTION  airline#parts#iminsert()
+Called 2 times
+Total time:   0.000040
+ Self time:   0.000040
+
+count  total (s)   self (s)
+    2              0.000016   if g:airline_detect_iminsert && &iminsert && exists('b:keymap_name')
+                                return toupper(b:keymap_name)
+                              endif
+    2              0.000004   return ''
+
+FUNCTION  airline#util#wrap()
+Called 10 times
+Total time:   0.000162
+ Self time:   0.000162
+
+count  total (s)   self (s)
+   10              0.000066   if a:minwidth > 0 && winwidth(0) < a:minwidth
+                                return ''
+                              endif
+   10              0.000032   return a:text
+
+FUNCTION  airline#parts#paste()
+Called 2 times
+Total time:   0.000020
+ Self time:   0.000020
+
+count  total (s)   self (s)
+    2              0.000017   return g:airline_detect_paste && &paste ? g:airline_symbols.paste : ''
+
+FUNCTION  airline#parts#readonly()
+Called 2 times
+Total time:   0.000019
+ Self time:   0.000019
+
+count  total (s)   self (s)
+    2              0.000017   return &readonly ? g:airline_symbols.readonly : ''
+
+FUNCTION  airline#extensions#whitespace#check()
+Called 2 times
+Total time:   0.000254
+ Self time:   0.000254
+
+count  total (s)   self (s)
+    2              0.000016   if &readonly || !&modifiable || !s:enabled
+                                return ''
+                              endif
+                            
+    2              0.000019   if !exists('b:airline_whitespace_check')
+                                let b:airline_whitespace_check = ''
+                            
+                                let trailing = 0
+                                if index(s:checks, 'trailing') > -1
+                                  let trailing = search(' $', 'nw')
+                                endif
+                            
+                                let mixed = 0
+                                if index(s:checks, 'indent') > -1
+                                  let indents = [search('^ \{2,}', 'nb'), search('^ \{2,}', 'n'), search('^\t', 'nb'), search('^\t', 'n')]
+                                  let mixed = indents[0] != 0 && indents[1] != 0 && indents[2] != 0 && indents[3] != 0
+                                endif
+                            
+                                if trailing != 0 || mixed
+                                  let b:airline_whitespace_check = s:symbol
+                                  if s:show_message
+                                    if trailing != 0
+                                      let b:airline_whitespace_check .= (g:airline_symbols.space).printf(s:trailing_format, trailing)
+                                    endif
+                                    if mixed
+                                      let mixnr = indents[0] == indents[1] ? indents[0] : indents[2]
+                                      let b:airline_whitespace_check .= (g:airline_symbols.space).printf(s:mixed_indent_format, mixnr)
+                                    endif
+                                  endif
+                                endif
+                              endif
+    2              0.000010   return b:airline_whitespace_check
+
+FUNCTION  208()
+Called 2 times
+Total time:   0.000059
+ Self time:   0.000059
+
+count  total (s)   self (s)
+    2              0.000023     if !exists("b:syntastic_loclist")
+                                    let b:syntastic_loclist = g:SyntasticLoclist.New([])
+                                endif
+    2              0.000009     return b:syntastic_loclist
+
+FUNCTION  211()
+Called 2 times
+Total time:   0.000030
+ Self time:   0.000030
+
+count  total (s)   self (s)
+    2              0.000027     return copy(self._quietWarnings ? self.errors() : self._rawLoclist)
+
+FUNCTION  214()
+Called 2 times
+Total time:   0.000019
+ Self time:   0.000019
+
+count  total (s)   self (s)
+    2              0.000015     return len(self._rawLoclist)
+
+FUNCTION  217()
+Called 2 times
+Total time:   0.000026
+ Self time:   0.000026
+
+count  total (s)   self (s)
+    2              0.000010     if self._hasErrorsOrWarningsToDisplay >= 0
+    2              0.000010         return self._hasErrorsOrWarningsToDisplay
+                                endif
+                                let self._hasErrorsOrWarningsToDisplay = empty(self._rawLoclist) ? 0 : (!self._quietWarnings || len(self.errors()))
+                                return self._hasErrorsOrWarningsToDisplay
+
+FUNCTION  airline#parts#mode()
+Called 2 times
+Total time:   0.000022
+ Self time:   0.000022
+
+count  total (s)   self (s)
+    2              0.000019   return get(w:, 'airline_current_mode', '')
+
+FUNCTION  airline#extensions#syntastic#get_warnings()
+Called 2 times
+Total time:   0.000558
+ Self time:   0.000078
+
+count  total (s)   self (s)
+    2   0.000519   0.000039   let errors = SyntasticStatuslineFlag()
+    2              0.000016   if strlen(errors) > 0
+                                return errors.(g:airline_symbols.space)
+                              endif
+    2              0.000005   return ''
+
+FUNCTION  SyntasticStatuslineFlag()
+Called 2 times
+Total time:   0.000480
+ Self time:   0.000346
+
+count  total (s)   self (s)
+    2   0.000097   0.000038     let loclist = g:SyntasticLoclist.current()
+    2   0.000060   0.000030     let issues = loclist.filteredRaw()
+    2   0.000049   0.000030     let num_issues = loclist.getLength()
+    2   0.000049   0.000023     if loclist.hasErrorsOrWarningsToDisplay()
+                                    let errors = loclist.errors()
+                                    let warnings = loclist.warnings()
+                            
+                                    let num_errors = len(errors)
+                                    let num_warnings = len(warnings)
+                            
+                                    let output = g:syntastic_stl_format
+                            
+                                    "hide stuff wrapped in %E(...) unless there are errors
+                                    let output = substitute(output, '\C%E{\([^}]*\)}', num_errors ? '\1' : '' , 'g')
+                            
+                                    "hide stuff wrapped in %W(...) unless there are warnings
+                                    let output = substitute(output, '\C%W{\([^}]*\)}', num_warnings ? '\1' : '' , 'g')
+                            
+                                    "hide stuff wrapped in %B(...) unless there are both errors and warnings
+                                    let output = substitute(output, '\C%B{\([^}]*\)}', (num_warnings && num_errors) ? '\1' : '' , 'g')
+                            
+                            
+                                    "sub in the total errors/warnings/both
+                                    let output = substitute(output, '\C%w', num_warnings, 'g')
+                                    let output = substitute(output, '\C%e', num_errors, 'g')
+                                    let output = substitute(output, '\C%t', num_issues, 'g')
+                            
+                                    "first error/warning line num
+                                    let output = substitute(output, '\C%F', num_issues ? issues[0]['lnum'] : '', 'g')
+                            
+                                    "first error line num
+                                    let output = substitute(output, '\C%fe', num_errors ? errors[0]['lnum'] : '', 'g')
+                            
+                                    "first warning line num
+                                    let output = substitute(output, '\C%fw', num_warnings ? warnings[0]['lnum'] : '', 'g')
+                            
+                                    return output
+                                else
+    2              0.000005         return ''
+                                endif
+
+FUNCTIONS SORTED ON TOTAL TIME
+count  total (s)   self (s)  function
+    2   0.000558   0.000078  airline#extensions#syntastic#get_warnings()
+    2   0.000480   0.000346  SyntasticStatuslineFlag()
+    2   0.000453             airline#check_mode()
+    2   0.000254             airline#extensions#whitespace#check()
+   10   0.000162             airline#util#wrap()
+    4   0.000142             airline#util#append()
+    2   0.000111             airline#statusline()
+    2   0.000059             208()
+    2   0.000040             airline#parts#iminsert()
+    2   0.000030             211()
+    2   0.000026             217()
+    2   0.000022             airline#parts#mode()
+    2   0.000020             airline#parts#paste()
+    2   0.000019             airline#parts#readonly()
+    2   0.000019             214()
+    2   0.000015             airline#parts#filetype()
+
+FUNCTIONS SORTED ON SELF TIME
+count  total (s)   self (s)  function
+    2              0.000453  airline#check_mode()
+    2   0.000480   0.000346  SyntasticStatuslineFlag()
+    2              0.000254  airline#extensions#whitespace#check()
+   10              0.000162  airline#util#wrap()
+    4              0.000142  airline#util#append()
+    2              0.000111  airline#statusline()
+    2   0.000558   0.000078  airline#extensions#syntastic#get_warnings()
+    2              0.000059  208()
+    2              0.000040  airline#parts#iminsert()
+    2              0.000030  211()
+    2              0.000026  217()
+    2              0.000022  airline#parts#mode()
+    2              0.000020  airline#parts#paste()
+    2              0.000019  airline#parts#readonly()
+    2              0.000019  214()
+    2              0.000015  airline#parts#filetype()
+

@@ -19,15 +19,17 @@ Bundle 'Valloric/YouCompleteMe'
   nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
   let g:ycm_key_list_select_completion = ['<C-TAB>', '<Down>']
   let g:ycm_key_list_previous_completion = ['<C-S-TAB>', '<Up>']
+  nnoremap <F6> :YcmForceCompileAndDiagnostics<CR>
 
 Bundle 'Valloric/ListToggle'
   let g:lt_location_list_toggle_map = '<leader>l'
   let g:lt_quickfix_list_toggle_map = '<leader>q'
   let g:lt_height = 10
 
-"Bundle 'gerw/vim-latex-suite'
-  "set grepprg=grep\ -nH\ $*
-  "let g:tex_flavor = "latex"
+Bundle 'gerw/vim-latex-suite'
+  set grepprg=grep\ -nH\ $*
+  let g:tex_flavor = "latex"
+  set guioptions=am
 
 Bundle 'tomasr/molokai'
 
@@ -36,19 +38,18 @@ Bundle 'scrooloose/nerdtree'
 
 Bundle 'xuhdev/SingleCompile'
   nmap <F3> :SCCompile<cr>
-  nmap <F4> :SCCompileRun<cr>
+  nmap <S-F3> :SCCompileRun<cr>
 
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/syntastic'
 "Bundle 'tpope/vim-fugitive'
 "Bundle 'tpope/vim-surround'
 "Bundle 'tpope/vim-repeat'
-"Bundle 'tpope/vim-rails.git'
-"Bundle 'mattn/gist-vim'
-"Bundle 'kien/ctrlp.vim'
+Bundle 'kien/ctrlp.vim'
 "Bundle 'corntrace/bufexplorer'
 "Bundle 'mileszs/ack.vim'
 " nnoremap <leader>a :Ack
+Bundle 'jiangmiao/auto-pairs'
 
 Bundle 'Yggdroot/indentLine'
   let g:indentLine_color_term = 239
@@ -56,8 +57,7 @@ Bundle 'Yggdroot/indentLine'
   let g:indentLine_char = '┆'
 
 Bundle 'SirVer/ultisnips'
-  let g:UltiSnipsJumpForwardTrigger="<leader>j"
-  let g:UltiSnipsJumpBackwardTrigger="<leader>k"
+  let g:UltiSnipsListSnippets="<leader>j"
 
 Bundle 'bling/vim-airline'
   let g:airline_powerline_fonts=1
@@ -94,20 +94,9 @@ Bundle 'bling/vim-airline'
   "map <S-F5> :VimwikiAll2HTML<cr>
   "map <F5> :Vimwiki2HTML<cr>
 
-"The c.vim script from vim-scripts is out of date
-"So using it which has updated to version 6.0
-"Bundle 'blak3mill3r/c.vim'
-
 " vim-scripts repos
-" it looks like some library
-"Bundle 'L9'
-Bundle 'fcitx.vim'
-" auto detect encondings
-"Bundle 'FencView.vim'
-"Bundle 'taglist.vim'
-" bookmark
-"Bundle 'Visual-Mark'
-"Bundle 'genutils'
+Bundle "majutsushi/tagbar"
+  nnoremap <silent> <F4> :TagbarToggle<CR>
 " improved yankring
 "Bundle 'YankRing.vim'
 " nnoremap <silent> <F3> :YRShow<cr>
@@ -123,21 +112,6 @@ syntax on
 
 " " plugins settings {
 
-" " taglist
-" let Tlist_Auto_Open = 0
-" let Tlist_Auto_Update = 1
-" let Tlist_Hightlight_Tag_On_BufEnter = 1
-" let Tlist_Show_One_File = 1    " 只显示当前文件
-" let Tlist_Enable_Fold_Column = 0
-" let Tlist_File_Fold_Auto_Close = 0
-" let Tlist_Process_File_Always = 1
-" let Tlist_Display_Prototype = 0
-" let Tlist_Compact_Format = 1
-" let Tlist_Use_Right_Window = 0
-" let Tlist_Exit_OnlyWindow = 1      "如果taglist窗口是最后一个窗口，则退出vim
-" let tlist_php_settings = 'php;c:class;d:constant;f:function' 
-" let Tlist_WinWidth = 30
-" 
 " " yankring
 " " 配置yankring历史文件名前缀
 " let g:yankring_history_file = '.yankring_history'
@@ -161,6 +135,8 @@ set nosplitbelow
 set nosplitright
 nnoremap <leader>s <C-w>v<C-w>l
 nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 " }
 
@@ -176,7 +152,7 @@ set viminfo+=n~/.vim/viminfo/
 set scrolloff=3
 set showcmd
 set wildmenu
-set wildmode=list:longest
+set wildmode=longest
 set novisualbell
 " }
 
@@ -188,7 +164,6 @@ set textwidth=79
 set wrap
 set wrapscan
 " formatoptions=qrn1
-" You should set nocolorcolumn in markdown file.
 set colorcolumn=80
 set cursorline
 set cursorcolumn
@@ -220,6 +195,7 @@ nnoremap <leader>e :q<cr>
 nnoremap <leader>n :bn<cr>
 nnoremap <leader>p :bp<cr>
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
+set pastetoggle=<F2>
 
 autocmd BufWinLeave * if expand('%') != '' && &buftype == '' | mkview | endif
 autocmd BufRead     * if expand('%') != '' && &buftype == '' | silent loadview | syntax on | endif
@@ -256,36 +232,28 @@ set expandtab
 " }
 
 " " Fn mapping {
-set pastetoggle=<F2>
 
-nnoremap <F6> :YcmForceCompileAndDiagnostics<CR>
-" 
 " " 切换MiniBufExplorer的显示
 " nnoremap <F2> :TMiniBufExplorer<CR>
 " 
 " " 切换到MiniBufExplorer
 " nnoremap <F3> :MiniBufExplorer<CR>
 " 
-" " 切换TagList的显示
-" nnoremap <F4> :TlistToggle<CR>
-" 
 " " 切换Yank Ring的显示
 " nnoremap <silent> <F10> :YRShow<cr>
 " inoremap <silent> <F10> <ESC>:YRShow<cr>
 " 
-" " 在.cpp/.c和.h文件间切换
-" nnoremap <F12> <Esc>:A<CR>
 " " }
 
-" filetype {
-augroup Binary
-    autocmd!
-    autocmd BufReadPre  *.bin,*.o let &bin=1
-    autocmd BufReadPost *.bin,*.o if &bin | %!xxd
-    autocmd BufReadPost *.bin,*.o set ft=xxd | endif
-    autocmd BufWritePre *.bin,*.o if &bin | %!xxd -r
-    autocmd BufWritePre *.bin,*.o endif
-    autocmd BufWritePost *.bin,*.o if &bin | %!xxd
-    autocmd BufWritePost *.bin,*.o set nomod | endif
-augroup END
-" }
+"" filetype {
+"augroup Binary
+    "autocmd!
+    "autocmd BufReadPre  *.bin,*.o let &bin=1
+    "autocmd BufReadPost *.bin,*.o if &bin | %!xxd
+    "autocmd BufReadPost *.bin,*.o set ft=xxd | endif
+    "autocmd BufWritePre *.bin,*.o if &bin | %!xxd -r
+    "autocmd BufWritePre *.bin,*.o endif
+    "autocmd BufWritePost *.bin,*.o if &bin | %!xxd
+    "autocmd BufWritePost *.bin,*.o set nomod | endif
+"augroup END
+"" }
