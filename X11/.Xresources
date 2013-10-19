@@ -36,46 +36,18 @@ URxvt.borderLess:False
 
 Urxvt.inLocale: zh_CN.UTF-8
 
-! -*- { theming tango
+URxvt.pointerColorBackground : #586E75
+URxvt.pointerColorForeground : #93A1A1
 
-*background: #0f0f0f
-*foreground: #c8c8c8
+URxvt.background : #333333
+URxvt.foreground : #CCCCCC
 
-! black
-*color0:    #2E3436
-*color8:    #555753
-
-! red
-*color1:    #a40000
-*color9:    #EF2929
-
-! green
-*color2:    #4ea906
-*color10:   #8ae234
-
-! yellow
-*color3:    #c4a000
-*color11:   #fce94f
-
-! blue
-*color4:    #3465a4
-*color11:   #729fcf
-
-! purple
-*color5:    #75507b
-*color13:   #ad7fa8
+URxvt.colorBD : #FFFFFF
+URxvt.colorUL : #CCCC66
 
 ! orange
 *color6:    #ce5c00
 *color14:   #fcaf3e
-
-! white
-*color7:    #babdb9
-*color15:   #eeeeec
-
-! -*- }
-
-! -*- { theme snowcherry / yukisakura
 
 ! black
 *color0:    #000000
@@ -101,4 +73,3 @@ Urxvt.inLocale: zh_CN.UTF-8
 ! white
 *color7:    #D9D9D9
 *color15:   #FFFFFF
-! -*- }
