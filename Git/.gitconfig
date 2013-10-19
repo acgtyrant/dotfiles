@@ -13,3 +13,5 @@
 [http]
 	#sslVerify = false
 	#sslCAInfo = /usr/share/goagent/local/CA.crt
+[push]
+	default = simple
