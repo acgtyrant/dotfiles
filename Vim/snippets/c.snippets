@@ -1,0 +1,168 @@
+###########################################################################
+#                            TextMate Snippets                            #
+###########################################################################
+
+snippet fc "File Comments" !b
+
+//=============================================================================
+// 
+//   Copyright:  © 2013 Isaac Ge
+//     Licence:  GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+//               This is free software: you are free to change and redistribute
+//               it.  There is NO WARRANTY, to the extent permitted by law.
+//
+//    Filename:  `!p snip.rv = snip.fn`
+// Description:  ${1}
+//    Compiler:  gcc
+//
+//      Author:  Isaac Ge <acgtyrant@gmail.com>.
+//Organization:  Zhejiang Sci-Tech University 
+// 
+//=============================================================================
+ 
+${2}
+endsnippet
+
+snippet def "#define ..."
+#define ${1}
+endsnippet
+
+snippet ifndef "#ifndef ... #define ... #endif"
+#ifndef ${1/([A-Za-z0-9_]+).*/$1/}
+#define ${1:SYMBOL} ${2:value}
+#endif
+endsnippet
+
+snippet #if "#if #endif" !b
+#if ${1:0}
+${VISUAL}${0:${VISUAL/(.*)/(?1::code)/}}
+#endif
+endsnippet
+
+snippet inc "#include local header (inc)"
+#include "${1:`!p snip.rv = snip.basename + '.h'`}"
+endsnippet
+
+snippet Inc "#include <> (Inc)"
+#include <${1}.h>${2}
+endsnippet
+
+snippet mark "#pragma mark (mark)"
+#if 0
+${1:#pragma mark -
+}#pragma mark $2
+#endif
+
+$0
+endsnippet
+
+snippet main "main() (main)"
+int main(int argc, char *argv[]) {
+	${VISUAL}${1:${VISUAL/(.*)/(?1::\/* code *\/)/}}
+	return 0;
+}${2}
+endsnippet
+
+snippet for "for loop (for)"
+for (${2:i} = 0; $2 < ${1:count}; ${3:++$2}) {
+	${VISUAL}${4:${VISUAL/(.*)/(?1::\/* code *\/)/}}
+}${5}
+endsnippet
+
+snippet fori "for int loop (fori)"
+for (${4:int} ${2:i} = 0; $2 < ${1:count}; ${3:++$2}) {
+	${VISUAL}${5:${VISUAL/(.*)/(?1::\/* code *\/)/}}
+}${6}
+endsnippet
+
+snippet enum "Enumeration"
+enum ${1:name} { $0 };
+endsnippet
+
+snippet once "Include header once only guard"
+#ifndef ${1:`!p
+if not snip.c:
+	import random, string
+	name = re.sub(r'[^A-Za-z0-9]+','_', snip.fn).upper()
+	rand = ''.join(random.sample(string.ascii_letters+string.digits, 8))
+	snip.rv = ('%s_%s' % (name,rand)).upper()
+else:
+    snip.rv = snip.c`}
+#define $1
+
+${2}
+
+#endif /* end of include guard: $1 */
+
+endsnippet
+
+snippet td "Typedef"
+typedef ${1:int} ${2:MyCustomType};
+${3}
+endsnippet
+
+snippet wh "while loop"
+while (${1:/* condition */}) {
+	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
+}${3}
+endsnippet
+
+snippet do "do...while loop (do)"
+do {
+	${VISUAL}${2:${VISUAL/(.*)/(?1::\/* code *\/)/}}
+} while (${1:/* condition */});${3}
+endsnippet
+
+snippet fprintf "fprintf ..."
+fprintf(${1:stderr}, "${2:%s}\n"${2/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$3${2/([^%]|%%)*(%.)?.*/(?2:\);)/}
+endsnippet
+
+snippet if "if .. (if)"
+if (${1:/* condition */}) {
+	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
+}${3}
+endsnippet
+
+snippet el "else .. (else)"
+else {
+	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
+}${3}
+endsnippet
+
+snippet ife "if .. else (ife)"
+if (${1:/* condition */}) {
+	${2:/* code */}
+}
+else {
+	${3:/* else */}
+}${4}
+endsnippet
+
+snippet printf "printf .. (printf)"
+printf("${1:%s}\n"${1/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$2${1/([^%]|%%)*(%.)?.*/(?2:\);)/}
+endsnippet
+
+snippet st "struct"
+struct ${1:`!p snip.rv = (snip.basename or "name") + "_t"`} {
+	${2:/* data */}
+};${3}
+endsnippet
+
+snippet fun "function" b
+${1:void} ${2:function_name}(${3}) {
+	${VISUAL}${4:${VISUAL/(.*)/(?1::\/* code *\/)/}}
+}${5}
+endsnippet
+
+snippet fund "function declaration" b
+${1:void} ${2:function_name}(${3});${4}
+endsnippet
+
+snippet re "return statement" b
+return ${1:return_statement};${2}
+endsnippet
+
+snippet TO "This is a TODO reminder" !b
+//`echo Isaac Ge`s TODO: ${1:desc} `!v strftime("%c")`${2}
+endsnippet
+# vim:ft=snippets:

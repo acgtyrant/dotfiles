@@ -1,0 +1,42 @@
+<+	+>	!comp!	!exe!
+%        File: !comp!expand("%:p:t")!comp!
+%     Created: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+% Last Change: !comp!strftime("%a %b %d %I:00 %p %Y ").substitute(strftime('%Z'), '\<\(\w\)\(\w*\)\>\(\W\|$\)', '\1', 'g')!comp!
+%
+\documentclass[UTF8]{ctexart}
+
+\title{\heiti <++>}
+\author{\kaishu 浙江理工大学 2010届数学与应用数学（2）班 葛逸盛}
+
+\usepackage{geometry}
+\geometry{a4paper,centering}
+\usepackage{graphicx}
+\usepackage{format=hang,font=small,textfont=it}{caption}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage[nottoc]{tocbibind}
+
+\bibliographystyle{plain}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+  <++>
+\end{abstract}
+
+\tableofcontents
+
+\section{<++>}
+\lable{sec:<++>}
+
+\section{<++>}
+\lable{sec:<++>}
+
+\section{<++>}
+\lable{sec:<++>}
+
+\bibliography{<++>}
+
+\end{document}
