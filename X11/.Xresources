@@ -13,7 +13,7 @@ Xft*hinting:    true
 ! -*- }
 
 !URxvt*font: xft: Dejavu Sans Mono:bold, xft:Droid Sans Mono for powerline:pixelsize=15, xft:WenQuanYi Micro Hei Mono:pixelsize=15
-URxvt*font: xft: Source Code Pro, xft:Droid Sans Mono for powerline:pixelsize=15, xft: 方正兰亭黑_GBK
+URxvt*font: xft:Droid Sans Mono for powerline:bold, xft: 方正兰亭粗黑_GBK
 
 URxvt.scrollstyle:       rxvt
 URxvt.scrollBar:         false

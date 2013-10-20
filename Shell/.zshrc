@@ -67,6 +67,7 @@ alias rake="noglob rake"
 alias rm=' rm -Iv --one-file-system'
 alias mkdir='mkdir -pv'
 alias gcc='gcc -Wall'
+alias google-chrome='google-chrome --enable-easy-off-store-extension-install'
 
 # Path aliases
 hash -d POST="/home/acgtyrant/blog.acgtyrant.com/source/_posts/"

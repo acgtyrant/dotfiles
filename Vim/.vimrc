@@ -75,25 +75,6 @@ Bundle 'bling/vim-airline'
   let g:airline_paste_symbol = 'Þ'
   let g:airline_whitespace_symbol = 'Ξ'
 
-"Bundle 'vimwiki/vimwiki'
- 
-""let g:vimwiki_list = [{'path': 'E:/My Dropbox/vimwiki/',
-      ""\ 'html_header': 'E:/My Dropbox/Public/vimwiki_template/header.htm',
-      ""\ 'html_footer': 'E:/My Dropbox/Public/vimwiki_template/footer.htm',
-      ""\ 'diary_link_count': 5},
-      ""\{'path': 'Z:\demo\qiuchi\wiki'}]
-  "let g:vimwiki_camel_case = 1
-  "let g:vimwiki_hl_cb_checked = 1
-  "let g:vimwiki_menu = ''
-  "let g:vimwiki_folding = 1
-  "let g:vimwiki_CJK_length = 1
-  "let g:vimwiki_use_mouse = 1
-  "let g:vimwiki_use_calendar = 0
-  "let g:vimwiki_timestamp_format='%Y年%m月%d日 %H:%M:%S'
-  "let g:vimwiki_user_htmls = "search.html,404.html"
-  "map <S-F5> :VimwikiAll2HTML<cr>
-  "map <F5> :Vimwiki2HTML<cr>
-
 " vim-scripts repos
 Bundle "majutsushi/tagbar"
   nnoremap <silent> <F4> :TagbarToggle<CR>
