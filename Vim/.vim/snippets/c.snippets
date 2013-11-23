@@ -4,7 +4,7 @@
 
 snippet fc "File Comments" !b
 
-//=============================================================================
+//==============================================================================
 // 
 //   Copyright:  © 2013 Isaac Ge
 //     Licence:  GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
@@ -14,13 +14,44 @@ snippet fc "File Comments" !b
 //    Filename:  `!p snip.rv = snip.fn`
 // Description:  ${1}
 //    Compiler:  gcc
+//    Standard:  C99
 //
 //      Author:  Isaac Ge <acgtyrant@gmail.com>.
 //Organization:  Zhejiang Sci-Tech University 
+//        TODO:  
 // 
-//=============================================================================
+//==============================================================================
  
 ${2}
+endsnippet
+
+snippet fce "File Comments" !b
+
+//==============================================================================
+// 
+//   Copyright:  © 2013 Isaac Ge
+//     Licence:  GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+//               This is free software: you are free to change and redistribute
+//               it.  There is NO WARRANTY, to the extent permitted by law.
+//
+//    Filename:  `!p snip.rv = snip.fn`
+// Description:  KnR-The-C-Programming-Language-Solutions
+//               Exercise ${1}, page ${2}
+//               
+//               ${3}
+//
+//    Compiler:  gcc
+//    Standard:  C99
+//
+//      Author:  Isaac Ge <acgtyrant@gmail.com>.
+//Organization:  Zhejiang Sci-Tech University 
+//        TODO:  
+// 
+//==============================================================================
+ 
+#include <stdio.h>
+#include <stdlib.h>
+${4}
 endsnippet
 
 snippet def "#define ..."
@@ -57,9 +88,9 @@ $0
 endsnippet
 
 snippet main "main() (main)"
-int main(int argc, char *argv[]) {
+int main(void) {
 	${VISUAL}${1:${VISUAL/(.*)/(?1::\/* code *\/)/}}
-	return 0;
+	return EXIT_SUCCESS;
 }${2}
 endsnippet
 
@@ -103,7 +134,7 @@ endsnippet
 
 snippet wh "while loop"
 while (${1:/* condition */}) {
-	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
+	${VISUAL}${2:${VISUAL/(.*)/(?1::\/* code *\/)/}}
 }${3}
 endsnippet
 
@@ -119,7 +150,7 @@ endsnippet
 
 snippet if "if .. (if)"
 if (${1:/* condition */}) {
-	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
+	${VISUAL}${2:${VISUAL/(.*)/(?1::\/* code *\/)/}}
 }${3}
 endsnippet
 
@@ -166,3 +197,18 @@ snippet TO "This is a TODO reminder" !b
 //`echo Isaac Ge`s TODO: ${1:desc} `!v strftime("%c")`${2}
 endsnippet
 # vim:ft=snippets:
+
+snippet Errd "Error(char string[]) function declation" !b
+void Error(char *string);
+endsnippet
+
+snippet Err "Error(char string[]) function declation" !b
+void Error(char *string) {
+	printf("%s\n", string);
+	exit(EXIT_FAILURE);
+}
+endsnippet
+
+snippet con "Continue statement" !b
+continue;
+endsnippet

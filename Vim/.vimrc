@@ -26,10 +26,10 @@ Bundle 'Valloric/ListToggle'
   let g:lt_quickfix_list_toggle_map = '<leader>q'
   let g:lt_height = 10
 
-Bundle 'gerw/vim-latex-suite'
-  set grepprg=grep\ -nH\ $*
-  let g:tex_flavor = "latex"
-  set guioptions=am
+"Bundle 'gerw/vim-latex-suite'
+  "set grepprg=grep\ -nH\ $*
+  "let g:tex_flavor = "latex"
+  "set guioptions=am
 
 Bundle 'tomasr/molokai'
 
@@ -75,9 +75,12 @@ Bundle 'bling/vim-airline'
   let g:airline_paste_symbol = 'Þ'
   let g:airline_whitespace_symbol = 'Ξ'
 
-" vim-scripts repos
 Bundle "majutsushi/tagbar"
   nnoremap <silent> <F4> :TagbarToggle<CR>
+
+Bundle "junegunn/vim-easy-align"
+
+" vim-scripts repos
 " improved yankring
 "Bundle 'YankRing.vim'
 " nnoremap <silent> <F3> :YRShow<cr>
@@ -168,6 +171,7 @@ set modelines=0
 set selection=inclusive
 set foldmethod=indent
 set confirm
+set noscrollbind
 cmap w!! w !sudo tee % >/dev/null
 autocmd FocusLost * silent! up
 autocmd! bufwritepost vimrc source ~/.vimrc

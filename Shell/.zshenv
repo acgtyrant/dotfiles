@@ -12,6 +12,7 @@ export PATH="$HOME/.rbenv/shims:$PATH"
 export PATH="/usr/lib/colorgcc/bin:$PATH"
 export PATH="/opt/katawa-shoujo/:$PATH"
 export PATH="$HOME/cxoffice/bin/:$PATH"
+export PATH="$HOME/Canopy32:$PATH"
 export PATH="$HOME/.gem/ruby/2.0.0/bin:$PATH"
 export PATH="/root/.gem/ruby/2.0.0/bin:$PATH"
 

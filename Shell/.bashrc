@@ -15,3 +15,7 @@ alias vi='vim'
 alias grep='grep --color'
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+# Added by Canopy installer on 2013-10-27
+# VIRTUAL_ENV_DISABLE_PROMPT can be set to '' to make bashprompt show that Canopy is active, otherwise 1
+VIRTUAL_ENV_DISABLE_PROMPT=1 source /home/acgtyrant/Enthought/Canopy_32bit/User/bin/activate
