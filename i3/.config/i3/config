@@ -23,16 +23,16 @@ set $dmenu dmenu_run -fn 'Menlo-10' -nf '#FFFFFF' -sb '#00002A' -nb '#447C73' -p
 # chose a FreeType font, such as:
 
 # font pango:DejaVu Sans Mono 10
-font xft: 方正兰亭黑_GBK 10
+font xft: 方正兰亭黑_GBK 11
 #font xft: Sans 9
 # Make i3 support chinese font
 #font xft:Wen Quan Yi Zen Hei Mono 10
 
-# Theme from Mr. Green
-client.focused             #447C73   #447C73    #FFFFFF
-client.focused_inactive    #CCCED4   #CCCED4    #000000
-client.unfocused           #CCCED4   #CCCED4    #000000
-client.urgent              #FF0000   #FF0000    #FF0000
+# colors
+client.focused              #688060 #688060 #303030 #ffcfaf
+client.focused_inactive     #3f3f3f #3F3F3F #7f9f7f #3f3f3f
+client.unfocused            #3f3f3f #3F3F3F #DCDCCC #3f3f3f
+client.urgent               #dca3a3 #dca3a3 #DCDCCC #3f3f3f
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -241,20 +241,21 @@ bindsym $mod+x move container to output HDMI1
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available
 
-#bar {
-	##position bottom
-	##mode dock
-	#font xft: Menlo 10
-	#tray_output none
-  #colors {
-        #background #1A4E59
-        #statusline #FFFFFF
-        #active_workspace  #447C73 #447C73 #FFFFFF
-        #focused_workspace   #CCCED4 #CCCED4 #000000
-        #inactive_workspace #1A4E59 #1A4E59 #000000
-        #urgent_workspace   #2f343a #900000 #ffffff
-  #}
-	##workspace_buttons yes
-	##I have tmux-powerline already, so I do not need it anymore!
-  #status_command $HOME/.config/i3/i3bar-conky
-#}
+bar {
+  #position bottom
+  #mode dock
+  font xft: 方正兰亭黑_GBK 11
+  tray_output primary
+  colors {
+      background #3f3f3f
+      statusline #dcdccc
+
+      focused_workspace  #93b3a3 #3f3f3f #93b3a3
+      active_workspace   #ffcfaf #3f3f3f #ffcfaf
+      inactive_workspace #636363 #3f3f3f #dcdccc
+      urgent_workspace   #dca3a3 #3f3f3f #dca3a3
+  }
+  workspace_buttons yes
+  #I have tmux-powerline already, so I do not need it anymore!
+  status_command $HOME/.config/i3/i3bar-conky
+}

@@ -68,6 +68,9 @@ alias rm=' rm -Iv --one-file-system'
 alias mkdir='mkdir -pv'
 alias gcc='gcc -Wall'
 alias google-chrome='google-chrome --enable-easy-off-store-extension-install'
+alias dstat='dstat -cdlmnpsy'
+alias l2='sudo l2tp.sh'
+alias sw='sudo wifi-menu'
 
 # Path aliases
 hash -d POST="/home/acgtyrant/blog.acgtyrant.com/source/_posts/"

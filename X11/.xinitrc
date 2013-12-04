@@ -22,9 +22,10 @@ export LC_CTYPE="zh_CN.UTF-8"
 
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
-# exec gnome-session
-# exec startkde
+#exec gnome-session
+ #exec startkde
 # exec startxfce4
 # ...or the Window Manager of your choice
 # exec awesome
+#exec i3-gnome
 exec i3
