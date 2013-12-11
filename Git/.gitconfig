@@ -15,3 +15,5 @@
 	#sslCAInfo = /usr/share/goagent/local/CA.crt
 [push]
 	default = simple
+[core]
+	quotepath = false

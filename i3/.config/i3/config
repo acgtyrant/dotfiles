@@ -201,21 +201,25 @@ exec --no-startup-id extendmirror &
 
 # Set some arbitrary commands for specific windows
 for_window [class="URxvt"] border 1pixel
+for_window [class="Canopy"] border 1pixel
 for_window [class="Mirage"] floating enable
 for_window [class="MPlayer"] floating enable
 for_window [class="Thunar"] floating enable
 for_window [class="Manager"] floating enable
 for_window [class="Orage"] floating enable
-for_window [class="qq"] floating enable
+for_window [instance="QQ.exe"] floating enable
+for_window [instance="QQ.exe"] border none
 for_window [class="tray"] floating enable
 for_window [class="wine"] floating enable
+for_window [instance="qq"] floating enable
 for_window [title="Panel"] floating enable
 for_window [title="Settings"] floating enable
 for_window [title="Notes"] floating enable
 for_window [title="feh"] floating enable
-for_window [title="Downloads"] floating enable
+for_window [title="Download"] floating enable
 for_window [title="Pman"] floating enable
 for_window [title="chat"] floating enable
+for_window [title="Preferences"] floating enable
 
 # Automatically putting workspaces on specific screens 
 workspace "1: urxvt" output HDMI1
