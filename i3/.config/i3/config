@@ -147,6 +147,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 assign [class="(?i)Urxvt"] 1: urxvt
 assign [class="(?i)google-chrome"] 2: web
 assign [class="(?i)opera"] 2: web
+assign [class="(?i)Canopy"] 3: vim
 assign [class="(?i)gVim"] 3: vim
 assign [class="(?i)mplayer"] 4: media
 assign [class="(?i)crossover"] 5: crossover
@@ -207,10 +208,10 @@ for_window [class="MPlayer"] floating enable
 for_window [class="Thunar"] floating enable
 for_window [class="Manager"] floating enable
 for_window [class="Orage"] floating enable
+for_window [class="Wine"] floating enable
 for_window [instance="QQ.exe"] floating enable
 for_window [instance="QQ.exe"] border none
 for_window [class="tray"] floating enable
-for_window [class="wine"] floating enable
 for_window [instance="qq"] floating enable
 for_window [title="Panel"] floating enable
 for_window [title="Settings"] floating enable
@@ -260,6 +261,5 @@ bar {
       urgent_workspace   #dca3a3 #3f3f3f #dca3a3
   }
   workspace_buttons yes
-  #I have tmux-powerline already, so I do not need it anymore!
   status_command $HOME/.config/i3/i3bar-conky
 }

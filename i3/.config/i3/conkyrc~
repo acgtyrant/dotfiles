@@ -140,13 +140,13 @@ TEXT
   # Battery:
   # You need to install `acpi` packagae in you OS firstly.
   {"full_text":"ⓑ","color":"\#888888","separator":false,"separator_block_width":6},\
-  {"full_text":"${if_match ${exec acpi -b | awk "{print $1}" | sed 's/\([^:]*\): \([^,]*\), \([0-9]*\)%.*/\3/'}>=85}${exec acpi -b | awk "{print $1}" | sed 's/\([^:]*\): \([^,]*\), \([0-9]*\)%.*/\3/'}%","color":"\#AAF096","separator": false, "separator_block_width":3},\
+  {"full_text":"${if_match ${exec acpi -b | awk "{print $1}" | sed 's/\([^:]*\): \([^,]*\), \([0-9]*\)%.*/\3/'}<30}${exec acpi -b | awk "{print $1}" | sed 's/\([^:]*\): \([^,]*\), \([0-9]*\)%.*/\3/'}%","color":"\#AAF096","separator": false, "separator_block_width":3},\
   {"full_text":"${else}"},\
-  {"full_text":"${if_match ${exec acpi -b | awk "{print $1}" | sed 's/\([^:]*\): \([^,]*\), \([0-9]*\)%.*/\3/'}>60}${exec acpi -b | awk "{print $1}" | sed 's/\([^:]*\): \([^,]*\), \([0-9]*\)%.*/\3/'}%","color":"\#F0DC64","separator": false, "separator_block_width":3},\
+  {"full_text":"${if_match ${exec acpi -b | awk "{print $1}" | sed 's/\([^:]*\): \([^,]*\), \([0-9]*\)%.*/\3/'}<60}${exec acpi -b | awk "{print $1}" | sed 's/\([^:]*\): \([^,]*\), \([0-9]*\)%.*/\3/'}%","color":"\#F0DC64","separator": false, "separator_block_width":3},\
   {"full_text":"${else}"},\
-  {"full_text":"${if_match ${exec acpi -b | awk "{print $1}" | sed 's/\([^:]*\): \([^,]*\), \([0-9]*\)%.*/\3/'}>40}${exec acpi -b | awk "{print $1}" | sed 's/\([^:]*\): \([^,]*\), \([0-9]*\)%.*/\3/'}%","color":"\#FF9933","separator": false, "separator_block_width":3},\
+  {"full_text":"${if_match ${exec acpi -b | awk "{print $1}" | sed 's/\([^:]*\): \([^,]*\), \([0-9]*\)%.*/\3/'}<85}${exec acpi -b | awk "{print $1}" | sed 's/\([^:]*\): \([^,]*\), \([0-9]*\)%.*/\3/'}%","color":"\#FF9933","separator": false, "separator_block_width":3},\
   {"full_text":"${else}"},\
-  {"full_text":"${if_match ${exec acpi -b | awk "{print $1}" | sed 's/\([^:]*\): \([^,]*\), \([0-9]*\)%.*/\3/'}<40}${exec acpi -b | awk "{print $1}" | sed 's/\([^:]*\): \([^,]*\), \([0-9]*\)%.*/\3/'}%","color":"\#FF9933","separator": false, "separator_block_width":3},\
+  {"full_text":"${if_match ${exec acpi -b | awk "{print $1}" | sed 's/\([^:]*\): \([^,]*\), \([0-9]*\)%.*/\3/'}>=85}${exec acpi -b | awk "{print $1}" | sed 's/\([^:]*\): \([^,]*\), \([0-9]*\)%.*/\3/'}%","color":"\#FF9933","separator": false, "separator_block_width":3},\
   {"full_text":"${endif}${endif}${endif}${endif}"},\
 
   # Volume:

@@ -22,7 +22,7 @@ URxvt.scrollBar:         false
 URxvt*scrollTtyOutput:   false
 URxvt*scrollWithBuffer:  true
 URxvt*scrollTtyKeypress: true
-URxvt.perl-ext-common:  defalut,matcher
+URxvt.perl-ext-common:  defalut,matcher,vtwheel
 URxvt.url-launcher:     /usr/bin/google-chrome -new-tab
 URxvt.matcher.button:   1
 URxvt.colorUL: #4682B4

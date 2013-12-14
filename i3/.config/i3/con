@@ -1,0 +1,24 @@
+## Stuff after 'TEXT' will be formatted on screen
+TEXT
+[\
+
+
+## CPU:
+#{"full_text":"ⓒ","color":"\#888888","separator":false,"separator_block_width":6},\
+#{"full_text":"${if_match ${cpu cpu0}<25}${cpu cpu0}","color":"\#AAF096","separator":false,"separator_block_width":0},\
+#{"full_text":"${else}"},\
+#{"full_text":"${if_match ${cpu cpu0}<50}${cpu cpu0}","color":"\#F0DC64","separator":false,"separator_block_width":0},\
+#{"full_text":"${else}"},\
+#{"full_text":"${if_match ${cpu cpu0}<75}${cpu cpu0}","color":"\#FF9933","separator":false,"separator_block_width":0},\
+#{"full_text":"${else}"},\
+#{"full_text":"${if_match ${cpu cpu0}<=100}${cpu cpu0}","color":"\#FF3333","separator":false,"separator_block_width":0},\
+#{"full_text":"${endif}${endif}${endif}${endif}"},\
+#{"full_text":"%","color":"\#EEEEEE","separator":false,"separator_block_width":6},\
+
+  # Battery
+  
+
+  # Time
+  {"full_text": "ⓣ: ${time %Y-%m-%d}", "separator": false, "separator_block_width":3, "color":"\#ffcfaf"},\
+  {"full_text": " ${time %R}", "separator": false},\
+],
