@@ -68,7 +68,7 @@ TEXT
   #{"full_text":"°C","color":"\#EEEEEE","separator":false,"separator_block_width":6},\
 
   # Download:
-  {"full_text":"⇊","color":"\#888888","separator":false,"separator_block_width":6},\
+  {"full_text":"⇊","color":"\#EEEEEE","separator":false,"separator_block_width":6},\
   {"full_text":"${if_match ${downspeedf enp3s0}<100}${downspeed enp3s0}","color":"\#AAF096","separator":false,"separator_block_width":6},\
   {"full_text":"${else}"},\
   {"full_text":"${if_match ${downspeedf enp3s0}<300}${downspeed enp3s0}","color":"\#68B1E8","separator":false,"separator_block_width":6},\
@@ -81,7 +81,7 @@ TEXT
   {"full_text":"${endif}${endif}${endif}${endif}${endif}"},\
 
   # Upload:
-  {"full_text":"⇈","color":"\#888888","separator":false,"separator_block_width":6},\
+  {"full_text":"⇈","color":"\#EEEEEE","separator":false,"separator_block_width":6},\
   {"full_text":"${if_match ${upspeedf enp3s0}<15}${upspeed enp3s0}","color":"\#AAF096","separator":false,"separator_block_width":6},\
   {"full_text":"${else}"},\
   {"full_text":"${if_match ${upspeedf enp3s0}<35}${upspeed enp3s0}","color":"\#9470DB","separator":false,"separator_block_width":6},\
@@ -90,15 +90,15 @@ TEXT
   {"full_text":"${endif}${endif}${endif}"},\
 
   # SSID
-  {"full_text":"ⓢ: ","separator": false, "separator_block_width":3},\
+  {"full_text":"ⓢ:","color":"\#EEEEEE","separator": false, "separator_block_width":3},\
   {"full_text":"${wireless_essid wlp9s0}","separator":false, "separator_block_width":3, "color":"\#EEEEEE"},\
-  {"full_text":"ⓦ: ${addr wlp9s0}","color":"\#EEEEEE","separator":false, "separator_block_width":1},\
+  {"full_text":"ⓦ: ${addr enp3s0}","color":"\#EEEEEE","separator":false, "separator_block_width":1},\
   {"full_text":" ","separator":false, "separator_block_width":1},\
   {"full_text":"ⓛ: ${exec /home/acgtyrant/bin/external-ip}","color":"\#EEEEEE","separator":false, "separator_block_width":1},\
   {"full_text":" ","separator":false, "separator_block_width":1},\
 
   # Memory:
-  {"full_text":"ⓜ","color":"\#888888","separator":false,"separator_block_width":6},\
+  {"full_text":"ⓜ","color":"\#EEEEEE","separator":false,"separator_block_width":6},\
   {"full_text":"${if_match ${memperc}<30}${memeasyfree}","color":"\#AAF096","separator":false,"separator_block_width":6},\
   {"full_text":"${else}"},\
   {"full_text":"${if_match ${memperc}<60}${memeasyfree}","color":"\#F0DC64","separator":false,"separator_block_width":6},\
@@ -109,7 +109,7 @@ TEXT
   {"full_text":"${endif}${endif}${endif}${endif}"},\
 
   # CPU
-  {"full_text":"ⓒ: ","separator": false, "separator_block_width":3},\
+  {"full_text":"ⓒ: ","color":"\#EEEEEE","separator": false, "separator_block_width":3},\
   {"full_text":"${if_match ${exec awk '{print $1}' /proc/loadavg}<1.0}${exec awk '{print $1}' /proc/loadavg}","color":"\#AAF096","separator": false, "separator_block_width":3},\
   {"full_text":"${else}"},\
   {"full_text":"${if_match ${exec awk '{print $1}' /proc/loadavg}<2.0}${exec awk '{print $1}' /proc/loadavg}","color":"\#F0DC64","separator": false, "separator_block_width":3},\
@@ -139,7 +139,7 @@ TEXT
 
   # Battery:
   # You need to install `acpi` packagae in you OS firstly.
-  {"full_text":"ⓑ","color":"\#888888","separator":false,"separator_block_width":6},\
+  {"full_text":"ⓑ:","color":"\#EEEEEE","separator":false,"separator_block_width":6},\
   {"full_text":"${if_match ${exec acpi -b | awk "{print $1}" | sed 's/\([^:]*\): \([^,]*\), \([0-9]*\)%.*/\3/'}>=85}${exec acpi -b | awk "{print $1}" | sed 's/\([^:]*\): \([^,]*\), \([0-9]*\)%.*/\3/'}%","color":"\#AAF096","separator": false, "separator_block_width":3},\
   {"full_text":"${else}"},\
   {"full_text":"${if_match ${exec acpi -b | awk "{print $1}" | sed 's/\([^:]*\): \([^,]*\), \([0-9]*\)%.*/\3/'}>60}${exec acpi -b | awk "{print $1}" | sed 's/\([^:]*\): \([^,]*\), \([0-9]*\)%.*/\3/'}%","color":"\#F0DC64","separator": false, "separator_block_width":3},\
@@ -156,7 +156,7 @@ TEXT
   #{"full_text":"ⓥ: ${exec amixer get Master | egrep -o "[0-9]+%" | head -1 | egrep -o "[0-9]*"}%" , "color" : "\#E5EFF0"},\
 
   # Time:
-  {"full_text":"ⓓ","color":"\#888888","separator":false,"separator_block_width":6},\
+  {"full_text":"ⓓ:","color":"\#EEEEEE","separator":false,"separator_block_width":6},\
   {"full_text":"${time %Y.%m.%d}","color":"\#EEEEEE","separator":false,"separator_block_width":6},\
   {"full_text":"${time %R}","color":"\#EEEEEE","separator":false}\
 ],

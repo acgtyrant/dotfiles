@@ -1,19 +1,17 @@
 [user]
-	name = acgtyrant
-	email = acgtyrant@gmail.com
 [color]
 	ui = true
 [alias]
 	glog = log --graph
-	ci = commit
+	ci = commit -s
 	co = checkout
 	st = status
 [credential]
 	helper = cache
-[http]
-	#sslVerify = false
-	#sslCAInfo = /usr/share/goagent/local/CA.crt
 [push]
 	default = simple
 [core]
 	quotepath = false
+[user]
+	name = acgtyrant
+	email = acgtyrant@gmail.com
