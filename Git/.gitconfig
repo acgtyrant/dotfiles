@@ -12,6 +12,7 @@
 	default = simple
 [core]
 	quotepath = false
+	logAllRefUpdates = true
 [user]
 	name = acgtyrant
 	email = acgtyrant@gmail.com

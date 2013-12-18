@@ -1,11 +1,11 @@
 include "/usr/share/themes/QtCurve/gtk-2.0/gtkrc"
 include "/etc/gtk-2.0/gtkrc"
 
-#style "user-font"
-#{
-    #font-name="方正兰亭黑_GBK 12"
-#}
-#widget_class "*" style "user-font" 
+style "user-font"
+{
+    font-name = "方正兰亭黑_GBK 12"
+}
+widget_class "*" style "user-font" 
 
 gtk-theme-name="QtCurve"
 #gtk-theme-name = "MediterraneanLight"
