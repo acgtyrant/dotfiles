@@ -26,11 +26,6 @@ Bundle 'Valloric/ListToggle'
   let g:lt_quickfix_list_toggle_map = '<leader>q'
   let g:lt_height = 10
 
-"Bundle 'gerw/vim-latex-suite'
-  "set grepprg=grep\ -nH\ $*
-  "let g:tex_flavor = "latex"
-  "set guioptions=am
-
 Bundle 'tomasr/molokai'
 
 Bundle 'scrooloose/nerdtree'

@@ -153,7 +153,7 @@ assign [class="(?i)mplayer"] 4: media
 assign [class="(?i)crossover"] 5: crossover
 
 # Startups shortcut
-bindsym $mod+c exec google-chrome
+bindsym $mod+c exec google-chrome-stable
 bindsym $mod+g exec gvim
 bindsym $mod+o exec opera
 
@@ -209,6 +209,8 @@ for_window [class="Thunar"] floating enable
 for_window [class="Manager"] floating enable
 for_window [class="Orage"] floating enable
 for_window [class="Wine"] floating enable
+for_window [class="Calculator"] floating enable
+for_window [class="opencc-gbgui"] floating enable
 for_window [instance="QQ.exe"] floating enable
 for_window [instance="QQ.exe"] border none
 for_window [class="tray"] floating enable
