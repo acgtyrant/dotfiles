@@ -13,6 +13,7 @@
 [core]
 	quotepath = false
 	logAllRefUpdates = true
+	excludesfile = /home/acgtyrant/.gitignore
 [user]
 	name = acgtyrant
 	email = acgtyrant@gmail.com
