@@ -145,7 +145,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 
 # Assigns #
 assign [class="(?i)Urxvt"] 1: urxvt
-assign [class="(?i)google-chrome"] 2: web
+assign [class="(?i)chromium"] 2: web
 assign [class="(?i)opera"] 2: web
 assign [class="(?i)Canopy"] 3: vim
 assign [class="(?i)gVim"] 3: vim
@@ -153,7 +153,7 @@ assign [class="(?i)mplayer"] 4: media
 assign [class="(?i)crossover"] 5: crossover
 
 # Startups shortcut
-bindsym $mod+c exec google-chrome-stable
+bindsym $mod+c exec chromium
 bindsym $mod+g exec gvim
 bindsym $mod+o exec opera
 
