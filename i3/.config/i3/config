@@ -23,7 +23,7 @@ set $dmenu dmenu_run -fn 'Menlo-10' -nf '#FFFFFF' -sb '#00002A' -nb '#447C73' -p
 # chose a FreeType font, such as:
 
 # font pango:DejaVu Sans Mono 10
-font xft: WenQuanYi Micro Hei 11
+font xft: 方正兰亭黑_GBK 11
 #font xft: Sans 9
 # Make i3 support chinese font
 #font xft:Wen Quan Yi Zen Hei Mono 10
@@ -252,7 +252,7 @@ bindsym $mod+x move container to output HDMI1
 bar {
   #position bottom
   #mode dock
-  font xft: WenQuanYi Micro Hei 11
+  font xft: 方正兰亭黑_GBK 11
   tray_output primary
   colors {
       background #3f3f3f

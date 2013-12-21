@@ -105,7 +105,7 @@ if has('gui_running')
  colorscheme molokai
 endif
 set guioptions=a
-set guifont=Droid\ Sans\ Mono\ for\ Powerline
+set guifont=Source\ Code\ Pro\ for\ Powerline
 " }
 
 " splict {

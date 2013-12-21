@@ -4,5 +4,5 @@ rename themes__
 rename themes
 rename custom
 rename .oh-my-zsh/
-delete
 rename Droid Sans Mono for Powerline.otf
+delete
