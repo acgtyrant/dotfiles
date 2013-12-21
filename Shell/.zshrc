@@ -53,7 +53,7 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(git systemd archlinux web-search github)
 
 source $ZSH/oh-my-zsh.sh
-source /usr/share/doc/pkgfile/command-not-found.zsh
+#source /usr/share/doc/pkgfile/command-not-found.zsh
 source $HOME/.zshenv
 
 # Customize to your needs...
@@ -84,7 +84,7 @@ hash -d POST="/home/acgtyrant/blog.acgtyrant.com/source/_posts/"
 # Improve colored output by ls
 eval "$(dircolors -b)"
 # Rbenv control
-eval "$(rbenv init -)"
+#eval "$(rbenv init -)"
 
 # source some files
 # source ~/bin/incr-0.2.zsh
