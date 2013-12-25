@@ -15,6 +15,7 @@ export PATH="$HOME/cxoffice/bin/:$PATH"
 export PATH="$HOME/Canopy32:$PATH"
 export PATH="$HOME/.gem/ruby/2.0.0/bin:$PATH"
 export PATH="/root/.gem/ruby/2.0.0/bin:$PATH"
+export GTK_PATH="$GTK_PATH:/usr/lib/gtk-2.0"
 
 export LESS=-R
 export LESS_TERMCAP_me=$(printf '\e[0m')

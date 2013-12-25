@@ -1,11 +1,14 @@
-include "/usr/share/themes/QtCurve/gtk-2.0/gtkrc"
-include "/etc/gtk-2.0/gtkrc"
+# -- THEME AUTO-WRITTEN DO NOT EDIT
+include "/usr/share/themes/Adwaita/gtk-2.0/gtkrc"
 
-style "user-font"
-{
-    font-name="方正兰亭黑_GBK 12"
+style "user-font" {
+	font_name = "方正兰亭黑_GBK 11"
 }
-widget_class "*" style "user-font" 
 
-gtk-theme-name="QtCurve"
-#gtk-theme-name = "MediterraneanLight"
+widget_class "*" style "user-font"
+
+gtk-font-name="方正兰亭黑_GBK 11"
+
+include "/home/acgtyrant/.gtkrc.mine"
+
+# -- THEME AUTO-WRITTEN DO NOT EDIT
