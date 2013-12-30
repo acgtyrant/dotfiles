@@ -3,48 +3,28 @@ locale-gen
 ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 hwclock --systohc --utc
 echo ThinkPad.acgtyrant.com > /etc/hostname
-systemctl enable dhcpcd@eth0.service
 passwd 
-pacman -S grub-bios
-grub-install --recheck /dev/sda
-cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo
-pacman -S os-prober
-grub-mkconfig -o /boot/grub/grub.cfg
 useradd -m -g users -G wheel,storage,power -s /bin/bash acgtyrant
-systemctl enable dhcpcd@eth0.service
 pacman -S vim
 pacman -S sudo
 chmod u+w /etc/sudoers
 vim /etc/sudoers
 chmod u-w /etc/sudoers
-su acgtyrant
 
 open multilab repository
 
 sudo pacman -S reflector
+sudo reflector --verbose --country "China" -l 5 -p http --sort rate --save /etc/pacman.d/mirrorlist
 
-sudo reflector --verbose -l 200 -p http --sort rate --save /etc/pacman.d/mirrorl ist
-sudo pacman -S pacmatic 
-sudo pacmatic -S git git-doc git-svn git-email git-gui wqy-microhei wqy-zenhei
-python2 goagent dmenu rxvt-unicode yaourt i3 xorg-xrandr arandr vim gvim feh
-gksu fakeroot enchant goagent fcitx-im dzen2 gimp tmux pinfo urxvt-perls ruby
-openssh xclip htop mtr powertop ranger alsi scrot lolcat fcitx-im
-fcitx-configtool dig lynx highlight libcaca atool poppler transmission-cli
-mediainfo ntp mplayer urxvt -perls gcc binutils gdb make gdb mlocate html2text
-lib32-zlib python-pip catalyst-hook catalyst-utils-pxp linux-headers os-prober
-mesa-libgl xf86-video-intel intel-dri clang cmake wgetpaste net-tools
-teamviewer opera nodejs fcitx-rime gstramer0.10-base-plugins
-gstreamer0.10-base-plugins gstreamer0.10-good kingsoft-office firefox cmatrix
-fceux stow
+sudo pacmatic -S git wqy-microhei python2 goagent dmenu i3 xorg-xrandr gvim feh gksu goagent gimp tmux openssh htop ranger alsi acpi scrot fcitx-configtool mplayer urxvt-perls gcc html2text linux-headers xf86-video-intel intel-dri clang cmake wgetpaste net-tools opera nodejs fcitx-rime kingsoft-office firefox cmatrix stow
+
+yaourt 
 
 add catalyst repo
 
-yaourt -S google-chrome fcitx-configtool ttf-mac-fonts gt5 katawa-shoujo
-texworks acroread acroread-fonts mentohust-bin wpsforlinux
-mediterraneannight-theme haroopad insync
+yaourt -S chromium acroread mentohust-bin haroopad 
 
 /etc/pacman.conf
-/etc/goagent
 
 git clone git@github.com/acgtyrant/bin.git ~/bin
 git clone git@github.com/acgtyrant/dotfiles.git ~/dotfiles
@@ -53,5 +33,3 @@ git clone git@github.com/acgtyrant/dotfiles.git ~/dotfiles
 /*~/.xinitrc*/
 /*~/.config*/
 /*~/.gitconfig*/
-
-systemctl enable /etc/systemd/system/suspend@acgtyrant.service

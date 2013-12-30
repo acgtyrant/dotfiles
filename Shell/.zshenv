@@ -1,11 +1,12 @@
 # Some export
 export HISTCONTROL=ignoreboth
 export EDITOR=vim
+export BROWSER=chromium
 export XDG_CONFIG_HOME="$HOME/.config"
-export http_proxy="http://127.0.0.1:8087"
-export https_proxy="http://127.0.0.1:8087"
-export HTTP_PROXY="http://127.0.0.1:8087"
-export HTTPS_PROXY="http://127.0.0.1:8087"
+#export http_proxy="http://127.0.0.1:8087"
+#export https_proxy="http://127.0.0.1:8087"
+#export HTTP_PROXY="http://127.0.0.1:8087"
+#export HTTPS_PROXY="http://127.0.0.1:8087"
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.rbenv/shims:$PATH"
@@ -15,7 +16,7 @@ export PATH="$HOME/cxoffice/bin/:$PATH"
 export PATH="$HOME/Canopy32:$PATH"
 export PATH="$HOME/.gem/ruby/2.0.0/bin:$PATH"
 export PATH="/root/.gem/ruby/2.0.0/bin:$PATH"
-export GTK_PATH="$GTK_PATH:/usr/lib/gtk-2.0"
+#export GTK_PATH="$GTK_PATH:/usr/lib/gtk-2.0"
 
 export LESS=-R
 export LESS_TERMCAP_me=$(printf '\e[0m')

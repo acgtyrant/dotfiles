@@ -196,7 +196,7 @@ bindsym $mod+r mode "resize"
 exec --no-startup-id chromium
 exec --no-startup-id urxvt -e tmuxen
 exec --no-startup-id fcitx &
-exec --no-startup-id extendmirror &
+#exec --no-startup-id extendmirror &
 
 # Set some arbitrary commands for specific windows
 for_window [class="URxvt"] border 1pixel
