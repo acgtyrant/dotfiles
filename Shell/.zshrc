@@ -74,6 +74,9 @@ alias wpp='wpp -style gtk'
 alias dstat='dstat -cdlmnpsy'
 alias l2='sudo l2tp.sh'
 alias sw='sudo wifi-menu'
+alias hexoge='hexo generate'
+alias hexode='hexo deploy'
+alias hexose='hexo server'
 
 # Path aliases
 hash -d POST="/home/acgtyrant/blog.acgtyrant.com/source/_posts/"

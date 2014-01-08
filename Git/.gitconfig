@@ -1,13 +1,32 @@
 [user]
 [color]
 	ui = true
+  interactive = true
 [alias]
-	glog = log --graph
+	s = status
+  a = !git add . && git status
+  au = !git add -u && git status
+  aa = !git add . && git add -u && git status
+
+	c = commit
 	ci = commit -s
+  cm = commit -m
+
 	co = checkout
-	st = status
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	com = checkout master
+
+  b = branch
+
 	l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
+	ll = log --stat --abbrev-commit
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	lp = log -p
+
+  d = diff
+	dw = diff --color-words
+
+  alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
+	me = config user.name
 [credential]
 	helper = cache
 [push]
@@ -16,6 +35,7 @@
 	quotepath = false
 	logAllRefUpdates = true
 	excludesfile = /home/acgtyrant/.gitignore
+	pager = less
 [user]
 	name = acgtyrant
 	email = acgtyrant@gmail.com

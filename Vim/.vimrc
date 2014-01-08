@@ -206,9 +206,8 @@ nnoremap <S-l> :bn<cr>
 " indentation {
 set autoindent
 set tabstop=2
-autocmd filetype python set tabstop=4
-set shiftwidth=2
 set expandtab
+set shiftwidth=2
 " }
 
 " " Fn mapping {
