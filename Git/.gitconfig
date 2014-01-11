@@ -1,6 +1,6 @@
 [user]
 [color]
-	ui = true
+	ui = off
   interactive = true
 [alias]
 	s = status
@@ -35,7 +35,7 @@
 	quotepath = false
 	logAllRefUpdates = true
 	excludesfile = /home/acgtyrant/.gitignore
-	pager = less
+	pager = tig
 [user]
 	name = acgtyrant
 	email = acgtyrant@gmail.com
