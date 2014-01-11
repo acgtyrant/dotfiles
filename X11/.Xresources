@@ -22,7 +22,7 @@ URxvt.scrollBar:         false
 URxvt*scrollTtyOutput:   false
 URxvt*scrollWithBuffer:  true
 URxvt*scrollTtyKeypress: true
-URxvt.perl-ext-common:  defalut,clipboard,url-select,keyboard-select,matcher,vtwheel
+URxvt.perl-ext-common:  default,clipboard,url-select,keyboard-select,matcher,vtwheel
 URxvt.url-launcher:     /usr/bin/chromium -new-tab
 URxvt.matcher.button:   1
 URxvt.colorUL: #4682B4
