@@ -12,34 +12,56 @@ Xft*antialias:  true
 Xft*hinting:    true
 ! -*- }
 
-!URxvt*font: xft: Dejavu Sans Mono:bold, xft:Droid Sans Mono for powerline:pixelsize=15, xft:WenQuanYi Micro Hei Mono:pixelsize=15
-URxvt*font: xft: Droid Sans Mono for Powerline:size=11, xft: 方正兰亭黑_GBK:size=11
-
-URxvt.secondaryWheel: true
+! Scrollbar
 
 URxvt.scrollstyle:       rxvt
 URxvt.scrollBar:         false
 URxvt*scrollTtyOutput:   false
 URxvt*scrollWithBuffer:  true
 URxvt*scrollTtyKeypress: true
-URxvt.perl-ext-common:  default,clipboard,url-select,keyboard-select,matcher,vtwheel
-URxvt.url-launcher:     /usr/bin/chromium -new-tab
-URxvt.matcher.button:   1
-URxvt.colorUL: #4682B4
 
-URxvt.perl-ext:      default,url-select
+! Font
+URxvt*font: xft: Droid Sans Mono for Powerline:size=11, xft: 方正兰亭黑_GBK:size=11
+
+! -*- { Perl extensions
+
+! secondaryWhell which need rxvt-unicode-multi_display-256xresources in AUR
+URxvt.secondaryWheel: true
+
+! vtwehll which need urxvt-vtwheel in AUR, keyboard-select, url-select,
+! clipboard which need urxvt-perls-git
+URxvt.perl-ext-common:  vtwheel,keyboard-select,url-select
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-s:    perl:keyboard-select:search
 URxvt.keysym.M-u:    perl:url-select:select_next
-URxvt.keysym.M-Escape:      perl:keyboard-select:activate
-URxvt.keysym.M-s:           perl:keyboard-select:search
-URxvt.url-select.launcher:  /usr/bin/google-chrome -new-tab
+URxvt.url-select.launcher:  /usr/bin/chromium -new-tab
+URxvt.url-select.button: 2
 URxvt.url-select.underline: true
+URxvt.keysym.M-c:   perl:clipboard:copy
+URxvt.keysym.M-v:   perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+
+!Clickable URLs Extension which need urxvt-perls, replaced by url-select now
+!URxvt.perl-ext-common:  default,matcher
+!URxvt.url-launcher:     /usr/bin/chromium -new-tab
+!URxvt.matcher.button:   1
+!URxvt.colorUL: #4682B4
+
+!Yankable URLs Extension which need urxvt-perls, replaced by url-select two
+!URxvt.perl-ext:      default,url-select
+!Urxvt.keysym.M-u: perl:url-select:select_next
+!URxvt.url-select.launcher:  /usr/bin/chromium -new-tab
+!URxvt.url-select.underline: true
+! -*- }
 
 URxvt.cursorBlink:True
 URxvt.saveLines:65535
 URxvt.borderLess:False
 
+! Locale
 Urxvt.inLocale: zh_CN.UTF-8
 
+! Color
 URxvt.pointerColorBackground : #586E75
 URxvt.pointerColorForeground : #93A1A1
 
