@@ -4,6 +4,7 @@
 
 export PATH=$PATH:~/bin
 export HISTCONTROL=ignoreboth
+export HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S"
 export EDITOR=vim
 
 # If not running interactively, don't do anything
