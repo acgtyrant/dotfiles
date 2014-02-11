@@ -195,8 +195,10 @@ bindsym $mod+r mode "resize"
 # Automatically starting applications on i3 startup
 exec --no-startup-id chromium
 exec --no-startup-id urxvt -e tmuxen
+#exec --no-startup-id urxvt
 exec --no-startup-id fcitx &
-exec --no-startup-id sh ~/bin/extendmirror
+exec --no-startup-id /home/acgtyrant/bin/extendmirror
+exec --no-startup-id weatherboy -l 2132574 -a
 
 # Set some arbitrary commands for specific windows
 for_window [class="URxvt"] border 1pixel
@@ -209,6 +211,7 @@ for_window [class="Orage"] floating enable
 for_window [class="Wine"] floating enable
 for_window [class="Calculator"] floating enable
 for_window [class="Steam"] floating enable
+for_window [class="Dropbox"] floating enable
 for_window [class="opencc-gbgui"] floating enable
 for_window [instance="QQ.exe"] floating enable
 for_window [instance="QQ.exe"] border none
