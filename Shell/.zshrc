@@ -77,6 +77,7 @@ alias sw='sudo wifi-menu'
 alias hexoge='hexo generate'
 alias hexode='hexo deploy'
 alias hexose='hexo server'
+alias cc='c99 -Wall'
 
 # Path aliases
 hash -d POST="/home/acgtyrant/blog.acgtyrant.com/source/_posts/"
