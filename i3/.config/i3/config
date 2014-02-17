@@ -120,11 +120,11 @@ bindsym $mod+space focus mode_toggle
 #bindsym $mod+d focus child
 
 # switch to workspace
-bindsym $mod+1 workspace 1: urxvt
-bindsym $mod+2 workspace 2: web
-bindsym $mod+3 workspace 3: vim
-bindsym $mod+4 workspace 4: media
-bindsym $mod+5 workspace 5: crossover
+bindsym $mod+1 workspace 1: Term
+bindsym $mod+2 workspace 2: Web
+bindsym $mod+3 workspace 3: Editor
+bindsym $mod+4 workspace 4: Media
+bindsym $mod+5 workspace 5: Others
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
@@ -132,11 +132,11 @@ bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1: urxvt
-bindsym $mod+Shift+2 move container to workspace 2: web
-bindsym $mod+Shift+3 move container to workspace 3: vim
-bindsym $mod+Shift+4 move container to workspace 4: media
-bindsym $mod+Shift+5 move container to workspace 5: crossover
+bindsym $mod+Shift+1 move container to workspace 1: Term
+bindsym $mod+Shift+2 move container to workspace 2: Web
+bindsym $mod+Shift+3 move container to workspace 3: Editor
+bindsym $mod+Shift+4 move container to workspace 4: Media
+bindsym $mod+Shift+5 move container to workspace 5: Others
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
@@ -144,13 +144,13 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 # Assigns #
-assign [class="(?i)Urxvt"] 1: urxvt
-assign [class="(?i)chromium"] 2: web
-assign [class="(?i)opera"] 2: web
-assign [class="(?i)Canopy"] 3: vim
-assign [class="(?i)gVim"] 3: vim
-assign [class="(?i)mplayer"] 4: media
-assign [class="(?i)crossover"] 5: crossover
+assign [class="(?i)Urxvt"] 1: Term
+assign [class="(?i)chromium"] 2: Web
+assign [class="(?i)opera"] 2: Web
+assign [class="(?i)Canopy"] 3: Editor
+assign [class="(?i)gVim"] 3: Editor
+assign [class="(?i)mplayer"] 4: Media
+assign [class="(?i)crossover"] 5: Others
 
 # Startups shortcut
 bindsym $mod+c exec chromium
@@ -163,6 +163,8 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec $HOME/.config/i3/exitmenu
+# lock i3
+#bindsym $mod+l exec i3lock
 
 # resize window (you can also use the mouse for that)
 mode "resize" { 
@@ -228,11 +230,11 @@ for_window [title="Preferences"] floating enable
 for_window [title="File Operations"] floating enable
 
 # Automatically putting workspaces on specific screens 
-workspace "1: urxvt" output HDMI1
-workspace "2: web" output HDMI1
-workspace "3: vim" output HDMI1
-workspace "4: media" output HDMI1
-workspace "5: crossover" output HDMI1
+workspace "1: Term" output HDMI1
+workspace "2: Web" output HDMI1
+workspace "3: Editor" output HDMI1
+workspace "4: Media" output HDMI1
+workspace "5: Other" output HDMI1
 
 # Focus follows mouse
 focus_follows_mouse no

@@ -92,9 +92,9 @@ TEXT
   # SSID
   {"full_text":"SSID:","color":"\#EEEEEE","separator": false, "separator_block_width":3},\
   {"full_text":"${wireless_essid wlp9s0}","separator":false, "separator_block_width":3, "color":"\#EEEEEE"},\
-  {"full_text":"广: ${addr enp3s0}","color":"\#EEEEEE","separator":false, "separator_block_width":1},\
+  {"full_text":"局: ${addr enp3s0}","color":"\#EEEEEE","separator":false, "separator_block_width":1},\
   {"full_text":" ","separator":false, "separator_block_width":1},\
-  {"full_text":"局: ${exec /home/acgtyrant/bin/external-ip}","color":"\#EEEEEE","separator":false, "separator_block_width":1},\
+  {"full_text":"广: ${exec /home/acgtyrant/bin/external-ip}","color":"\#EEEEEE","separator":false, "separator_block_width":1},\
   {"full_text":" ","separator":false, "separator_block_width":1},\
 
   # Memory:
