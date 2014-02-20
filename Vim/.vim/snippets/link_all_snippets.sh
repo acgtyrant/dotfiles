@@ -1,5 +1,5 @@
 #!/bin/bash
 
-link -s ./c.snippets ~/.vim/bundle/ultisnips/UltiSnips/c.snippets
-link -s ./markdown.snippets ~/.vim/bundle/ultisnips/UltiSnips/markdown.snippets
-link -s ./python.snippets ~/.vim/bundle/ultisnips/UltiSnips/python.snippets
+cp ./c.snippets ~/.vim/bundle/ultisnips/UltiSnips/c.snippets
+cp ./markdown.snippets ~/.vim/bundle/ultisnips/UltiSnips/markdown.snippets
+cp ./python.snippets ~/.vim/bundle/ultisnips/UltiSnips/python.snippets

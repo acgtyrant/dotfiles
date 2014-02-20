@@ -127,13 +127,14 @@ set directory=~/.vim/.vim_swap//
 set undofile
 set undodir=~/.vim/.vim_undo/
 set viminfo+=n~/.vim/.viminfo/
+" }
 
 set scrolloff=3
 set showcmd
 set wildmenu
 set wildmode=longest
+set noerrorbells
 set novisualbell
-" }
 
 " text typesetting {
 set number
