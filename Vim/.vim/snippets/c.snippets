@@ -71,7 +71,7 @@ ${VISUAL}${0:${VISUAL/(.*)/(?1::code)/}}
 endsnippet
 
 snippet inc "#include local header (inc)"
-#include "${1:`!p snip.rv = snip.basename + '.h'`}"
+#include "${1:`!p snip.rv = snip.basename}`.h"
 endsnippet
 
 snippet Inc "#include <> (Inc)"
@@ -154,11 +154,23 @@ if (${1:/* condition */}) {
 }${3}
 endsnippet
 
+snippet ifo "ifo .. (if)"
+if (${1:/* condition */})
+	${VISUAL}${2:${VISUAL/(.*)/(?1::\/* code *\/)/}}$3
+endsnippet
+
 snippet el "else .. (else)"
 else {
 	${VISUAL}${1:${VISUAL/(.*)/(?1::\/* code *\/)/}}
 }${2}
 endsnippet
+
+snippet elo "else .. (else)"
+else
+	${VISUAL}${1:${VISUAL/(.*)/(?1::\/* code *\/)/}}
+${2}
+endsnippet
+
 
 snippet ife "if .. else (ife)"
 if (${1:/* condition */}) {
@@ -180,13 +192,17 @@ struct ${1:`!p snip.rv = (snip.basename or "name") + "_t"`} {
 endsnippet
 
 snippet fun "function" b
-${1:void} ${2:function_name}(${3}) {
+extern ${1:void} ${2:function_name}(${3}) {
 	${VISUAL}${4:${VISUAL/(.*)/(?1::\/* code *\/)/}}
 }${5}
 endsnippet
 
 snippet fund "function declaration" b
-${1:void} ${2:function_name}(${3});${4}
+extern ${1:void} ${2:function_name}(${3});${4}
+endsnippet
+
+snippet sfund "function declaration" b
+static ${1:void} ${2:function_name}(${3});${4}
 endsnippet
 
 snippet re "return statement" b
@@ -211,4 +227,11 @@ endsnippet
 
 snippet con "Continue statement" !b
 continue;
+endsnippet
+
+snippet sw "switch (...) {...}"
+switch($1) {
+	case $2:$3
+	default:
+}$4
 endsnippet
