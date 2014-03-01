@@ -72,12 +72,11 @@ alias wps='wps -style gtk'
 alias et='et -style gtk'
 alias wpp='wpp -style gtk'
 alias dstat='dstat -cdlmnpsy'
-alias l2='sudo l2tp.sh'
+alias l2='sudo l2tp start'
 alias sw='sudo wifi-menu'
-alias hexoge='hexo generate'
-alias hexode='hexo deploy'
-alias hexose='hexo server'
 alias cc='c99 -Wall'
+alias rj='sudo mentohust.sh start'
+alias rjs='sudo mentohust.sh stop'
 
 # Path aliases
 hash -d POST="/home/acgtyrant/blog.acgtyrant.com/source/_posts/"
