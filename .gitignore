@@ -3,4 +3,6 @@ Vim/.vim/.vim_swap/*
 Vim/.vim/.vim_undo/*
 Vim/.vim/view/*
 Vim/.vim/viminfo/*
+Vim/.vim/.viminfo/*
 Vim/.vim/bundle/*
+i3/.config/i3/i3log
