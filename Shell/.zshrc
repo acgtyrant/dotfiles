@@ -77,6 +77,7 @@ alias sw='sudo wifi-menu'
 alias cc='c99 -Wall'
 alias rj='sudo mentohust.sh start'
 alias rjs='sudo mentohust.sh stop'
+alias gvim='gvim -p'
 
 # Path aliases
 hash -d POST="/home/acgtyrant/blog.acgtyrant.com/source/_posts/"
