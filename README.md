@@ -7,4 +7,7 @@ However, you may notice that how difficulty to manage these dotfiles while they 
 
 BTW, I take that arch_linux_config file as my personal guide to install arch linux, it is not perfect so far and may mislead you.
 
+Note that the FZTHK.TTF in Fonts is not free and open, DO NOT DOWNLOAD and SPREAD IT PLEASE! If you
+wang to ues it, but it yourself, thank you!
+
   [1]: http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html
