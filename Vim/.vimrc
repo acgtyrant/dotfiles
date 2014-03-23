@@ -31,14 +31,14 @@ Bundle 'tomasr/molokai'
 Bundle 'scrooloose/nerdtree'
   map <F1> :NERDTreeToggle<cr>
 
-Bundle 'xuhdev/SingleCompile'
-  nmap <F3> :SCCompile<cr>
-  nmap <S-F3> :SCCompileRun<cr>
+"Bundle 'xuhdev/SingleCompile'
+  "nmap <F3> :SCCompile<cr>
+  "nmap <S-F3> :SCCompileRun<cr>
 
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/syntastic'
 "Bundle 'tpope/vim-fugitive'
-"Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-surround'
 "Bundle 'tpope/vim-repeat'
 Bundle 'kien/ctrlp.vim'
 "Bundle 'corntrace/bufexplorer'
@@ -53,6 +53,8 @@ Bundle 'Yggdroot/indentLine'
 
 Bundle 'SirVer/ultisnips'
   let g:UltiSnipsListSnippets="<leader>j"
+
+Bundle 'honza/vim-snippets'
 
 Bundle 'bling/vim-airline'
   let g:airline_powerline_fonts=1
@@ -101,11 +103,12 @@ syntax on
 
 " gui {
 if has('gui_running')
- set background=dark
- colorscheme molokai
+  colorscheme molokai
+  set background=dark
+  set showtabline=2
+  set guioptions=a
+  set guifont=Source\ Code\ Pro\ for\ Powerline
 endif
-set guioptions=a
-set guifont=Source\ Code\ Pro\ for\ Powerline
 " }
 
 " splict {

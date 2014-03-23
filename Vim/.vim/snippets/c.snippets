@@ -44,7 +44,7 @@ snippet fce "File Comments" !b
 //    Standard:  C99
 //
 //      Author:  Isaac Ge <acgtyrant@gmail.com>.
-//Organization:  Zhejiang Sci-Tech University 
+//Organization:  Zhejiang Sci-Tech University
 //        TODO:  
 // 
 //==============================================================================
@@ -136,6 +136,11 @@ snippet wh "while loop"
 while (${1:/* condition */}) {
 	${VISUAL}${2:${VISUAL/(.*)/(?1::\/* code *\/)/}}
 }${3}
+endsnippet
+
+snippet who "while loop"
+while (${1:/* condition */})
+	${VISUAL}${2:${VISUAL/(.*)/(?1::\/* code *\/)/}}
 endsnippet
 
 snippet do "do...while loop (do)"
