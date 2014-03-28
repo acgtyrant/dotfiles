@@ -88,10 +88,10 @@ $0
 endsnippet
 
 snippet main "main() (main)"
-int main(void) {
-	${VISUAL}${1:${VISUAL/(.*)/(?1::\/* code *\/)/}}
+int main(${1:int argc, char *argv[]}) {
+	${VISUAL}${2:${VISUAL/(.*)/(?1::\/* code *\/)/}}
 	return EXIT_SUCCESS;
-}${2}
+}${3}
 endsnippet
 
 snippet for "for loop (for)"
