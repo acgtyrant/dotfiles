@@ -201,6 +201,7 @@ exec --no-startup-id urxvt -e tmuxen
 exec --no-startup-id fcitx &
 exec --no-startup-id /home/acgtyrant/bin/extendmirror
 exec --no-startup-id weatherboy -l 2132574 -a
+exec --no-startup-id CopyAgent
 
 # Set some arbitrary commands for specific windows
 for_window [class="URxvt"] border 1pixel
