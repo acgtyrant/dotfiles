@@ -31,16 +31,16 @@ Bundle 'tomasr/molokai'
 Bundle 'scrooloose/nerdtree'
   map <F1> :NERDTreeToggle<cr>
 
-"Bundle 'xuhdev/SingleCompile'
-  "nmap <F3> :SCCompile<cr>
-  "nmap <S-F3> :SCCompileRun<cr>
+Bundle 'xuhdev/SingleCompile'
+  nmap <F3> :SCCompile<cr>
+  nmap <S-F3> :SCCompileRun<cr>
 
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/syntastic'
+"Bundle 'scrooloose/syntastic'
 "Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 "Bundle 'tpope/vim-repeat'
-Bundle 'kien/ctrlp.vim'
+"Bundle 'kien/ctrlp.vim'
 "Bundle 'corntrace/bufexplorer'
 "Bundle 'mileszs/ack.vim'
 " nnoremap <leader>a :Ack
@@ -76,6 +76,9 @@ Bundle "majutsushi/tagbar"
   nnoremap <silent> <F4> :TagbarToggle<CR>
 
 Bundle "junegunn/vim-easy-align"
+
+Bundle 'luochen1990/rainbow'
+  let g:rainbow_active = 1
 
 " vim-scripts repos
 " improved yankring
@@ -171,6 +174,8 @@ set selection=inclusive
 set foldmethod=indent
 set confirm
 set noscrollbind
+set ttyfast
+set lazyredraw
 cmap w!! w !sudo tee % >/dev/null
 autocmd FocusLost * silent! up
 autocmd! bufwritepost vimrc source ~/.vimrc
@@ -183,6 +188,8 @@ set pastetoggle=<F2>
 
 autocmd BufWinLeave * if expand('%') != '' && &buftype == '' | mkview | endif
 autocmd BufRead     * if expand('%') != '' && &buftype == '' | silent loadview | syntax on | endif
+
+autocmd BufWritePre *.py :%s/\s\+$//e
 
 inoremap jj <ESC>
 nnoremap ; :

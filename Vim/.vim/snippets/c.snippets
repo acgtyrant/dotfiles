@@ -196,8 +196,14 @@ struct ${1:`!p snip.rv = (snip.basename or "name") + "_t"`} {
 };${3}
 endsnippet
 
-snippet fun "function" b
+snippet fun "function defination" b
 extern ${1:void} ${2:function_name}(${3}) {
+	${VISUAL}${4:${VISUAL/(.*)/(?1::\/* code *\/)/}}
+}${5}
+endsnippet
+
+snippet sfun "static function defination" b
+static ${1:void} ${2:function_name}(${3}) {
 	${VISUAL}${4:${VISUAL/(.*)/(?1::\/* code *\/)/}}
 }${5}
 endsnippet
