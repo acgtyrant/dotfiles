@@ -202,6 +202,7 @@ exec --no-startup-id fcitx &
 exec --no-startup-id /home/acgtyrant/bin/extendmirror
 exec --no-startup-id weatherboy -l 2132574 -a
 exec --no-startup-id CopyAgent
+exec --no-startup-id pidgin
 
 # Set some arbitrary commands for specific windows
 for_window [class="URxvt"] border 1pixel
@@ -213,18 +214,23 @@ for_window [class="Manager"] floating enable
 for_window [class="Orage"] floating enable
 for_window [class="Wine"] floating enable
 for_window [class="Calculator"] floating enable
-for_window [class="Steam"] floating enable
+#for_window [class="Steam"] floating enable
 for_window [class="Dropbox"] floating enable
 for_window [class="opencc-gbgui"] floating enable
 for_window [instance="QQ.exe"] floating enable
 for_window [instance="QQ.exe"] border none
 for_window [class="tray"] floating enable
 for_window [instance="qq"] floating enable
+for_window [class="Panel"] floating enable
 for_window [title="Panel"] floating enable
+for_window [instance="Panel"] floating enable
 for_window [title="Settings"] floating enable
+for_window [instance="Settings"] floating enable
+for_window [class="Notes"] floating enable
 for_window [title="Notes"] floating enable
+for_window [instance="Notes"] floating enable
 for_window [title="feh"] floating enable
-for_window [title="Download"] floating enable
+for_window [instance="Download"] floating enable
 for_window [title="Pman"] floating enable
 for_window [title="chat"] floating enable
 for_window [title="Preferences"] floating enable
@@ -236,6 +242,12 @@ workspace "2: Web" output HDMI1
 workspace "3: Editor" output HDMI1
 workspace "4: Media" output HDMI1
 workspace "5: Other" output HDMI1
+
+# Scratchpad
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+exec --no-startup-id gedit ~/scratchpad
+for_window [class="gedit" instance="scratchpad"] move scratchpad
 
 # Focus follows mouse
 focus_follows_mouse no
