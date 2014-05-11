@@ -196,6 +196,10 @@ nnoremap ; :
 
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
+
+match ErrorMsg '\s\+$'
+"match Todo /\s\+$/
+nnoremap <Leader>rtw :%s/\s\+$//e<CR>
 " }
 
 " searching/moving {
