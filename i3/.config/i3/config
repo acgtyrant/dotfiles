@@ -149,13 +149,17 @@ assign [class="(?i)chromium"] 2: Web
 assign [class="(?i)opera"] 2: Web
 assign [class="(?i)Canopy"] 3: Editor
 assign [class="(?i)gVim"] 3: Editor
+assign [class="(?i)Steam"] 4: Media
+assign [class="(?i)Pidgin"] 4: Media
 assign [class="(?i)mplayer"] 4: Media
+assign [class="(?i)Dota"] 4: Media
 assign [class="(?i)crossover"] 5: Others
 
 # Startups shortcut
 bindsym $mod+c exec chromium
 bindsym $mod+g exec gvim
 bindsym $mod+o exec opera
+bindsym $mod+` exec lxtask
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
