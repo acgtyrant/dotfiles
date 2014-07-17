@@ -1,62 +1,62 @@
 let mapleader = ","
 
-" Let Vundle manage Vundle and plugins firstly {
+" Vundle manage Vundle and plugins firstly {
 
 set nocompatible               " be iMproved
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " all plugins {
 " required! 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 " original repos on github
-"Bundle 'Lokaltog/vim-easymotion'
-Bundle 'Valloric/YouCompleteMe'
+"Plugin 'Lokaltog/vim-easymotion'
+Plugin 'Valloric/YouCompleteMe'
   let g:syntastic_always_populate_loc_list=1
   nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
   let g:ycm_key_list_select_completion = ['<C-TAB>', '<Down>']
   let g:ycm_key_list_previous_completion = ['<C-S-TAB>', '<Up>']
   nnoremap <F6> :YcmForceCompileAndDiagnostics<CR>
 
-Bundle 'Valloric/ListToggle'
+Plugin 'Valloric/ListToggle'
   let g:lt_location_list_toggle_map = '<leader>l'
   let g:lt_quickfix_list_toggle_map = '<leader>q'
   let g:lt_height = 10
 
-Bundle 'tomasr/molokai'
+Plugin 'tomasr/molokai'
 
-Bundle 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
   map <F1> :NERDTreeToggle<cr>
 
-Bundle 'xuhdev/SingleCompile'
+Plugin 'xuhdev/SingleCompile'
   nmap <F3> :SCCompile<cr>
   nmap <S-F3> :SCCompileRun<cr>
 
-Bundle 'scrooloose/nerdcommenter'
-"Bundle 'scrooloose/syntastic'
-"Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-surround'
-"Bundle 'tpope/vim-repeat'
-"Bundle 'kien/ctrlp.vim'
-"Bundle 'corntrace/bufexplorer'
-"Bundle 'mileszs/ack.vim'
+Plugin 'scrooloose/nerdcommenter'
+"Plugin 'scrooloose/syntastic'
+"Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+"Plugin 'tpope/vim-repeat'
+"Plugin 'kien/ctrlp.vim'
+"Plugin 'corntrace/bufexplorer'
+"Plugin 'mileszs/ack.vim'
 " nnoremap <leader>a :Ack
-Bundle 'jiangmiao/auto-pairs'
+Plugin 'jiangmiao/auto-pairs'
 
-Bundle 'Yggdroot/indentLine'
+Plugin 'Yggdroot/indentLine'
   let g:indentLine_color_term = 239
   let g:indentLine_color_gui = '#A4E57E'
   let g:indentLine_char = '┆'
 
-Bundle 'SirVer/ultisnips'
+Plugin 'SirVer/ultisnips'
   let g:UltiSnipsListSnippets="<leader>j"
 
-Bundle 'honza/vim-snippets'
+Plugin 'honza/vim-snippets'
 
-Bundle 'bling/vim-airline'
+Plugin 'bling/vim-airline'
   let g:airline_powerline_fonts=1
   let g:airline_enable_branch=1
   let g:airline_enable_syntastic=1
@@ -72,25 +72,25 @@ Bundle 'bling/vim-airline'
   let g:airline_paste_symbol = 'Þ'
   let g:airline_whitespace_symbol = 'Ξ'
 
-Bundle "majutsushi/tagbar"
+Plugin 'majutsushi/tagbar'
   nnoremap <silent> <F4> :TagbarToggle<CR>
 
-Bundle "junegunn/vim-easy-align"
+Plugin 'junegunn/vim-easy-align'
 
-Bundle 'luochen1990/rainbow'
+Plugin 'luochen1990/rainbow'
   let g:rainbow_active = 1
 
 " vim-scripts repos
 " improved yankring
-"Bundle 'YankRing.vim'
+"Plugin 'YankRing.vim'
 " nnoremap <silent> <F3> :YRShow<cr>
 " inoremap <silent> <F3> <ESC>:YRShow<cr>
 
 " non github repos
 
-" }
-
+call vundle#end()
 filetype plugin indent on     " required!
+
 syntax on
 " }
 
