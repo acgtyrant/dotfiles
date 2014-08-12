@@ -32,3 +32,6 @@ export LESS_TERMCAP_us=$(printf '\e[1;32m')
 export LESS_TERMCAP_so=$(printf '\e[1;44;1m')
 
 export KEYTIMEOUT=1
+
+#Convert a virtual big screen to two screens for SDL game.
+export SDL_VIDEO_FULLSCREEN_HEAD=1
