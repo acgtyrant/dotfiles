@@ -151,6 +151,7 @@ assign [class="(?i)Canopy"] 3: Editor
 assign [class="(?i)gVim"] 3: Editor
 assign [class="(?i)Steam"] 4: Media
 assign [class="(?i)Pidgin"] 4: Media
+assign [class="(?i)Hexchat"] 4: Media
 assign [class="(?i)mplayer"] 4: Media
 assign [class="(?i)Dota"] 4: Media
 assign [class="(?i)crossover"] 5: Others
@@ -206,7 +207,8 @@ exec --no-startup-id fcitx &
 exec --no-startup-id /home/acgtyrant/bin/extendmirror
 exec --no-startup-id weatherboy -l 2132574 -a
 exec --no-startup-id CopyAgent
-exec --no-startup-id pidgin
+exec --no-startup-id hexchat
+exec --no-startup-id synapse
 
 # Set some arbitrary commands for specific windows
 for_window [class="URxvt"] border 1pixel
@@ -218,6 +220,7 @@ for_window [class="Manager"] floating enable
 for_window [class="Orage"] floating enable
 for_window [class="Wine"] floating enable
 for_window [class="Calculator"] floating enable
+for_window [class="Hexchat"] floating disable
 #for_window [class="Steam"] floating enable
 for_window [class="Dropbox"] floating enable
 for_window [class="opencc-gbgui"] floating enable
@@ -248,10 +251,10 @@ workspace "4: Media" output HDMI1
 workspace "5: Other" output HDMI1
 
 # Scratchpad
-bindsym $mod+Shift+minus move scratchpad
-bindsym $mod+minus scratchpad show
+bindsym $mod+minus move scratchpad
+bindsym $mod+plus scratchpad show
 exec --no-startup-id gedit ~/scratchpad
-for_window [class="gedit" instance="scratchpad"] move scratchpad
+for_window [title="scratchpad"] move scratchpad
 
 # Focus follows mouse
 focus_follows_mouse no

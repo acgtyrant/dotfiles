@@ -1,6 +1,10 @@
-
 [Default Applications]
 text/html=chromium.desktop
 x-scheme-handler/http=chromium.desktop
 x-scheme-handler/https=chromium.desktop
 application/pdf=acroread.desktop
+image/jpeg=feh.desktop
+
+[Added Associations]
+image/png=feh.desktop;
+image/jpeg=feh.desktop;

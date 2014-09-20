@@ -33,7 +33,7 @@
                 (aux-info
                     (show-button-bar "true"))))
         (book
-            (position 328)
+            (position 262)
             (current-page 0)
             (dockable "gimp-layer-list"
                 (tab-style automatic)
@@ -48,7 +48,7 @@
             (dockable "gimp-histogram-editor"
                 (tab-style automatic)))
         (book
-            (position 675)
+            (position 531)
             (current-page 0)
             (dockable "gimp-document-list"
                 (tab-style automatic)
@@ -60,8 +60,8 @@
                     (show-button-bar "true"))))))
 (session-info "toplevel"
     (factory-entry "gimp-file-open-dialog")
-    (position 65 24)
-    (size 971 712))
+    (position 0 24)
+    (size 1920 1035))
 (session-info "toplevel"
     (factory-entry "gimp-shear-tool-dialog")
     (position 464 463))
@@ -81,10 +81,10 @@
     (position 51 170))
 (session-info "toplevel"
     (factory-entry "gimp-preferences-dialog")
-    (position 428 81))
+    (position 422 81))
 (session-info "toplevel"
     (factory-entry "gimp-image-new-dialog")
-    (position 51 24))
+    (position 47 24))
 (session-info "toplevel"
     (factory-entry "gimp-rotate-tool-dialog")
     (position 458 149))
