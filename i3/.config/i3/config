@@ -205,10 +205,12 @@ exec --no-startup-id urxvt -e tmuxen
 #exec --no-startup-id urxvt
 exec --no-startup-id fcitx &
 exec --no-startup-id /home/acgtyrant/bin/extendmirror
+exec --no-startup-id /home/acgtyrant/Nutstore/shadowsocks-Linux64bit &
 exec --no-startup-id weatherboy -l 2132574 -a
 exec --no-startup-id hexchat &
 exec --no-startup-id synapse &
 exec --no-startup-id starcal2 &
+exec --no-startup-id nutstore &
 
 # Set some arbitrary commands for specific windows
 for_window [class="URxvt"] border 1pixel
