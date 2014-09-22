@@ -206,9 +206,9 @@ exec --no-startup-id urxvt -e tmuxen
 exec --no-startup-id fcitx &
 exec --no-startup-id /home/acgtyrant/bin/extendmirror
 exec --no-startup-id weatherboy -l 2132574 -a
-exec --no-startup-id CopyAgent
-exec --no-startup-id hexchat
-exec --no-startup-id synapse
+exec --no-startup-id hexchat &
+exec --no-startup-id synapse &
+exec --no-startup-id starcal2 &
 
 # Set some arbitrary commands for specific windows
 for_window [class="URxvt"] border 1pixel
@@ -221,6 +221,7 @@ for_window [class="Orage"] floating enable
 for_window [class="Wine"] floating enable
 for_window [class="Calculator"] floating enable
 for_window [class="Hexchat"] floating disable
+for_window [class="Hangouts"] floating enable
 #for_window [class="Steam"] floating enable
 for_window [class="Dropbox"] floating enable
 for_window [class="opencc-gbgui"] floating enable
