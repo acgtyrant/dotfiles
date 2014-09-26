@@ -6,5 +6,6 @@ application/pdf=acroread.desktop
 image/jpeg=feh.desktop
 
 [Added Associations]
-image/png=feh.desktop;
+image/png=mcomix.desktop;feh.desktop;
 image/jpeg=feh.desktop;
+text/plain=gedit.desktop;

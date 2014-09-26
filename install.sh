@@ -23,12 +23,12 @@ yain xorg-server xorg-xinit xf86-input-synaptics alsa-utils pulseaudio pavucontr
 git clone git@github.com/acgtyrant/bin.git /home/acgtyrant/bin
 git clone git@github.com/acgtyrant/dotfiles.git /home/acgtyrant/dotfiles
 # Favourite software
-yain rxvt-unicode-multi_display-256xresources urxvt-perls-git i3 chromium chromium-pepper-flash chromium-libpdf spacefm nautilus meld hexchat haroopad gedit mcomic lxrandr fcitx-rime nodejs-hexo mentohust-bin acroread deluge vlc deadbeef catfish gnome-system-monitor synapse deepin-screenshot tmux wpsoffice wpsoffice-common wpsoffice-zh-CN lxappearance steam nutstore nautilus-nutstore fcitx-configtool fcitx-im smplayer
+yain rxvt-unicode-multi_display-256xresources urxvt-perls-git i3 chromium chromium-pepper-flash chromium-libpdf spacefm nautilus meld hexchat haroopad gedit mcomic lxrandr fcitx-rime nodejs-hexo mentohust-bin acroread deluge vlc deadbeef catfish gnome-system-monitor synapse deepin-screenshot tmux wpsoffice wpsoffice-common wpsoffice-zh-CN lxappearance steam nutstore nautilus-nutstore fcitx-configtool fcitx-im smplayer texmacs
 # Font
 yain wqy-zenhei wqy-microhei adobe-source-han-sans-fonts acroread-fonts 
 # Theme
 yain stark-gtk-git moka-gtk-git moka-icons-git
 # Optional Software
-yain xmind baobab mcomix skype wineqq emacs sage-mathematics gparted gimp hardinfo teamviewer cpu-g gimp upeditor wicd-gtk gnome-calculator wiznote starcal2
+yain xmind baobab mcomix skype wineqq emacs sage-mathematics gparted gimp hardinfo teamviewer cpu-g gimp upeditor wicd-gtk gnome-calculator wiznote starcal2 gtkhash
 # Develop Tool
 yain jdk8-openjdk eclipse python-docs python2-docs 
