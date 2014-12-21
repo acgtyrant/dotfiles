@@ -66,7 +66,7 @@ alias grep='grep --color'
 alias rake="noglob rake"
 alias rm=' rm -Iv --one-file-system'
 alias mkdir='mkdir -pv'
-alias gcc='gcc -Wall -O'
+alias gcc='gcc -Wall -O -fdiagnostics-color=auto'
 alias google-chrome='google-chrome --enable-easy-off-store-extension-install'
 alias wps='wps -style gtk'
 alias et='et -style gtk'
@@ -78,6 +78,7 @@ alias cc='c99 -Wall'
 alias rj='sudo mentohust.sh start'
 alias rjs='sudo mentohust.sh stop'
 alias gvim='gvim -p'
+alias cl='clang'
 
 # Path aliases
 hash -d POST="/home/acgtyrant/blog.acgtyrant.com/source/_posts/"

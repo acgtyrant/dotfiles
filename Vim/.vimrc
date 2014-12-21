@@ -80,6 +80,8 @@ Plugin 'junegunn/vim-easy-align'
 Plugin 'luochen1990/rainbow'
   let g:rainbow_active = 1
 
+Plugin 'nvie/vim-flake8'
+
 " vim-scripts repos
 " improved yankring
 "Plugin 'YankRing.vim'
