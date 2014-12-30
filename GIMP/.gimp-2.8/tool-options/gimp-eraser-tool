@@ -1,7 +1,0 @@
-# GIMP gimp-eraser-tool options
-
-(brush "Clipboard")
-(dynamics "Dynamics Off")
-(palette "Default")
-
-# end of gimp-eraser-tool options

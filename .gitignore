@@ -9,4 +9,4 @@ i3/.config/i3/i3log
 Ranger/*
 Tmux/.config/tmux-powerline/*
 X11/.config/gtk-3.0/settings.ini
-Default Applications/.local/share/applications/*
+Default Applications
