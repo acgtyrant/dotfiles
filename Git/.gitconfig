@@ -39,3 +39,6 @@
 [user]
 	name = acgtyrant
 	email = acgtyrant@gmail.com
+[merge]
+	conflictstyle = merge
+	tool = meld
