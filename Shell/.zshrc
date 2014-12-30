@@ -96,3 +96,4 @@ eval "$(dircolors -b)"
 
 # source some files
 # source ~/bin/incr-0.2.zsh
+[[ -s /etc/profile.d/autojump.sh  ]] && source /etc/profile.d/autojump.sh
