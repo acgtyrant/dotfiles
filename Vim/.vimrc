@@ -143,6 +143,7 @@ set wildmenu
 set wildmode=longest
 set noerrorbells
 set novisualbell
+set t_vb=
 
 " text typesetting {
 set number
