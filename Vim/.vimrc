@@ -30,6 +30,9 @@ Plugin 'tomasr/molokai'
 
 Plugin 'scrooloose/nerdtree'
   map <F1> :NERDTreeToggle<cr>
+  "Open a NERDTree automatically when vim starts up if no files were specified
+  autocmd StdinReadPre * let s:std_in=1
+  autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 Plugin 'xuhdev/SingleCompile'
   nmap <F3> :SCCompile<cr>
