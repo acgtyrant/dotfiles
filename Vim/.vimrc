@@ -39,6 +39,8 @@ Plugin 'xuhdev/SingleCompile'
   nmap <S-F3> :SCCompileRun<cr>
 
 Plugin 'scrooloose/nerdcommenter'
+  let NERD_c_alt_style=1
+
 "Plugin 'scrooloose/syntastic'
 "Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
