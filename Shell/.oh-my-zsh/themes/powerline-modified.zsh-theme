@@ -27,9 +27,11 @@ ZSH_THEME_GIT_PROMPT_UNTRACKED="%F{190]✭%f"
 
 PROMPT="
 %k%f%F{blue}# \
-%k%f%F{magenta}%K{green} %n \
-%k%f%F{green}%K{blue}"$'\u2b80'" %m \
-%k%f%F{blue}%K{magenta}"$'\u2b80'" %f%F{white}%~ "$'$(git_prompt_info)'"\
+%k%f%F{white}%K{green} %n \
+%k%f%F{green}%K{blue}"$'\u2b80'" \
+%k%f%F{white}%K{blue}%m \
+%k%f%F{blue}%K{magenta}"$'\u2b80'" \
+%f%F{white}%~ "$'$(git_prompt_info)'"\
 %k%f%F{magenta}"$'\u2b80'"
 %k%f%F{red}$ %f"
 
