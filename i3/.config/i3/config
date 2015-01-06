@@ -44,7 +44,7 @@ bindsym Print exec scrot -e 'mv $f ~/ScreenShot.png && feh ~/ScreenShot.png'
 bindsym Mod1+Print exec scrot -s -e 'mv $f ~/SceenShot && feh ~/ScreenShot/$f'
 
 # start an improved terminal
-bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Return exec tilda
 
 # kill focused window
 bindsym $mod+q kill
@@ -202,7 +202,7 @@ bindsym $mod+r mode "resize"
 # Automatically starting applications on i3 startup
 exec --no-startup-id compton &
 exec --no-startup-id chromium
-exec --no-startup-id xfce4-terminal -e tmuxen
+exec --no-startup-id tilda -e /home/acgtyrant/bin/tmuxen
 #exec --no-startup-id urxvt
 exec --no-startup-id fcitx &
 exec --no-startup-id /home/acgtyrant/bin/extendmirror
