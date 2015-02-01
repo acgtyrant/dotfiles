@@ -27,6 +27,10 @@ Plugin 'Valloric/ListToggle'
   let g:lt_height = 10
 
 Plugin 'tomasr/molokai'
+"Vim support for Rust file detection and syntax highlighting.
+"Plugin 'wting/rust.vim' 
+"Vim syntax for TOML
+Plugin 'cespare/vim-toml'
 
 Plugin 'scrooloose/nerdtree'
   map <F1> :NERDTreeToggle<cr>
@@ -216,7 +220,7 @@ nnoremap <Leader>rtw :%s/\s\+$//e<CR>
 " vnoremap / /\v
 set ignorecase
 set smartcase
-set gdefault
+set gdefault "" You do not need add 'g' after every replace command
 set incsearch
 set showmatch
 set hlsearch

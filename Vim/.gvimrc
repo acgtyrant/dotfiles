@@ -1,2 +1,2 @@
-set guifont=Droid\ Sans\ Mono\ for\ Powerline
+set guifont=hermit
 set vb t_vb=
