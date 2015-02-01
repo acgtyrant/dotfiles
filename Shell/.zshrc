@@ -79,6 +79,8 @@ alias rj='sudo mentohust.sh start'
 alias rjs='sudo mentohust.sh stop'
 alias gvim='gvim -p'
 alias cl='clang'
+alias grep="/usr/bin/grep $GREP_OPTIONS"
+unset GREP_OPTIONS
 
 # Path aliases
 hash -d POST="/home/acgtyrant/blog.acgtyrant.com/source/_posts/"
