@@ -1,34 +1,229 @@
-#base-devel
-#nano /etc/locale.gen 
-locale-gen 
+# Set the hostname
+echo "Set the hostname..."
+echo ArchE540 > /etc/hostname
+sleep 1; echo "Done."
+# Set the timezone
+echo "Set the timezone..."
 ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+sleep 1; echo "Done."
+# Set the locale
+echo "Set the locale..."
+sed -i "s/#en_US\.UTF-8 UTF-8/en_US\.UTF-8 UTF-8/" /etc/locale.gen
+sed -i "s/#zh_CN\.UTF-8 UTF-8/zh_CN\.UTF-8 UTF-8/" /etc/locale.gen
+locale-gen
+echo "LANG=en_US.UTF-8 UTF-8" > /etc/locale.conf
+sleep 1; echo "Done."
+# Set the hwclock
 hwclock --systohc --utc
-echo ThinkPad.acgtyrant.com > /etc/hostname
-#
-pacman -S sudo alsi feh acpi scrot xclip git tig clang cmake htop gdb ntpdate weatherboy whois create_ap unzip zip p7zip unrar file-roller dmenu conky su openssh gcc linux-headers wgetpaste cmatrix stow
-chmod u+w /etc/sudoers
-#vim /etc/sudoers
-chmod u-w /etc/sudoers
-useradd -m -g users -G wheel,storage,power -s /bin/bash acgtyrant
-passwd 
-# Cuntomize mirrorlist and set up proxy.
-#reflector
+# Set the passwd
+echo "Set the root passwd..."
+passwd
+sleep 1; echo "Done."
+
+# Set the bootloader...
+
+  # System administration
+
+  ## Users and groups
+  echo "Set the user: acgtyrant..."
+  useradd -m -G wheel -s /bin/bash acgtyrant
+  passwd acgtyrant
+
+  ## Privilege escalation
+  echo "sudo is in the `base` group already, but gksu is not."
+  sleep 1; pacman -S --noconfirm gksu
+  echo "and exec visudo to edit /etc/sudoers immediately."
+  echo "just uncomment '%wheel ALL =(ALL) ALL'."
+  visudo
+  sleep 1; echo "Done."
+
+  ## Service management TODO
+
+  ## System maintenance TODO
+
+# Package management
+
+## pacman TODO
+
+  ## Repositories TODO
+  # uncommnet multilab
+
+  ## Arch Build System TODO
+  # mkdir ~/abs
+
+  ## Arch User Repository TODO
+  # AUR Helper yaourt
+  sleep 1; echo "now you can use yaourt."
+
+  ## Mirrors
+  # rank mirrors
+
+# Graphical user interface
+
+  ## Display drivers TODO
+  # Bumblebee
+  pacman -S --noconfirm bumblebee bbswitch primus virtualgl lib32-primus \
+  lib32-virtualgl mesa mesa-demos xf86-video-intel nvidia lib32-nvidia-utils \
+  lib32-mesa-libgl lib32-mesa 
+  gpasswd -a acgtyrant bumblebee
+  systemctl enable bumblebeed.service
+
+  # Display server TODO
+  pacman -S --noconfirm xorg-server
+  pacman -S --noconfirm compton
+  lxrandr 
+
+  # Windows managers TODO
+  pacman -S --noconfirm i3 conky
+
+  # Display manager TODO
+  pacman -S --noconfirm xorg-xinit
+
+# Audio/video
+
+## Sound TODO
+pacman -S --noconfirm alsa-utils
+pacman -S --noconfirm pulseaudio paprefs pavucontrol
+
+## Browser plugins TODO
+
+## Codecs TODO
+
+# Networking TODO
+
+# Booting TODO
+
+# Power management TODO
+
+# Input devices TODO
+pacman -S --noconfirm xf86-input-synaptics
+
+# Optimization TODO
+
+# System service TODO
+
+# Appearance
+
+## Fonts
+echo "Installing fonts..."
+pacman -S --noconfirm wqy-zenhei wqy-microhei adobe-source-han-sans-cn-fonts otf-hermit
+sleep 1; echo "Done."
+
+## GTK and Qt themes
+#yaourt -S moka* TODO
+lxappearance 
+
+# Console improvements
+
+## Alternative shells
+pacman -S zsh
+chsh -s /bin/zsh acgtyrant
+# oh-my-zsh
+
+## Compressed files
+pacman -S --noconfirm unzip zip p7zip unrar file-roller
+
+## Session management
+pacman -S --noconfirm tmux
+
+# Applications
+
+## Proxy
 pacman -S goagent shadowsocks python2-m2crypto cow-proxy
-# Edit pacman.conf
-yaourt
-# Oh-My-Zsh
-# Driver, xorg, windows manager
-yain xorg-server xorg-xinit xf86-input-synaptics alsa-utils pulseaudio pavucontrol pulseaudio-alsa xf86-video-intel intel-dri
-# Some utilities
+
+## Launcher
+
+dmenu synapse
+
+## Browser
+
+chromium
+chromium-pepper-flash chromium-libpdf 
+
+## Edirot
+
+gvim gedit haroopad
+
+## File manager
+nautilus
+
+## IME
+fcitx-im fcitx-rime fcitx-configtool
+
+## Photoshop
+gimp
+
+## PDF Reader
+evince
+
+# Preferences
+
+## Git
+pacman -S git tig
+pacman -S xclip
+
+## Instant Message
+hexchat
+skype 
+
+## Game
+steam
+
+## Office
+wpsoffice wpsoffice-common wpsoffice-zh-CN
+texmacs 
+
+## Note Software
+wiznote
+
+## Cloud backup
+nutstore nautilus-nutstore 
+
+## Screenshot
+scrot deepin-screenshot
+
+## Remote desktop
+teamviewer
+
+## System info
+alsi cpu-g hardinfo
+
+## Safe plusgins
+upeditor 
+
+## Bitrront
+deluge 
+
+## Monitor
+htop gnome-system-monitor alsi
+
+## Video player
+smplayer vlc gnome-player
+
+## diff
+meld
+
+## Hash checker
+gtkhash
+
+## Calculator
+gnome-calculator
+
+## Calender
+starcal2
+
+## Terminal emulator
+tilda
+
+## Others
+cmatrix xmind baobab gparted wicd-gtk
+yarout -S nodejs-hexo mentohust-bin deadbeef catfish aegisub
+feh weatherboy whois 
+
+# Preference
 git clone git@github.com/acgtyrant/bin.git /home/acgtyrant/bin
 git clone git@github.com/acgtyrant/dotfiles.git /home/acgtyrant/dotfiles
-# Favourite software
-yain rxvt-unicode-multi_display-256xresources urxvt-perls-git i3 chromium chromium-pepper-flash chromium-libpdf spacefm nautilus meld hexchat haroopad gedit mcomic lxrandr fcitx-rime nodejs-hexo mentohust-bin acroread deluge vlc deadbeef catfish gnome-system-monitor synapse deepin-screenshot tmux wpsoffice wpsoffice-common wpsoffice-zh-CN lxappearance steam nutstore nautilus-nutstore fcitx-configtool fcitx-im smplayer texmacs aegisub
-# Font
-yain wqy-zenhei wqy-microhei adobe-source-han-sans-fonts acroread-fonts 
-# Theme
-yain stark-gtk-git moka-gtk-git moka-icons-git
-# Optional Software
-yain xmind baobab mcomix skype wineqq emacs sage-mathematics gparted gimp hardinfo teamviewer cpu-g gimp upeditor wicd-gtk gnome-calculator wiznote starcal2 gtkhash
-# Develop Tool
-yain jdk8-openjdk eclipse python-docs python2-docs 
+pacman -S --noconfirm stow
+stow
+
+create_ap openssh linux-headers
