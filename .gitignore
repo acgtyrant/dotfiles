@@ -1,15 +1,40 @@
+#Vim
 Vim/.vim/.vim_backup/*
 Vim/.vim/.vim_swap/*
 Vim/.vim/.vim_undo/*
+Vim/.vim/.viminfo/*
 Vim/.vim/view/*
 Vim/.vim/viminfo/*
-Vim/.vim/.viminfo/*
 Vim/.vim/bundle/*
+
+# i3
 i3/.config/i3/i3log
+
+# Ranger
 Ranger/*
+
+# Tmux
 Tmux/.config/tmux-powerline/*
+
+# X11
 X11/.config/gtk-3.0/settings.ini
+
+# Default Applications
 Default Applications
+
+# Fcitx
 Fcitx
+
+# Cow
 Cow/.cow/*
+
+# HexChat
 HexChat/*
+
+# SSH
+SSH/.ssh/id_rsa
+SSH/.ssh/id_rsa.pub
+SSH/.ssh/known_hosts
+
+# Tilda
+Tilda/.config/tilda/config_1
