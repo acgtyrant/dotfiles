@@ -28,7 +28,8 @@ Plugin 'Valloric/ListToggle'
 
 Plugin 'tomasr/molokai'
 "Vim support for Rust file detection and syntax highlighting.
-"Plugin 'wting/rust.vim' 
+Plugin 'rust-lang/rust.vim'
+  "autocmd BufRead,BufNewFile *.rs set filetype=rust
 "Vim syntax for TOML
 Plugin 'cespare/vim-toml'
 
@@ -66,18 +67,19 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
 Plugin 'bling/vim-airline'
+  let g:airline_symbols = {}
   let g:airline_powerline_fonts=1
   let g:airline_enable_branch=1
   let g:airline_enable_syntastic=1
   let g:airline_detect_paste=1
   let g:airline_theme='light'
-  let g:airline_left_sep = '⮀'                                                  
-  let g:airline_left_alt_sep = '⮁'                                              
-  let g:airline_right_sep = '⮂'                                                 
-  let g:airline_right_alt_sep = '⮃'
-  let g:airline_branch_prefix = '⭠'                                             
-  let g:airline_readonly_symbol = '⭤'                                           
-  let g:airline_linecolumn_prefix = '⭡'
+  let g:airline_left_sep = ''
+  let g:airline_left_alt_sep = ''
+  let g:airline_right_sep = ''
+  let g:airline_right_alt_sep = ''
+  let g:airline_symbols.branch = ''
+  let g:airline_symbols.readonly = ''
+  let g:airline_symbols.linenr = ''
   let g:airline_paste_symbol = 'Þ'
   let g:airline_whitespace_symbol = 'Ξ'
 
