@@ -197,7 +197,7 @@ bindsym Escape mode "default"
 bindsym $mod+r mode "resize"
 
 # Automatically starting applications on i3 startup
-exec --no-startup-id compton &
+exec --no-startup-id compton -b -c
 exec --no-startup-id chromium
 exec --no-startup-id tilda -e /home/acgtyrant/bin/tmuxen
 #exec --no-startup-id urxvt
