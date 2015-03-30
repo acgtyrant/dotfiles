@@ -10,7 +10,7 @@ call vundle#begin()
 
 " all plugins {
 " required! 
-Plugin 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 " original repos on github
 "Plugin 'Lokaltog/vim-easymotion'
