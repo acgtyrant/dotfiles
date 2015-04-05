@@ -1,73 +1,50 @@
+" Map leader key from backslash to comma, which is confortable to human.
 let mapleader = ","
 
 " Vundle manage Vundle and plugins firstly {
 
-set nocompatible               " be iMproved
+set nocompatible               " be improved
 filetype off                   " required!
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " all plugins {
-" required! 
+" Vim plugins manager
 Plugin 'gmarik/Vundle.vim'
 
 " original repos on github
-"Plugin 'Lokaltog/vim-easymotion'
+Plugin 'scrooloose/nerdtree'
+  map <F1> :NERDTreeToggle<cr>
+  "Open a NERDTree automatically when vim starts up if no files were specified
+  autocmd StdinReadPre * let s:std_in=1
+  autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+Plugin 'scrooloose/nerdcommenter'
+  let NERD_c_alt_style=1
+
 Plugin 'Valloric/YouCompleteMe'
   let g:syntastic_always_populate_loc_list=1
   nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
   let g:ycm_key_list_select_completion = ['<C-TAB>', '<Down>']
   let g:ycm_key_list_previous_completion = ['<C-S-TAB>', '<Up>']
   nnoremap <F6> :YcmForceCompileAndDiagnostics<CR>
+Plugin 'scrooloose/syntastic'
+Plugin 'SirVer/ultisnips'
+  let g:UltiSnipsListSnippets="<leader>j"
+Plugin 'honza/vim-snippets'
 
-Plugin 'Valloric/ListToggle'
-  let g:lt_location_list_toggle_map = '<leader>l'
-  let g:lt_quickfix_list_toggle_map = '<leader>q'
-  let g:lt_height = 10
-
-Plugin 'tomasr/molokai'
-"Vim support for Rust file detection and syntax highlighting.
 Plugin 'rust-lang/rust.vim'
-  "autocmd BufRead,BufNewFile *.rs set filetype=rust
-"Vim syntax for TOML
 Plugin 'cespare/vim-toml'
 
-Plugin 'scrooloose/nerdtree'
-  map <F1> :NERDTreeToggle<cr>
-  "Open a NERDTree automatically when vim starts up if no files were specified
-  autocmd StdinReadPre * let s:std_in=1
-  autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
-Plugin 'xuhdev/SingleCompile'
-  nmap <F3> :SCCompile<cr>
-  nmap <S-F3> :SCCompileRun<cr>
-
-Plugin 'scrooloose/nerdcommenter'
-  let NERD_c_alt_style=1
-
-"Plugin 'scrooloose/syntastic'
-"Plugin 'tpope/vim-fugitive'
+Plugin 'tomasr/molokai'
 Plugin 'tpope/vim-surround'
-"Plugin 'tpope/vim-repeat'
-Plugin 'kien/ctrlp.vim'
-  let g:ctrlp_map = '<c-p>'
-  let g:ctrlp_cmd = 'CtrlP'
-"Plugin 'corntrace/bufexplorer'
-"Plugin 'mileszs/ack.vim'
-" nnoremap <leader>a :Ack
 Plugin 'jiangmiao/auto-pairs'
-
 Plugin 'Yggdroot/indentLine'
   let g:indentLine_color_term = 239
   let g:indentLine_color_gui = '#A4E57E'
   let g:indentLine_char = '┆'
-
-Plugin 'SirVer/ultisnips'
-  let g:UltiSnipsListSnippets="<leader>j"
-
-Plugin 'honza/vim-snippets'
-
+Plugin 'luochen1990/rainbow'
+  let g:rainbow_active = 1
 Plugin 'bling/vim-airline'
   let g:airline_symbols = {}
   let g:airline_powerline_fonts=1
@@ -85,48 +62,11 @@ Plugin 'bling/vim-airline'
   let g:airline_paste_symbol = 'Þ'
   let g:airline_whitespace_symbol = 'Ξ'
 
-Plugin 'majutsushi/tagbar'
-  nnoremap <silent> <F4> :TagbarToggle<CR>
-
-Plugin 'junegunn/vim-easy-align'
-
-Plugin 'luochen1990/rainbow'
-  let g:rainbow_active = 1
-
-Plugin 'nvie/vim-flake8'
-
-" vim-scripts repos
-" improved yankring
-"Plugin 'YankRing.vim'
-" nnoremap <silent> <F3> :YRShow<cr>
-" inoremap <silent> <F3> <ESC>:YRShow<cr>
-
-" non github repos
-
 call vundle#end()
+
 filetype plugin indent on     " required!
 
 syntax on
-" }
-
-" " plugins settings {
-
-" " yankring
-" " 配置yankring历史文件名前缀
-" let g:yankring_history_file = '.yankring_history'
-" 
-" " Mini Buffer Explorer
-" let g:miniBufExplSplitBelow = 1
-" " }
-
-" gui {
-if has('gui_running')
-  colorscheme molokai
-  set background=dark
-  set showtabline=2
-  set guioptions=a
-  set guifont=Source\ Code\ Pro\ for\ Powerline
-endif
 " }
 
 " splict {
@@ -156,7 +96,7 @@ set wildmenu
 set wildmode=longest
 set noerrorbells
 set novisualbell
-set t_vb=
+set noeb vb t_vb=
 
 " text typesetting {
 set number
@@ -165,7 +105,6 @@ set ruler
 set textwidth=79
 set wrap
 set wrapscan
-" formatoptions=qrn1
 set colorcolumn=80
 set cursorline
 set cursorcolumn
@@ -219,9 +158,6 @@ nnoremap <Leader>rtw :%s/\s\+$//e<CR>
 " }
 
 " searching/moving {
-
-" nnoremap / /\v
-" vnoremap / /\v
 set ignorecase
 set smartcase
 set gdefault "" You do not need add 'g' after every replace command
@@ -240,30 +176,3 @@ set tabstop=2
 set expandtab
 set shiftwidth=2
 " }
-
-" " Fn mapping {
-
-" " 切换MiniBufExplorer的显示
-" nnoremap <F2> :TMiniBufExplorer<CR>
-" 
-" " 切换到MiniBufExplorer
-" nnoremap <F3> :MiniBufExplorer<CR>
-" 
-" " 切换Yank Ring的显示
-" nnoremap <silent> <F10> :YRShow<cr>
-" inoremap <silent> <F10> <ESC>:YRShow<cr>
-" 
-" " }
-
-"" filetype {
-"augroup Binary
-    "autocmd!
-    "autocmd BufReadPre  *.bin,*.o let &bin=1
-    "autocmd BufReadPost *.bin,*.o if &bin | %!xxd
-    "autocmd BufReadPost *.bin,*.o set ft=xxd | endif
-    "autocmd BufWritePre *.bin,*.o if &bin | %!xxd -r
-    "autocmd BufWritePre *.bin,*.o endif
-    "autocmd BufWritePost *.bin,*.o if &bin | %!xxd
-    "autocmd BufWritePost *.bin,*.o set nomod | endif
-"augroup END
-"" }
