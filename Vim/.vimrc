@@ -19,8 +19,18 @@ Plugin 'scrooloose/nerdtree'
   "Open a NERDTree automatically when vim starts up if no files were specified
   autocmd StdinReadPre * let s:std_in=1
   autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
 Plugin 'scrooloose/nerdcommenter'
   let NERD_c_alt_style=1
+
+Plugin 'majutsushi/tagbar'
+  map <F3> :TagbarToggle<cr>
+
+"Plugin 'vim-scripts/LustyExplorer'
+  "nmap <Leader>lf :LustyFilesystemExplorer<cr>
+  "nmap <Leader>lr :LustyFilesystemExplorerFromHere<cr>
+  "nmap <Leader>lb :LustyBufferExplorer<cr>
+  "nmap <Leader>lg :LustyBufferGrep<cr>
 
 Plugin 'Valloric/YouCompleteMe'
   let g:syntastic_always_populate_loc_list=1
@@ -29,22 +39,30 @@ Plugin 'Valloric/YouCompleteMe'
   let g:ycm_key_list_previous_completion = ['<C-S-TAB>', '<Up>']
   nnoremap <F6> :YcmForceCompileAndDiagnostics<CR>
 Plugin 'scrooloose/syntastic'
+
 Plugin 'SirVer/ultisnips'
   let g:UltiSnipsListSnippets="<leader>j"
+
 Plugin 'honza/vim-snippets'
 
 Plugin 'rust-lang/rust.vim'
+
 Plugin 'cespare/vim-toml'
 
 Plugin 'tomasr/molokai'
+
 Plugin 'tpope/vim-surround'
+
 Plugin 'jiangmiao/auto-pairs'
+
 Plugin 'Yggdroot/indentLine'
   let g:indentLine_color_term = 239
   let g:indentLine_color_gui = '#A4E57E'
   let g:indentLine_char = '┆'
+
 Plugin 'luochen1990/rainbow'
   let g:rainbow_active = 1
+
 Plugin 'bling/vim-airline'
   let g:airline_symbols = {}
   let g:airline_powerline_fonts=1
