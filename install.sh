@@ -31,7 +31,7 @@ sleep 1; echo "Done."
 
   ## Privilege escalation
   echo "sudo is in the `base` group already, but gksu is not."
-  sleep 1; pacman -S --noconfirm gksu
+  sleep 1; pacman -S --noconfirm --needed gksu
   echo "and exec visudo to edit /etc/sudoers immediately."
   echo "just uncomment '%wheel ALL =(ALL) ALL'."
   visudo
@@ -62,28 +62,28 @@ sleep 1; echo "Done."
 
   ## Display drivers TODO
   # Bumblebee
-  pacman -S --noconfirm bumblebee bbswitch primus virtualgl lib32-primus \
+  pacman -S --noconfirm --needed bumblebee bbswitch primus virtualgl lib32-primus \
   lib32-virtualgl mesa mesa-demos xf86-video-intel nvidia lib32-nvidia-utils \
   lib32-mesa-libgl lib32-mesa 
   gpasswd -a acgtyrant bumblebee
   systemctl enable bumblebeed.service
 
   # Display server TODO
-  pacman -S --noconfirm xorg-server
-  pacman -S --noconfirm compton
+  pacman -S --noconfirm --needed xorg-server
+  pacman -S --noconfirm --needed compton
   lxrandr 
 
   # Windows managers TODO
-  pacman -S --noconfirm i3 conky
+  pacman -S --noconfirm --needed i3 conky
 
   # Display manager TODO
-  pacman -S --noconfirm xorg-xinit
+  pacman -S --noconfirm --needed xorg-xinit
 
 # Audio/video
 
 ## Sound TODO
-pacman -S --noconfirm alsa-utils
-pacman -S --noconfirm pulseaudio paprefs pavucontrol
+pacman -S --noconfirm --needed alsa-utils
+pacman -S --noconfirm --needed pulseaudio paprefs pavucontrol
 
 ## Browser plugins TODO
 
@@ -96,7 +96,7 @@ pacman -S --noconfirm pulseaudio paprefs pavucontrol
 # Power management TODO
 
 # Input devices TODO
-pacman -S --noconfirm xf86-input-synaptics
+pacman -S --noconfirm --needed xf86-input-synaptics
 
 # Optimization TODO
 
@@ -106,7 +106,7 @@ pacman -S --noconfirm xf86-input-synaptics
 
 ## Fonts
 echo "Installing fonts..."
-pacman -S --noconfirm wqy-zenhei wqy-microhei adobe-source-han-sans-cn-fonts otf-hermit
+pacman -S --noconfirm --needed wqy-zenhei wqy-microhei adobe-source-han-sans-cn-fonts otf-hermit
 sleep 1; echo "Done."
 
 ## GTK and Qt themes
@@ -121,10 +121,10 @@ chsh -s /bin/zsh acgtyrant
 # oh-my-zsh
 
 ## Compressed files
-pacman -S --noconfirm unzip zip p7zip unrar file-roller
+pacman -S --noconfirm --needed unzip zip p7zip unrar file-roller
 
 ## Session management
-pacman -S --noconfirm tmux
+pacman -S --noconfirm --needed tmux
 
 # Applications
 
@@ -223,7 +223,7 @@ feh weatherboy whois
 # Preference
 git clone git@github.com/acgtyrant/bin.git /home/acgtyrant/bin
 git clone git@github.com/acgtyrant/dotfiles.git /home/acgtyrant/dotfiles
-pacman -S --noconfirm stow
+pacman -S --noconfirm --needed stow
 stow
 
 create_ap openssh linux-headers
