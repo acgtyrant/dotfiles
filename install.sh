@@ -57,6 +57,8 @@ sleep 1; echo "Done."
 
   ## Mirrors
   # rank mirrors
+  pacman -S --noconfirm --needed reflector
+  sudo reflector --verbose --country 'China' -l 5 -p http --sort rate --save /etc/pacman.d/mirrorlist
 
 # Graphical user interface
 
