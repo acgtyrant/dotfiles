@@ -1,40 +1,44 @@
-# Set the hostname
-echo "Set the hostname..."
-echo ArchE540 > /etc/hostname
-sleep 1; echo "Done."
-# Set the timezone
-echo "Set the timezone..."
-ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-sleep 1; echo "Done."
-# Set the locale
-echo "Set the locale..."
-sed -i "s/#en_US\.UTF-8 UTF-8/en_US\.UTF-8 UTF-8/" /etc/locale.gen
-sed -i "s/#zh_CN\.UTF-8 UTF-8/zh_CN\.UTF-8 UTF-8/" /etc/locale.gen
-locale-gen
-echo "LANG=en_US.UTF-8 UTF-8" > /etc/locale.conf
-sleep 1; echo "Done."
-# Set the hwclock
-hwclock --systohc --utc
-# Set the passwd
-echo "Set the root passwd..."
-passwd
-sleep 1; echo "Done."
+# Intialization
 
-# Set the bootloader...
+  ## Set the hostname
+  echo "Set the hostname to ArchE540..."
+  echo ArchE540 > /etc/hostname
+  sleep 1; echo "Done."
+  ## Set the timezone
+  echo "Set the timezone to Shanghai..."
+  ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+  sleep 1; echo "Done."
+  ## Set the locale
+  echo "Export the locale..."
+  sed -i "s/#en_US\.UTF-8 UTF-8/en_US\.UTF-8 UTF-8/" /etc/locale.gen
+  sed -i "s/#zh_CN\.UTF-8 UTF-8/zh_CN\.UTF-8 UTF-8/" /etc/locale.gen
+  locale-gen
+  echo "LANG=en_US.UTF-8 UTF-8" > /etc/locale.conf
+  sleep 1; echo "Done."
+  ## Set the hwclock
+  echo "Set the hwclock..."
+  hwclock --systohc --utc
+  sleep 1; echo "Done."
+  ## Set the passwd
+  echo "Set the root passwd..."
+  passwd
+  sleep 1; echo "Done."
 
-  # System administration
+# System administration
 
   ## Users and groups
   echo "Set the user: acgtyrant..."
   useradd -m -G wheel -s /bin/bash acgtyrant
+  echo "The user is created, input the new password now."
   passwd acgtyrant
+  sleep 1; echo "Done."
 
   ## Privilege escalation
   echo "sudo is in the `base` group already, but gksu is not."
   sleep 1; pacman -S --noconfirm --needed gksu
   echo "and exec visudo to edit /etc/sudoers immediately."
   echo "just uncomment '%wheel ALL =(ALL) ALL'."
-  visudo
+  sleep 2; visudo
   sleep 1; echo "Done."
 
   ## Service management TODO
@@ -45,47 +49,58 @@ sleep 1; echo "Done."
 
 ## pacman TODO
 
-  ## Repositories TODO
-  # uncommnet multilab
+  ## Repositories
+  echo "Uncommnet multilab, testing and so on."
+  sleep 2; vim /etc/pacman.conf
 
-  ## Arch Build System TODO
-  # mkdir ~/abs
+  ## Arch Build System
 
   ## Arch User Repository TODO
   # AUR Helper yaourt
-  sleep 1; echo "now you can use yaourt."
+  echo "Install yaourt manually now..."
+  curl -O https://aur.archlinux.org/packages/pa/package-query/package-query.tar.gz
+  tar zxvf package-query.tar.gz
+  cd package-query
+  makepkg -si
+  cd ..
+  curl -O https://aur.archlinux.org/packages/ya/yaourt/yaourt.tar.gz
+  tar zxvf yaourt.tar.gz
+  cd yaourt
+  makepkg -si
+  cd ..
+  rm -r package-query.tar.gz package-query yaourt.tar.gz yaourt
+  sleep 1; echo "Now you can use yaourt."
 
   ## Mirrors
   # rank mirrors
-  pacman -S --noconfirm --needed reflector
+  echo "Rank the mirrorlist now..."
+  yaourt -S --noconfirm --needed reflector
   sudo reflector --verbose --country 'China' -l 5 -p http --sort rate --save /etc/pacman.d/mirrorlist
+  sleep 1; echo "Done."
 
 # Graphical user interface
 
-  ## Display drivers TODO
+  ## Display drivers
   # Bumblebee
-  pacman -S --noconfirm --needed bumblebee bbswitch primus virtualgl lib32-primus \
-  lib32-virtualgl mesa mesa-demos xf86-video-intel nvidia lib32-nvidia-utils \
-  lib32-mesa-libgl lib32-mesa 
+  yaourt -S --noconfirm --needed bumblebee bbswitch primus virtualgl lib32-primus \
+    lib32-virtualgl mesa mesa-demos xf86-video-intel nvidia lib32-nvidia-utils \
+    lib32-mesa-libgl lib32-mesa 
   gpasswd -a acgtyrant bumblebee
   systemctl enable bumblebeed.service
 
-  # Display server TODO
-  pacman -S --noconfirm --needed xorg-server
-  pacman -S --noconfirm --needed compton
-  lxrandr 
+  # Display server
+  yaourt -S --noconfirm --needed xorg-server compton lxrandr 
 
-  # Windows managers TODO
-  pacman -S --noconfirm --needed i3 conky
+  # Windows managers
+  yaourt -S --noconfirm --needed i3 conky
 
-  # Display manager TODO
-  pacman -S --noconfirm --needed xorg-xinit
+  # Display manager
+  yaourt -S --noconfirm --needed xorg-xinit
 
 # Audio/video
 
-## Sound TODO
-pacman -S --noconfirm --needed alsa-utils
-pacman -S --noconfirm --needed pulseaudio paprefs pavucontrol
+## Sound
+yaourt -S --noconfirm --needed alsa-utils pulseaudio paprefs pavucontrol
 
 ## Browser plugins TODO
 
@@ -98,134 +113,132 @@ pacman -S --noconfirm --needed pulseaudio paprefs pavucontrol
 # Power management TODO
 
 # Input devices TODO
-pacman -S --noconfirm --needed xf86-input-synaptics
+yaourt -S --noconfirm --needed xf86-input-synaptics
 
 # Optimization TODO
 
 # System service TODO
 
 # Appearance
+yaourt -S --noconfirm --needed lxappearance
 
 ## Fonts
 echo "Installing fonts..."
-pacman -S --noconfirm --needed wqy-zenhei wqy-microhei adobe-source-han-sans-cn-fonts otf-hermit
+yaourt -S --noconfirm --needed wqy-zenhei wqy-microhei adobe-source-han-sans-cn-fonts otf-hermit
 sleep 1; echo "Done."
 
 ## GTK and Qt themes
 #yaourt -S moka* TODO
-lxappearance 
+#lxappearance 
 
 # Console improvements
 
 ## Alternative shells
-pacman -S zsh
+yaourt -S --noconfirm --needed zsh
 chsh -s /bin/zsh acgtyrant
 # oh-my-zsh
 
 ## Compressed files
-pacman -S --noconfirm --needed unzip zip p7zip unrar file-roller
+yaourt -S --noconfirm --needed unzip zip p7zip unrar file-roller
 
 ## Session management
-pacman -S --noconfirm --needed tmux
+yaourt -S --noconfirm --needed tmux
 
 # Applications
 
 ## Proxy
-pacman -S goagent shadowsocks python2-m2crypto cow-proxy
+yaourt -S --noconfirm --needed shadowsocks python2-m2crypto cow-proxy
 
 ## Launcher
 
-dmenu synapse
+yaourt -S --noconfirm --needed dmenu synapse
 
 ## Browser
 
-chromium
-chromium-pepper-flash chromium-libpdf 
+yaourt -S --noconfirm --needed chromium chromium-pepper-flash chromium-libpdf 
 
 ## Edirot
 
-gvim gedit haroopad
+yaourt -S --noconfirm --needed gvim gedit haroopad
 
 ## File manager
-nautilus
+yaourt -S --noconfirm --needed nautilus
 
 ## IME
-fcitx-im fcitx-rime fcitx-configtool
+yaourt -S --noconfirm --needed fcitx-im fcitx-rime fcitx-configtool
 
 ## Photoshop
-gimp
+yaourt -S --noconfirm --needed gimp
 
 ## PDF Reader
-evince
+yaourt -S --noconfirm --needed evince
 
 # Preferences
 
 ## Git
-pacman -S git tig
-pacman -S xclip
+yaourt -S --noconfirm --needed git tig xclip
 
 ## Instant Message
-hexchat
-skype 
+yaourt -S --noconfirm --needed hexchat
 
 ## Game
-steam
+yaourt -S --noconfirm --needed steam
 
 ## Office
-wpsoffice wpsoffice-common wpsoffice-zh-CN
-texmacs 
+#wpsoffice wpsoffice-common wpsoffice-zh-CN
+#texmacs 
 
 ## Note Software
-wiznote
+#wiznote
 
 ## Cloud backup
-nutstore nautilus-nutstore 
+yaourt -S --noconfirm --needed nutstore nautilus-nutstore 
 
 ## Screenshot
-scrot deepin-screenshot
+yaourt -S --noconfirm --needed scrot
 
 ## Remote desktop
-teamviewer
+yaourt -S --noconfirm --needed teamviewer
 
 ## System info
-alsi cpu-g hardinfo
+yaourt -S --noconfirm --needed alsi cpu-g hardinfo
 
 ## Safe plusgins
-upeditor 
+yaourt -S --noconfirm --needed upeditor 
 
 ## Bitrront
-deluge 
+yaourt -S --noconfirm --needed deluge 
 
 ## Monitor
-htop gnome-system-monitor alsi
+yaourt -S --noconfirm --needed htop gnome-system-monitor alsi
 
 ## Video player
-smplayer vlc gnome-player
+#yaourt -S --noconfirm --needed
 
 ## diff
-meld
+yaourt -S --noconfirm --needed meld
 
 ## Hash checker
-gtkhash
+yaourt -S --noconfirm --needed gtkhash
 
 ## Calculator
-gnome-calculator
+yaourt -S --noconfirm --needed gnome-calculator
 
 ## Calender
-starcal2
+#starcal2
 
 ## Terminal emulator
-tilda
+yaourt -S --noconfirm --needed tilda
 
 ## Others
-cmatrix xmind baobab gparted wicd-gtk
-yarout -S nodejs-hexo mentohust-bin deadbeef catfish aegisub
-feh weatherboy whois 
+yaourt -S --noconfirm --needed cmatrix xmind baobab mentohust-bin deadbeef \
+  aegisub feh weatherboy whois create_ap openssh linux-headers
 
 # Preference
-git clone git@github.com/acgtyrant/bin.git /home/acgtyrant/bin
-git clone git@github.com/acgtyrant/dotfiles.git /home/acgtyrant/dotfiles
-pacman -S --noconfirm --needed stow
-stow
+#git clone git@github.com/acgtyrant/bin.git /home/acgtyrant/bin
+#git clone git@github.com/acgtyrant/dotfiles.git /home/acgtyrant/dotfiles
+yaourt -S --noconfirm --needed stow
+#stow
 
-create_ap openssh linux-headers
+# Development
+yarout -S --no-confirm --needed git gitg elerm rust python
