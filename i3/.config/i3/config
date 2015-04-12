@@ -209,7 +209,7 @@ exec --no-startup-id hexchat &
 exec --no-startup-id synapse &
 exec --no-startup-id starcal2 &
 exec --no-startup-id nutstore &
-exec --no-startup-id rescuretime &
+exec --no-startup-id rescuetime &
 
 # Set some arbitrary commands for specific windows
 for_window [class="URxvt"] border 1pixel
