@@ -83,13 +83,13 @@
   ## Display drivers
   # Bumblebee
   yaourt -S --noconfirm --needed bumblebee bbswitch primus virtualgl lib32-primus \
-    lib32-virtualgl mesa mesa-demos xf86-video-intel nvidia lib32-nvidia-utils \
-    lib32-mesa-libgl lib32-mesa 
+    lib32-virtualgl mesa mesa-demos xf86-video-intel nvidia lib32-nvidia-utils
+    lib32-mesa-libgl lib32-mesa
   gpasswd -a acgtyrant bumblebee
   systemctl enable bumblebeed.service
 
   # Display server
-  yaourt -S --noconfirm --needed xorg-server compton lxrandr 
+  yaourt -S --noconfirm --needed xorg-server compton lxrandr
 
   # Windows managers
   yaourt -S --noconfirm --needed i3 conky
@@ -111,6 +111,7 @@ yaourt -S --noconfirm --needed alsa-utils pulseaudio paprefs pavucontrol
 # Booting TODO
 
 # Power management TODO
+yaourt -S acpi
 
 # Input devices TODO
 yaourt -S --noconfirm --needed xf86-input-synaptics
@@ -124,7 +125,7 @@ yaourt -S --noconfirm --needed lxappearance
 
 ## Fonts
 echo "Installing fonts..."
-yaourt -S --noconfirm --needed wqy-zenhei wqy-microhei adobe-source-han-sans-cn-fonts otf-hermit
+yaourt -S --noconfirm --needed wqy-zenhei wqy-microhei adobe-source-han-sans-cn-fonts otf-hermita ttf-ubuntu-font-family 
 sleep 1; echo "Done."
 
 ## GTK and Qt themes
@@ -155,14 +156,14 @@ yaourt -S --noconfirm --needed dmenu synapse
 
 ## Browser
 
-yaourt -S --noconfirm --needed chromium chromium-pepper-flash chromium-libpdf 
+yaourt -S --noconfirm --needed chromium chromium-pepper-flash
 
 ## Edirot
 
 yaourt -S --noconfirm --needed gvim gedit haroopad
 
 ## File manager
-yaourt -S --noconfirm --needed nautilus
+yaourt -S --noconfirm --needed ranger nautilus
 
 ## IME
 yaourt -S --noconfirm --needed fcitx-im fcitx-rime fcitx-configtool
@@ -204,10 +205,10 @@ yaourt -S --noconfirm --needed teamviewer
 yaourt -S --noconfirm --needed alsi cpu-g hardinfo
 
 ## Safe plusgins
-yaourt -S --noconfirm --needed upeditor 
+yaourt -S --noconfirm --needed upeditor
 
 ## Bitrront
-yaourt -S --noconfirm --needed deluge 
+yaourt -S --noconfirm --needed deluge
 
 ## Monitor
 yaourt -S --noconfirm --needed htop gnome-system-monitor alsi
@@ -241,4 +242,4 @@ yaourt -S --noconfirm --needed stow
 #stow
 
 # Development
-yarout -S --no-confirm --needed git gitg elerm rust python
+yarout -S --no-confirm --needed git gitg elerm rust python clang cmake
