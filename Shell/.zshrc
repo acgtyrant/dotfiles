@@ -7,7 +7,7 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 
 # ZSH_THEME="ys"
-ZSH_THEME="powerline-modified"
+ZSH_THEME="tyrant"
 
 # Make man pages colored
 man() {
