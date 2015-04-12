@@ -210,6 +210,7 @@ exec --no-startup-id synapse &
 exec --no-startup-id starcal2 &
 exec --no-startup-id nutstore &
 exec --no-startup-id rescuetime &
+exec --no-startup-id /opt/nutstore/bin/nutstore-pydaemon.py &
 
 # Set some arbitrary commands for specific windows
 for_window [class="URxvt"] border 1pixel
