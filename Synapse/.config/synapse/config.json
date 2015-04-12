@@ -1,0 +1,44 @@
+ {
+   "plugins" : {
+     "directory-plugin" : {
+       "home-dir-children-only" : false
+       use-internal: true
+     }
+   },
+   "ui" : {
+     "widgets" : {
+       "extended-info-enabled" : false
+     },
+     "global" : {
+       "ui-type" : "virgilio",
+       "show-indicator" : true
+     }
+   },
+   "data-sink" : {
+     "global" : {
+       "disabled-plugins" : [
+         "SynapseBansheeActions",
+         SynapseCalculatorPlugin,
+         SynapseChatActions,
+         SynapseChromiumPlugin,
+         "SynapseDevhelpPlugin",
+         "SynapseDictionaryPlugin",
+         SynapseGnomeBookmarksPlugin,
+         SynapseGnomeScreenSaverPlugin,
+         SynapseGnomeSessionPlugin,
+         SynapseHelloWorldPlugin,
+         SynapseHybridSearchPlugin,
+         SynapseImgUrPlugin,
+         SynapseLaunchpadPlugin,
+         SynapseOpenSearchPlugin,
+         SynapsePastebinPlugin,
+         SynapsePidginPlugin,
+         SynapseRhythmboxActions,
+         SynapseSelectionPlugin,
+         SynapseSystemManagementPlugin,
+         SynapseTestSlowPlugin,
+         SynapseXnoiseActions
+       ]
+     }
+   }
+ }
