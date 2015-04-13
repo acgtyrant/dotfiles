@@ -80,6 +80,8 @@ Plugin 'bling/vim-airline'
   let g:airline_paste_symbol = 'Þ'
   let g:airline_whitespace_symbol = 'Ξ'
 
+Bundle 'wakatime/vim-wakatime'
+
 call vundle#end()
 
 filetype plugin indent on     " required!
