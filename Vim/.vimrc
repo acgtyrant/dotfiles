@@ -22,6 +22,7 @@ Plugin 'scrooloose/nerdtree'
 
 Plugin 'scrooloose/nerdcommenter'
   let NERD_c_alt_style=1
+  let g:NERDCustomDelimiters = {'c': { 'leftAlt': '/*', 'rightAlt': '*/', 'left': '// '}}
 
 Plugin 'majutsushi/tagbar'
   map <F3> :TagbarToggle<cr>
