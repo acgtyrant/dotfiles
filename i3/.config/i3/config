@@ -143,6 +143,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 # Assigns #
 assign [class="(?i)Urxvt"] 1: Term
 assign [class="(?i)chromium"] 2: Web
+assign [class="(?i)google-chrome-stable"] 2: Web
 assign [class="(?i)opera"] 2: Web
 assign [class="(?i)Canopy"] 3: Editor
 assign [class="(?i)gVim"] 3: Editor
@@ -154,7 +155,7 @@ assign [class="(?i)Dota"] 4: Media
 assign [class="(?i)crossover"] 5: Others
 
 # Startups shortcut
-bindsym $mod+c exec chromium
+bindsym $mod+c exec google-chrome-stable
 bindsym $mod+g exec gvim
 bindsym $mod+o exec opera
 bindsym $mod+` exec lxtask
@@ -198,7 +199,7 @@ bindsym $mod+r mode "resize"
 
 # Automatically starting applications on i3 startup
 exec --no-startup-id compton -b -c
-exec --no-startup-id chromium
+exec --no-startup-id google-chrome-stable
 exec --no-startup-id tilda -e /home/acgtyrant/bin/tmuxen
 #exec --no-startup-id urxvt
 exec --no-startup-id fcitx &
