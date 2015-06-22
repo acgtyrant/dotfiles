@@ -82,6 +82,7 @@ alias rjs='sudo mentohust.sh stop'
 alias gvim='gvim -p'
 alias cl='clang'
 alias grep="/usr/bin/grep $GREP_OPTIONS"
+alias gv='gvim'
 unset GREP_OPTIONS
 
 # Path aliases
