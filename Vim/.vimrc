@@ -40,6 +40,8 @@ Plugin 'Valloric/YouCompleteMe'
   let g:ycm_key_list_previous_completion = ['<C-S-TAB>', '<Up>']
   nnoremap <F6> :YcmForceCompileAndDiagnostics<CR>
 Plugin 'scrooloose/syntastic'
+  let g:syntastic_cpp_compiler = 'clang++'
+  let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 
 Plugin 'SirVer/ultisnips'
   let g:UltiSnipsListSnippets="<leader>j"
