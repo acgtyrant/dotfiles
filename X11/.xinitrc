@@ -23,4 +23,4 @@ export LC_CTYPE="zh_CN.UTF-8"
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
 #exec gnome-session
-exec i3
+exec i3 --shmlog-size=26214400
