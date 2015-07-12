@@ -25,35 +25,6 @@ snippet fc "File Comments" !b
 ${2}
 endsnippet
 
-snippet fce "File Comments" !b
-
-//==============================================================================
-// 
-//   Copyright:  © 2013 Isaac Ge
-//     Licence:  GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-//               This is free software: you are free to change and redistribute
-//               it.  There is NO WARRANTY, to the extent permitted by law.
-//
-//    Filename:  `!p snip.rv = snip.fn`
-// Description:  KnR-The-C-Programming-Language-Solutions
-//               Exercise ${1}, page ${2}
-//               
-//               ${3}
-//
-//    Compiler:  gcc
-//    Standard:  C99
-//
-//      Author:  Isaac Ge <acgtyrant@gmail.com>.
-//Organization:  Zhejiang Sci-Tech University
-//        TODO:  
-// 
-//==============================================================================
- 
-#include <stdio.h>
-#include <stdlib.h>
-${4}
-endsnippet
-
 snippet def "#define ..."
 #define ${1}
 endsnippet
@@ -71,20 +42,11 @@ ${VISUAL}${0:${VISUAL/(.*)/(?1::code)/}}
 endsnippet
 
 snippet inc "#include local header (inc)"
-#include "${1:`!p snip.rv = snip.basename`}.h"
+#include "${1:`!p snip.rv = snip.basename`}.h${2}"
 endsnippet
 
 snippet Inc "#include <> (Inc)"
-#include <${1}.h>${2}
-endsnippet
-
-snippet mark "#pragma mark (mark)"
-#if 0
-${1:#pragma mark -
-}#pragma mark $2
-#endif
-
-$0
+#include <${1}.h${2}>${3}
 endsnippet
 
 snippet main "main() (main)"
@@ -245,4 +207,15 @@ switch($1) {
 	case $2:$3
 	default:
 }$4
+endsnippet
+
+# below is unuseful
+
+snippet mark "#pragma mark (mark)"
+#if 0
+${1:#pragma mark -
+}#pragma mark $2
+#endif
+
+$0
 endsnippet
