@@ -1,1 +1,2 @@
-feh  --bg-scale '/home/acgtyrant/background' 
+#!/bin/sh
+feh  --bg-fill '/home/acgtyrant/background' 
