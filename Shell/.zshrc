@@ -57,6 +57,7 @@ plugins=(systemd archlinux web-search github)
 source $ZSH/oh-my-zsh.sh
 #source /usr/share/doc/pkgfile/command-not-found.zsh
 source $HOME/.zshenv
+source /usr/share/doc/pkgfile/command-not-found.zsh
 
 # Customize to your needs...
 
