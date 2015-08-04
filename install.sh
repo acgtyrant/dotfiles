@@ -70,6 +70,7 @@
   cd ..
   rm -r package-query.tar.gz package-query yaourt.tar.gz yaourt
   sleep 1; echo "Now you can use yaourt."
+  yaourt -S pkgstat
 
   ## Mirrors
   # rank mirrors
@@ -82,14 +83,14 @@
 
   ## Display drivers
   # Bumblebee
-  yaourt -S --noconfirm --needed bumblebee bbswitch primus virtualgl lib32-primus \
-    lib32-virtualgl mesa mesa-demos xf86-video-intel nvidia lib32-nvidia-utils
-    lib32-mesa-libgl lib32-mesa
+  yaourt -S --noconfirm --needed bumblebee bbswitch primus virtualgl \
+    lib32-primus lib32-virtualgl mesa mesa-demos xf86-video-intel nvidia \
+    lib32-nvidia-utils lib32-mesa-libgl lib32-mesa
   gpasswd -a acgtyrant bumblebee
   systemctl enable bumblebeed.service
 
   # Display server
-  yaourt -S --noconfirm --needed xorg-server compton lxrandr
+  yaourt -S --noconfirm --needed xorg-server compton lxrandr xorg-xmodmap
 
   # Windows managers
   yaourt -S --noconfirm --needed i3 conky
@@ -100,7 +101,8 @@
 # Audio/video
 
 ## Sound
-yaourt -S --noconfirm --needed alsa-utils pulseaudio paprefs pavucontrol
+yaourt -S --noconfirm --needed alsa-utils pulseaudio paprefs pavucontrol \
+  pulseaudio-alsa
 
 ## Browser plugins TODO
 
@@ -125,12 +127,12 @@ yaourt -S --noconfirm --needed lxappearance
 
 ## Fonts
 echo "Installing fonts..."
-yaourt -S --noconfirm --needed wqy-zenhei wqy-microhei adobe-source-han-sans-cn-fonts otf-hermita ttf-ubuntu-font-family 
+yaourt -S --noconfirm --needed wqy-zenhei wqy-microhei adobe-source-han-sans-cn-fonts otf-hermita ttf-ubuntu-font-family
 sleep 1; echo "Done."
 
 ## GTK and Qt themes
-#yaourt -S moka* TODO
-#lxappearance 
+yaourt -S paper-gtk-theme-git
+#lxappearance
 
 # Console improvements
 
@@ -156,9 +158,9 @@ yaourt -S --noconfirm --needed dmenu synapse
 
 ## Browser
 
-yaourt -S --noconfirm --needed chromium chromium-pepper-flash
+yaourt -S --noconfirm --needed chromium chromium-pepper-flash firefox opera
 
-## Edirot
+## Editor
 
 yaourt -S --noconfirm --needed gvim gedit haroopad
 
@@ -166,7 +168,7 @@ yaourt -S --noconfirm --needed gvim gedit haroopad
 yaourt -S --noconfirm --needed ranger nautilus
 
 ## IME
-yaourt -S --noconfirm --needed fcitx-im fcitx-rime fcitx-configtool
+yaourt -S --noconfirm --needed fcitx-im fcitx-rime fcitx-configtool fcitx-qt5
 
 ## Photoshop
 yaourt -S --noconfirm --needed gimp
@@ -187,13 +189,13 @@ yaourt -S --noconfirm --needed steam
 
 ## Office
 #wpsoffice wpsoffice-common wpsoffice-zh-CN
-#texmacs 
+#texmacs
 
 ## Note Software
 #wiznote
 
 ## Cloud backup
-yaourt -S --noconfirm --needed nutstore nautilus-nutstore 
+yaourt -S --noconfirm --needed nutstore nautilus-nutstore
 
 ## Screenshot
 yaourt -S --noconfirm --needed scrot
@@ -233,13 +235,16 @@ yaourt -S --noconfirm --needed tilda
 
 ## Others
 yaourt -S --noconfirm --needed cmatrix xmind baobab mentohust-bin deadbeef \
-  aegisub feh weatherboy whois create_ap openssh linux-headers
+  aegisub feh weatherboy whois create_ap openssh linux-headers rescuetime \
+  autojump tree
 
 # Preference
-#git clone git@github.com/acgtyrant/bin.git /home/acgtyrant/bin
-#git clone git@github.com/acgtyrant/dotfiles.git /home/acgtyrant/dotfiles
+#git clone git@github.com:acgtyrant/bin.git /home/acgtyrant/bin
+#git clone git@github.com:acgtyrant/dotfiles.git /home/acgtyrant/dotfiles
+#git clone git@github.com:robbyrussell/oh-my-zsh.git /home/acgtyrant/.oh-my-zsh
 yaourt -S --noconfirm --needed stow
 #stow
 
 # Development
-yarout -S --no-confirm --needed git gitg elerm rust python clang cmake
+yarout -S --no-confirm --needed git gitg ix rust python clang cmake gdb \
+  valgrind nodejs dnsutils ctags gist
