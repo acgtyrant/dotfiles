@@ -41,12 +41,12 @@ ${VISUAL}${0:${VISUAL/(.*)/(?1::code)/}}
 #endif
 endsnippet
 
-snippet inc "#include local header (inc)"
-#include "${1:`!p snip.rv = snip.basename`}.h${2}"
+snippet Inc "#include local header (Inc)"
+#include "${1:`!p snip.rv = snip.basename`.h}${2}"
 endsnippet
 
-snippet Inc "#include <> (Inc)"
-#include <${1}.h${2}>${3}
+snippet inc "#include <> (inc)"
+#include <${1}>${3}
 endsnippet
 
 snippet main "main() (main)"
