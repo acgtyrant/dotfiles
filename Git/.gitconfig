@@ -9,7 +9,7 @@
   aa = !git add . && git add -u && git status
 
 	c = commit
-	ci = commit -s
+	ci = commit
   cm = commit -m
 
 	co = checkout
