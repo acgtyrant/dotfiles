@@ -14,19 +14,20 @@ endsnippet
 
 snippet cl "class .. (class)"
 class ${1:`!p snip.rv = snip.basename or "name"`} {
-public:
-	${1/(\w+).*/$1/}(${2:arguments});
-	virtual ~${1/(\w+).*/$1/} ();
+ public:
+  ${1/(\w+).*/$1/}(${2:arguments});
 
-private:
-	${0:/* data */}
+ private:
+  ${0:/* data */}
 };
 endsnippet
 
 snippet ns "namespace .. (namespace)"
 namespace ${1} {
+
 ${VISUAL}${0}
-}  // $1
+
+}  // ${1:namespace}
 endsnippet
 
 snippet readfile "read file (readF)"
@@ -50,14 +51,6 @@ endsnippet
 
 snippet tp "template <typename ..> (template)"
 template <typename ${1:_InputIter}>
-endsnippet
-
-snippet inc "#include local header (inc)"
-#include "${1:`!p snip.rv = snip.basename`}"
-endsnippet
-
-snippet Inc "#include <> (Inc)"
-#include <${1}>${2}
 endsnippet
 
 # vim:ft=snippets:
