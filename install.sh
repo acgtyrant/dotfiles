@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Intialization
 
   ## Set the hostname
