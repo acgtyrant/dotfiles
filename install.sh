@@ -72,7 +72,7 @@
   cd ..
   rm -r package-query.tar.gz package-query yaourt.tar.gz yaourt
   sleep 1; echo "Now you can use yaourt."
-  yaourt -S pkgstat
+  yaourt -S pkgstat pkgfile
 
   ## Mirrors
   # rank mirrors
@@ -112,10 +112,12 @@ yaourt -S --noconfirm --needed alsa-utils pulseaudio paprefs pavucontrol \
 
 # Networking TODO
 
+yaourt -S --noconfirm --needed wget
+
 # Booting TODO
 
 # Power management TODO
-yaourt -S acpi
+yaourt -S --noconfirm --needed acpi
 
 # Input devices TODO
 yaourt -S --noconfirm --needed xf86-input-synaptics
@@ -129,7 +131,8 @@ yaourt -S --noconfirm --needed lxappearance
 
 ## Fonts
 echo "Installing fonts..."
-yaourt -S --noconfirm --needed wqy-zenhei wqy-microhei adobe-source-han-sans-cn-fonts otf-hermita ttf-ubuntu-font-family
+yaourt -S --noconfirm --needed wqy-zenhei wqy-microhei otf-hermit
+adobe-source-han-sans-cn-fonts otf-google-chrome ttf-ubuntu-font-family
 sleep 1; echo "Done."
 
 ## GTK and Qt themes
@@ -160,7 +163,7 @@ yaourt -S --noconfirm --needed dmenu synapse
 
 ## Browser
 
-yaourt -S --noconfirm --needed chromium chromium-pepper-flash firefox opera
+yaourt -S --noconfirm --needed google-chrome chromium-pepper-flash firefox opera
 
 ## Editor
 
@@ -206,7 +209,7 @@ yaourt -S --noconfirm --needed scrot
 yaourt -S --noconfirm --needed teamviewer
 
 ## System info
-yaourt -S --noconfirm --needed alsi cpu-g hardinfo
+yaourt -S --noconfirm --needed alsi cpu-g-bzr hardinfo
 
 ## Safe plusgins
 yaourt -S --noconfirm --needed upeditor
@@ -248,5 +251,5 @@ yaourt -S --noconfirm --needed stow
 #stow
 
 # Development
-yarout -S --no-confirm --needed git gitg ix rust python clang cmake gdb \
-  valgrind nodejs dnsutils ctags gist
+yarout -S --noconfirm --needed git gitg ix rust python clang cmake gdb \
+  valgrind nodejs dnsutils ctags gist npm
