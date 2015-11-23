@@ -143,7 +143,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 # Assigns #
 assign [class="(?i)Urxvt"] 1: Term
 assign [class="(?i)chromium"] 2: Web
-assign [class="(?i)google-chrome-stable"] 2: Web
+assign [class="(?i)google-chrome"] 2: Web
 assign [class="(?i)opera"] 2: Web
 assign [class="(?i)Canopy"] 3: Editor
 assign [class="(?i)gVim"] 3: Editor
@@ -212,6 +212,7 @@ exec --no-startup-id starcal2 &
 exec --no-startup-id nutstore &
 exec --no-startup-id rescuetime &
 exec --no-startup-id /opt/nutstore/bin/nutstore-pydaemon.py &
+exec --no-startup-id thunderbird
 
 # Set some arbitrary commands for specific windows
 for_window [class="URxvt"] border 1pixel

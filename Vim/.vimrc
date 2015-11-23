@@ -11,7 +11,7 @@ call vundle#begin()
 
 " all plugins {
 " Vim plugins manager
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VumdleVim/Vundle.vim'
 
 " original repos on github
 Plugin 'scrooloose/nerdtree'
@@ -53,6 +53,8 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'cespare/vim-toml'
 
 Plugin 'tomasr/molokai'
+
+Plugin 'altercation/vim-colors-solarized'
 
 Plugin 'tpope/vim-surround'
 

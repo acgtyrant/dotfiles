@@ -21,7 +21,8 @@ export PATH="/root/.gem/ruby/2.0.0/bin:$PATH"
 export PATH="/opt/android-sdk/platform-tools:$PATH"
 #export GTK_PATH="$GTK_PATH:/usr/lib/gtk-2.0"
 export QT_SELECT=4
-
+export PYTHONPATH=${HOME}/Projects/longjon-caffe/python:$PYTHONPATH
+export PAGER='vimpager'
 
 export LESS=-R
 export LESS_TERMCAP_me=$(printf '\e[0m')

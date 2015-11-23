@@ -218,7 +218,7 @@ yaourt -S --noconfirm --needed upeditor
 yaourt -S --noconfirm --needed deluge
 
 ## Monitor
-yaourt -S --noconfirm --needed htop gnome-system-monitor alsi
+yaourt -S --noconfirm --needed htop gnome-system-monitor
 
 ## Video player
 #yaourt -S --noconfirm --needed
@@ -239,9 +239,9 @@ yaourt -S --noconfirm --needed gnome-calculator
 yaourt -S --noconfirm --needed tilda
 
 ## Others
-yaourt -S --noconfirm --needed cmatrix xmind baobab mentohust-bin deadbeef \
+yaourt -S --noconfirm --needed cmatrix xmind baobab deadbeef \
   aegisub feh weatherboy whois create_ap openssh linux-headers rescuetime \
-  autojump tree
+  autojump tree vimpager
 
 # Preference
 #git clone git@github.com:acgtyrant/bin.git /home/acgtyrant/bin
@@ -251,5 +251,5 @@ yaourt -S --noconfirm --needed stow
 #stow
 
 # Development
-yarout -S --noconfirm --needed git gitg ix rust python clang cmake gdb \
-  valgrind nodejs dnsutils ctags gist npm
+yarout -S --noconfirm --needed git gitg hub ix rust python clang cmake gdb \
+  valgrind nodejs dnsutils ctags gist npm strace lsof
