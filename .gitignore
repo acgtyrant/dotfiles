@@ -35,6 +35,3 @@ HexChat/*
 SSH/.ssh/id_rsa
 SSH/.ssh/id_rsa.pub
 SSH/.ssh/known_hosts
-
-# Tilda
-Tilda/.config/tilda/config_1
