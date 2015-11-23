@@ -94,7 +94,7 @@ filetype plugin indent on     " required!
 syntax on
 " }
 
-" splict {
+" split {
 set scrollbind
 set nosplitbelow
 set nosplitright
