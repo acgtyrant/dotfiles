@@ -39,14 +39,14 @@ Plugin 'Valloric/YouCompleteMe'
   let g:ycm_key_list_select_completion = ['<C-TAB>', '<Down>']
   let g:ycm_key_list_previous_completion = ['<C-S-TAB>', '<Up>']
   nnoremap <F6> :YcmForceCompileAndDiagnostics<CR>
+  let g:ycm_collect_identifiers_from_tags_files = 1
+  let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 Plugin 'scrooloose/syntastic'
   let g:syntastic_cpp_compiler = 'clang++'
   let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 
 Plugin 'SirVer/ultisnips'
   let g:UltiSnipsListSnippets="<leader>j"
-
-Plugin 'honza/vim-snippets'
 
 Plugin 'rust-lang/rust.vim'
 
@@ -55,8 +55,6 @@ Plugin 'cespare/vim-toml'
 Plugin 'tomasr/molokai'
 
 Plugin 'altercation/vim-colors-solarized'
-
-Plugin 'tpope/vim-surround'
 
 Plugin 'jiangmiao/auto-pairs'
 
@@ -71,8 +69,8 @@ Plugin 'luochen1990/rainbow'
 Plugin 'bling/vim-airline'
   let g:airline_symbols = {}
   let g:airline_powerline_fonts=1
-  let g:airline_enable_branch=1
-  let g:airline_enable_syntastic=1
+  let g:airline#extensions#branch#enabled =1
+  let g:airline#extensions#syntastic#enabled=1
   let g:airline_detect_paste=1
   let g:airline_theme='light'
   let g:airline_left_sep = ''
@@ -82,7 +80,7 @@ Plugin 'bling/vim-airline'
   let g:airline_symbols.branch = ''
   let g:airline_symbols.readonly = ''
   let g:airline_symbols.linenr = ''
-  let g:airline_paste_symbol = 'Þ'
+  let g:airline_symbols.paste = 'Þ'
   let g:airline_whitespace_symbol = 'Ξ'
 
 Bundle 'wakatime/vim-wakatime'

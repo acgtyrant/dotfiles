@@ -86,6 +86,7 @@ alias grep="/usr/bin/grep $GREP_OPTIONS"
 alias gv='gvim'
 alias git=hub
 alias less=vimpager
+alias g++=g++ -std=c++11
 unset GREP_OPTIONS
 
 # Path aliases

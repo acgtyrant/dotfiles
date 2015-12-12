@@ -112,7 +112,7 @@ yaourt -S --noconfirm --needed alsa-utils pulseaudio paprefs pavucontrol \
 
 # Networking TODO
 
-yaourt -S --noconfirm --needed wget
+yaourt -S --noconfirm --needed wget net-tools
 
 # Booting TODO
 
@@ -184,7 +184,7 @@ yaourt -S --noconfirm --needed evince
 # Preferences
 
 ## Git
-yaourt -S --noconfirm --needed git tig xclip
+yaourt -S --noconfirm --needed git tig
 
 ## Instant Message
 yaourt -S --noconfirm --needed hexchat
@@ -241,7 +241,7 @@ yaourt -S --noconfirm --needed tilda
 ## Others
 yaourt -S --noconfirm --needed cmatrix xmind baobab deadbeef \
   aegisub feh weatherboy whois create_ap openssh linux-headers rescuetime \
-  autojump tree vimpager
+  autojump tree vimpager xclip
 
 # Preference
 #git clone git@github.com:acgtyrant/bin.git /home/acgtyrant/bin
@@ -252,4 +252,4 @@ yaourt -S --noconfirm --needed stow
 
 # Development
 yarout -S --noconfirm --needed git gitg hub ix rust python clang cmake gdb \
-  valgrind nodejs dnsutils ctags gist npm strace lsof
+  valgrind nodejs dnsutils ctags gist npm strace lsof cpplint cloc
