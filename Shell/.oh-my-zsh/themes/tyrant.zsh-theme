@@ -1,6 +1,5 @@
 # FreeAgent puts the powerline style in zsh !
 
-
 POWERLINE_COLOR_BG_GRAY=%K{240}
 POWERLINE_COLOR_BG_LIGHT_GRAY=%K{240}
 POWERLINE_COLOR_BG_WHITE=%K{255}
