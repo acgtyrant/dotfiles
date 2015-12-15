@@ -1,40 +1,32 @@
-# Some export
-export HISTCONTROL=ignoreboth
-export EDITOR=vim
-export BROWSER=chromium
+# Making your BASH history more efficient
+# http://jorge.fbarr.net/2011/03/24/making-your-bash-history-more-efficient/
+export HISTTIMEFORMAT="%h %d %H:%M:%S> "
+export HISTCONTROL="ignoreboth"
+export HISTSIZE=10000
+
+# ArchWiki: Environment Viriables
+# https://wiki.archlinux.org/index.php/Environment_variables#Examples
+export TERM="xterm-256color"
+export SHELL="zsh"
+export PAGER="vimpager"
+export EDITOR="vim"
+export VISUAL="gedit"
+export BROWSER="google-chrome-stable"
 export XDG_CONFIG_HOME="$HOME/.config"
+# These addresses are assigned by cow.
 export http_proxy="http://127.0.0.1:7777"
 export https_proxy="http://127.0.0.1:7777"
 export HTTP_PROXY="http://127.0.0.1:7777"
 export HTTPS_PROXY="http://127.0.0.1:7777"
+
+# Docker cli ignores environment variable http_proxy
+# https://github.com/docker/docker/issues/10224
 export no_proxy="/var/run/docker.sock"
+
+# More PATH! More PATH! More PATH!
 export PATH="$HOME/bin:$PATH"
-export PATH="$HOME/.rbenv/bin:$PATH"
-export PATH="$HOME/.rbenv/shims:$PATH"
-export PATH="/usr/lib/colorgcc/bin:$PATH"
-export PATH="/opt/katawa-shoujo/:$PATH"
-export PATH="$HOME/cxoffice/bin/:$PATH"
-export PATH="$HOME/Canopy:$PATH"
-export PATH="$HOME/Canopy32:$PATH"
-export PATH="$HOME/.gem/ruby/2.1.0/bin:$PATH"
-export PATH="/root/.gem/ruby/2.0.0/bin:$PATH"
-export PATH="/opt/android-sdk/platform-tools:$PATH"
-#export GTK_PATH="$GTK_PATH:/usr/lib/gtk-2.0"
-export QT_SELECT=4
-export PYTHONPATH=${HOME}/Projects/longjon-caffe/python:$PYTHONPATH
-export PYTHONPATH=${HOME}/Projects/caffe/python:$PYTHONPATH
-export PAGER='vimpager'
-
-export LESS=-R
-export LESS_TERMCAP_me=$(printf '\e[0m')
-export LESS_TERMCAP_se=$(printf '\e[0m')
-export LESS_TERMCAP_ue=$(printf '\e[0m')
-export LESS_TERMCAP_mb=$(printf '\e[1;32m')
-export LESS_TERMCAP_md=$(printf '\e[1;34m')
-export LESS_TERMCAP_us=$(printf '\e[1;32m')
-export LESS_TERMCAP_so=$(printf '\e[1;44;1m')
-
-export KEYTIMEOUT=1
+export PYTHONPATH="${HOME}/Projects/caffe/distribute/python/"
+export LD_LIBRARY_PATH="${HOME}/Projects/caffe/distribute/lib/"
 
 #Convert a virtual big screen to two screens for SDL game.
 export SDL_VIDEO_FULLSCREEN_HEAD=1
