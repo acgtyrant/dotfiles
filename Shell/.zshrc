@@ -11,7 +11,7 @@ ZSH_THEME="tyrant"
 
 # Make man pages colored
 man() {
-    env LESS_TERMCAP_mb=$(printf "\e[1;31m") \
+  env LESS_TERMCAP_mb=$(printf "\e[1;31m") \
 	LESS_TERMCAP_md=$(printf "\e[1;31m") \
 	LESS_TERMCAP_me=$(printf "\e[0m") \
 	LESS_TERMCAP_se=$(printf "\e[0m") \
@@ -20,7 +20,6 @@ man() {
 	LESS_TERMCAP_us=$(printf "\e[1;32m") \
 	man "$@"
 }
-
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -52,10 +51,9 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(systemd archlinux web-search github)
+plugins=(systemd archlinux github)
 
 source $ZSH/oh-my-zsh.sh
-#source /usr/share/doc/pkgfile/command-not-found.zsh
 source $HOME/.zshenv
 source /usr/share/doc/pkgfile/command-not-found.zsh
 
@@ -63,46 +61,30 @@ source /usr/share/doc/pkgfile/command-not-found.zsh
 
 # Example aliases
 alias l='ls --color=auto'
-alias ll='ls -alFh --color=auto'
 alias vi='vim'
+alias cl='clang'
+alias gv='gvim'
+
+alias sw='sudo wifi-menu'
+alias git=hub
+alias less=vimpager
+
+alias ll='ls -alFh --color=auto'
 alias grep='grep --color'
-alias rake="noglob rake"
 alias rm=' rm -Iv --one-file-system'
 alias mkdir='mkdir -pv'
-alias gcc='gcc -Wall -O -fdiagnostics-color=auto'
-alias google-chrome='google-chrome --enable-easy-off-store-extension-install'
+alias dstat='dstat -cdlmnpsy'
+alias gvim='gvim -p'
 alias wps='wps -style gtk'
 alias et='et -style gtk'
 alias wpp='wpp -style gtk'
-alias dstat='dstat -cdlmnpsy'
-alias l2='sudo l2tp start'
-alias sw='sudo wifi-menu'
-alias cc='c99 -Wall'
-alias rj='sudo mentohust.sh start'
-alias rjs='sudo mentohust.sh stop'
-alias gvim='gvim -p'
-alias cl='clang'
-alias grep="/usr/bin/grep $GREP_OPTIONS"
-alias gv='gvim'
-alias git=hub
-alias less=vimpager
+
+alias gcc='gcc -Wall -O -fdiagnostics-color=auto'
 alias g++=g++ -std=c++11
-unset GREP_OPTIONS
-
-# Path aliases
-hash -d POST="/home/acgtyrant/blog.acgtyrant.com/source/_posts/"
-
-# File aliases
-#autoload -U zsh-mime-setup
-#zsh-mime-setup
-
-#alias -s pdf=google-chrome
+alias cc='c99 -Wall'
 
 # Improve colored output by ls
 eval "$(dircolors -b)"
-# Rbenv control
-#eval "$(rbenv init -)"
 
 # source some files
-# source ~/bin/incr-0.2.zsh
 [[ -s /etc/profile.d/autojump.sh  ]] && source /etc/profile.d/autojump.sh
