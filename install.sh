@@ -132,11 +132,11 @@ yaourt -S --noconfirm --needed lxappearance
 ## Fonts
 echo "Installing fonts..."
 yaourt -S --noconfirm --needed wqy-zenhei wqy-microhei otf-hermit
-adobe-source-han-sans-cn-fonts otf-google-chrome ttf-ubuntu-font-family
+adobe-source-han-sans-cn-fonts ttf-ubuntu-font-family
 sleep 1; echo "Done."
 
 ## GTK and Qt themes
-yaourt -S paper-gtk-theme-git
+yaourt -S paper-gtk-theme-git deepin-gtk-theme
 #lxappearance
 
 # Console improvements
@@ -165,12 +165,16 @@ yaourt -S --noconfirm --needed dmenu synapse
 
 yaourt -S --noconfirm --needed google-chrome chromium-pepper-flash firefox opera
 
+## Email Client
+
+yaourt -S --noconfirm --needed thunderbird
+
 ## Editor
 
-yaourt -S --noconfirm --needed gvim gedit haroopad
+yaourt -S --noconfirm --needed gvim gedit
 
 ## File manager
-yaourt -S --noconfirm --needed ranger nautilus
+yaourt -S --noconfirm --needed ranger nautilus gvfs-smb
 
 ## IME
 yaourt -S --noconfirm --needed fcitx-im fcitx-rime fcitx-configtool fcitx-qt5
@@ -185,6 +189,11 @@ yaourt -S --noconfirm --needed evince
 
 ## Git
 yaourt -S --noconfirm --needed git tig
+mkdir ~/.ssh
+ssh-keygen -t rsa -b 4096 -C "acgtyrant@gmail.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+# add your key to git server!
 
 ## Instant Message
 yaourt -S --noconfirm --needed hexchat
@@ -227,7 +236,7 @@ yaourt -S --noconfirm --needed htop gnome-system-monitor
 yaourt -S --noconfirm --needed meld
 
 ## Hash checker
-yaourt -S --noconfirm --needed gtkhash
+yaourt -S --noconfirm --needed gtkhash gtkhash-naltilus
 
 ## Calculator
 yaourt -S --noconfirm --needed gnome-calculator
@@ -247,9 +256,15 @@ yaourt -S --noconfirm --needed cmatrix xmind baobab deadbeef \
 #git clone git@github.com:acgtyrant/bin.git /home/acgtyrant/bin
 #git clone git@github.com:acgtyrant/dotfiles.git /home/acgtyrant/dotfiles
 #git clone git@github.com:robbyrussell/oh-my-zsh.git /home/acgtyrant/.oh-my-zsh
+#git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+# vim +PluginInstall +qall
+# cd~; take ycm_build;
+# cmake -G "Unix Makefiles" -DUSE_SYSTEM_LIBCLANG=ON -DUSE_SYSTEM_BOOST=ON . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
+# cmake --build . --target ycm_support_libs --config Release
 yaourt -S --noconfirm --needed stow
 #stow
 
 # Development
 yarout -S --noconfirm --needed git gitg hub ix rust python clang cmake gdb \
-  valgrind nodejs dnsutils ctags gist npm strace lsof cpplint cloc
+  valgrind nodejs dnsutils ctags gist npm strace lsof cpplint cloc boost \
+  boost-libs opencv ack fdupes
