@@ -10,7 +10,7 @@ export TERM="xterm-256color"
 export SHELL="zsh"
 export PAGER="vimpager"
 export EDITOR="vim"
-export VISUAL="gedit"
+export VISUAL="vim"
 export BROWSER="google-chrome-stable"
 export XDG_CONFIG_HOME="$HOME/.config"
 # These addresses are assigned by cow.
@@ -25,6 +25,8 @@ export no_proxy="/var/run/docker.sock"
 
 # More PATH! More PATH! More PATH!
 export PATH="$HOME/bin:$PATH"
+typeset -U PATH # ...And let any duplicate varaibles go!
+# Some development needs.
 export PYTHONPATH="${HOME}/Projects/caffe/distribute/python/"
 export LD_LIBRARY_PATH="${HOME}/Projects/caffe/distribute/lib/"
 

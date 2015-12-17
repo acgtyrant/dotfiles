@@ -69,6 +69,7 @@ alias sw='sudo wifi-menu'
 alias git=hub
 alias less=vimpager
 
+alias ssh='ssh -Y'
 alias ll='ls -alFh --color=auto'
 alias grep='grep --color'
 alias rm=' rm -Iv --one-file-system'
@@ -79,9 +80,8 @@ alias wps='wps -style gtk'
 alias et='et -style gtk'
 alias wpp='wpp -style gtk'
 
-alias gcc='gcc -Wall -O -fdiagnostics-color=auto'
-alias g++=g++ -std=c++11
-alias cc='c99 -Wall'
+alias g++='g++ -g -std=c++14'
+alias cc='gcc -std=c99'
 
 # Improve colored output by ls
 eval "$(dircolors -b)"
