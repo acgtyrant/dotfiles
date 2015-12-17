@@ -41,7 +41,7 @@ bindsym Print exec scrot -e 'mv $f ~/ScreenShot.png && feh ~/ScreenShot.png'
 bindsym Mod1+Print exec scrot -s -e 'mv $f ~/SceenShot && feh ~/ScreenShot/$f'
 
 # start an improved terminal
-bindsym $mod+Return exec tilda
+bindsym $mod+Return exec termite
 
 # kill focused window
 bindsym $mod+q kill
@@ -200,13 +200,13 @@ bindsym $mod+r mode "resize"
 # Automatically starting applications on i3 startup
 exec --no-startup-id compton -b -c
 exec --no-startup-id google-chrome-stable
+exec --no-startup-id google-chrome-stable --app=http://web.telegram.org --start-maximized
 exec --no-startup-id tilda -e /home/acgtyrant/bin/tmuxen
 #exec --no-startup-id urxvt
 exec --no-startup-id fcitx &
 exec --no-startup-id /home/acgtyrant/bin/extendmirror
 exec --no-startup-id /home/acgtyrant/Nutstore/shadowsocks-Linux64bit &
 exec --no-startup-id weatherboy -l 2132574 -a
-exec --no-startup-id hexchat &
 exec --no-startup-id synapse &
 exec --no-startup-id starcal2 &
 exec --no-startup-id nutstore &
