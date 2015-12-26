@@ -1,31 +1,31 @@
 [user]
 [color]
 	ui = off
-  interactive = true
+        interactive = true
 [alias]
 	s = status
-  a = !git add . && git status
-  au = !git add -u && git status
-  aa = !git add . && git add -u && git status
+
+        a = !git add . && git status
+        au = !git add -u && git status
+        aa = !git add . && git add -u && git status
 
 	c = commit
 	ci = commit
-  cm = commit -m
-
+        cm = commit -m
 	co = checkout
 	com = checkout master
 
-  b = branch
+        b = branch
 
 	l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
 	ll = log --stat --abbrev-commit
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	lp = log -p
 
-  d = diff
+        d = diff --check
 	dw = diff --color-words
 
-  alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
+        alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
 	me = config user.name
 [credential]
 	helper = cache
