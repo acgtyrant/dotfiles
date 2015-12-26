@@ -136,7 +136,7 @@ adobe-source-han-sans-cn-fonts ttf-ubuntu-font-family
 sleep 1; echo "Done."
 
 ## GTK and Qt themes
-yaourt -S paper-gtk-theme-git deepin-gtk-theme
+yaourt -S paper-gtk-theme-git deepin-gtk-theme deepin-icon-theme
 #lxappearance
 
 # Console improvements
@@ -247,6 +247,10 @@ yaourt -S --noconfirm --needed gnome-calculator
 ## Terminal emulator
 yaourt -S --noconfirm --needed tilda
 
+## Screen lockers
+
+yaourt -S --noconfirm --needed xautolock
+
 ## Others
 yaourt -S --noconfirm --needed cmatrix xmind baobab deadbeef \
   aegisub feh weatherboy whois create_ap openssh linux-headers rescuetime \
@@ -265,6 +269,6 @@ yaourt -S --noconfirm --needed stow
 #stow
 
 # Development
-yarout -S --noconfirm --needed git gitg hub ix rust python clang cmake gdb \
+yarout -S --noconfirm --needed git gitg hub rust python clang cmake gdb \
   valgrind nodejs dnsutils ctags gist npm strace lsof cpplint cloc boost \
-  boost-libs opencv ack fdupes
+  boost-libs opencv ack fdupes the_silver_searcher perf wgetpaste

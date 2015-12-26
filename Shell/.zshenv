@@ -30,5 +30,12 @@ typeset -U PATH # ...And let any duplicate varaibles go!
 export PYTHONPATH="${HOME}/Projects/caffe/distribute/python/"
 export LD_LIBRARY_PATH="${HOME}/Projects/caffe/distribute/lib/"
 
+# https://github.com/lilydjwg/search-and-view
+export AGV_EDITOR=gvim
+
 #Convert a virtual big screen to two screens for SDL game.
 export SDL_VIDEO_FULLSCREEN_HEAD=1
+
+# Choose Default Qt toolkit
+# https://wiki.archlinux.org/index.php/Qt#Using_environment_variables
+export QT_SELECT=5
