@@ -198,7 +198,7 @@ bindsym Escape mode "default"
 bindsym $mod+r mode "resize"
 
 # Automatically starting applications on i3 startup
-exec --no-startup-id compton -b -c
+exec --no-startup-id compton --config /home/acgtyrant/.config/compton.conf -b
 exec --no-startup-id google-chrome-stable
 exec --no-startup-id google-chrome-stable --app=http://web.telegram.org --start-maximized
 exec --no-startup-id termite -e tmuxen.sh
