@@ -1,4 +1,5 @@
 # Applications
+# https://wiki.archlinux.org/index.php/List_of_applications
 
 yaourt -S --noconfirm --needed pkgstats
 
@@ -52,64 +53,64 @@ yaourt -S --noconfirm --needed steam
 # Utilities
 
   ## Partitioning tools
-  gparted
+  yaourt -S --noconfirm --needed gparted
   ## Mount tools
   ## Terminal emulators
-    termite
+    yaourt -S --noconfirm --needed termite
   ## Files
     ### File managers
-    ranger nautilus gvfs-smb
+    yaourt -S --noconfirm --needed ranger nautilus gvfs-smb
   ## Desktop search engines
-  catfish
+  yaourt -S --noconfirm --needed catfish
   ## Archiving and compression tools
-  p7zip tar ### Graphical TODO
+  yaourt -S --noconfirm --needed p7zip tar ### Graphical TODO
   ## Comparison, diff, merge
-  meld
+  yaourt -S --noconfirm --needed meld
   ## Disk cleaning TODO
-  bleachbit
+  yaourt -S --noconfirm --needed bleachbit
   ## Disk usage display
-  baobab
+  yaourt -S --noconfirm --needed baobab
   ## Clock synchronization TODO
   ## System monitoring
-  conky gnome-system-monitor htop
+  yaourt -S --noconfirm --needed conky gnome-system-monitor htop
   ## System information viewers
-  alsi gpu-g-bzr hardinfo
+  yaourt -S --noconfirm --needed alsi gpu-g-bzr hardinfo
   ## Power management see general.sh
   ## Clipboard managers TODO
-  xclip
+  yaourt -S --noconfirm --needed xclip
   ## Wallpaper setters TODO
-  feh
+  yaourt -S --noconfirm --needed feh
   ## Package management see general.sh
   ## Input method editor
-  fcitx-im fcitx-rime fcitx-im fcitx-configtool fcitx-qt5
+  yaourt -S --noconfirm --needed fcitx-im fcitx-rime fcitx-im fcitx-configtool fcitx-qt5
   ## File synchronization
-  rsync
+  yaourt -S --noconfirm --needed rsync
 
 # Documents
 
-## Office suites
-wps-office
-## Document markup languages
-markdown pandoc python-sphinx
-## Scientific documents
-texmate
-## Translation and localization TODO
-## Text editors
-vim gvim neovim gedit emacs
-## Readers and Viewers
-### PDF and DjVu
-evince
-### Terminal pagers
-less vimpager
-### CHM
-### Comic book
-mcomix
-### Scanning software TODO
-### OCR software TODO
-## Mind-mapping tools
-xmind
-## Character Selector TODO
-## Bibliographic reference managers TODO
+  ## Office suites
+  yaourt -S --noconfirm --needed wps-office
+  ## Document markup languages
+  yaourt -S --noconfirm --needed markdown pandoc python-sphinx
+  ## Scientific documents
+  yaourt -S --noconfirm --needed texmate
+  ## Translation and localization TODO
+  ## Text editors
+  yaourt -S --noconfirm --needed vim gvim neovim gedit emacs
+  ## Readers and Viewers
+    ### PDF and DjVu
+    yaourt -S --noconfirm --needed evince
+    ### Terminal pagers
+    yaourt -S --noconfirm --needed less vimpager
+    ### CHM
+    ### Comic book
+    yaourt -S --noconfirm --needed mcomix
+    ### Scanning software TODO
+    ### OCR software TODO
+  ## Mind-mapping tools
+  yaourt -S --noconfirm --needed xmind
+  ## Character Selector TODO
+  ## Bibliographic reference managers TODO
 
 # Security
 
@@ -120,43 +121,34 @@ xmind
   ## Anti malware TODO
   ## Backup programs see general.sh
   ## Screen lockers TODO
-  xautolocki3lock
+  yaourt -S --noconfirm --needed xautolocki3lock
   ## Hash checkers
-  gtkhash gtkhash-nautilus
+  yaourt -S --noconfirm --needed gtkhash gtkhash-nautilus
   ## Encryption, signing, steganography TODO
   ## Password managers TODO
 
 # Science
 
-## Mathematics
-### Calculator
-gnome-calculator
-### Scientific or technical computing TODO
+  ## Mathematics
+    ### Calculator
+    yaourt -S --noconfirm --needed gnome-calculator
+    ### Scientific or technical computing TODO
 
 # Other
 
-## Work environment
-### Bootsplash TODO
-### Command shells see general.sh
-### Terminal multiplexers see general.sh
-### Window managers see general.sh
-## Application launchers TODO
-dmenu synapse
-## Emulators TODO
+  ## Work environment
+    ### Bootsplash TODO
+    ### Command shells see general.sh
+    ### Terminal multiplexers see general.sh
+    ### Window managers see general.sh
+  ## Application launchers TODO
+  yaourt -S --noconfirm --needed dmenu synapse
+  ## Emulators TODO
+
+################################################################################
 
 ## Proxy TODO
 yaourt -S --noconfirm --needed shadowsocks python2-m2crypto cow-proxy
-
-## Photoshop
-yaourt -S --noconfirm --needed gimp
-
-## Git
-yaourt -S --noconfirm --needed git tig
-mkdir ~/.ssh
-ssh-keygen -t rsa -b 4096 -C "acgtyrant@gmail.com"
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_rsa
-# add your key to git server!
 
 ## Cloud backup TODO
 yaourt -S --noconfirm --needed nutstore nautilus-nutstore
@@ -164,28 +156,33 @@ yaourt -S --noconfirm --needed nutstore nautilus-nutstore
 ## Remote desktop
 yaourt -S --noconfirm --needed teamviewer
 
-## Safe plusgins
-yaourt -S --noconfirm --needed upeditor
-
-## Calender
-#starcal2
+## Safe plugins
+yaourt -S --noconfirm --needed upeditor	aliedit
 
 ## Others
-yaourt -S --noconfirm --needed cmatrix \
-  weatherboy whois create_ap openssh linux-headers rescuetime \
-  autojump tree
-
-# Preference
-#git clone git@github.com:robbyrussell/oh-my-zsh.git /home/acgtyrant/.oh-my-zsh
-#git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-# vim +PluginInstall +qall
-# cd~; take ycm_build;
-# cmake -G "Unix Makefiles" -DUSE_SYSTEM_LIBCLANG=ON -DUSE_SYSTEM_BOOST=ON . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
-# cmake --build . --target ycm_support_libs --config Release
-yaourt -S --noconfirm --needed stow
-#stow
+yaourt -S --noconfirm --needed cmatrix weatherboy whois create_ap openssh \
+    linux-headers rescuetime autojump tree
 
 # Development
-yarout -S --noconfirm --needed git gitg hub rust python clang cmake gdb \
-  valgrind nodejs dnsutils ctags gist npm strace lsof cpplint cloc boost \
-  boost-libs opencv ack fdupes the_silver_searcher perf search-and-view-git
+
+  ## VCS
+  git gitg tig hub
+  mkdir ~/.ssh
+  ssh-keygen -t rsa -b 4096 -C "acgtyrant@gmail.com"
+  eval "$(ssh-agent -s)"
+  ssh-add ~/.ssh/id_rsa
+  echo "add your key to git server!"
+  ## python
+  yaourt -S --noconfirm --needed python
+  ## rust
+  yaourt -S --noconfirm --needed rust
+  ## C/C++
+  yaourt -S --noconfirm --needed gdb cmake clang valgrind ctags cpplint
+  yaourt -S --noconfirm --needed opencv boost boost-libs
+  ## system profiler
+  yaourt -S --noconfirm --needed strace lsof perf
+  ## nodjes
+  yaourt -S --noconfirm --needed nodejs npm
+  ## Others
+  yaourt -S --noconfirm --needed cloc ack fdupes the_silver_searcher \
+      search-and-view-git stow
