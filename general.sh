@@ -115,6 +115,8 @@ multilib=true
 
   ## Windows managers
   yaourt -S --noconfirm --needed i3 conky
+  # https://wiki.archlinux.org/index.php/I3#Correct_handling_of_floating_dialogs
+  yaourt -S --noconfirm --needed xorg-xprop
 
   ## Display manager
   yaourt -S --noconfirm --needed xorg-xinit
@@ -152,6 +154,9 @@ multilib=true
 
 # Networking TODO
 # https://wiki.archlinux.org/index.php/Network_configuration
+yaourt -S --noconfirm --needed gnome-nettols
+yaourt -S --noconfirm --needed dnsutils
+yaourt -S --noconfirm --needed net-tools
 
   ## Clock synchronization TODO
   # https://wiki.archlinux.org/index.php/Time#Time_synchronization
