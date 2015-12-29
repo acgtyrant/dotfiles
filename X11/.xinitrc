@@ -22,5 +22,8 @@ export LC_CTYPE="zh_CN.UTF-8"
 
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
+# https://wiki.archlinux.org/index.php/Activating_Numlock_on_Bootup#startx
+numlockx &
+
 #exec gnome-session
 exec i3 --shmlog-size=26214400
