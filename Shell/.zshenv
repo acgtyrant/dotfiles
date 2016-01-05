@@ -26,9 +26,6 @@ export no_proxy="/var/run/docker.sock"
 # More PATH! More PATH! More PATH!
 export PATH="$HOME/bin:$PATH"
 typeset -U PATH # ...And let any duplicate varaibles go!
-# Some development needs.
-export PYTHONPATH="${HOME}/Projects/caffe/distribute/python/"
-export LD_LIBRARY_PATH="${HOME}/Projects/caffe/distribute/lib/"
 
 # https://github.com/lilydjwg/search-and-view
 export AGV_EDITOR=gvim
@@ -39,3 +36,8 @@ export SDL_VIDEO_FULLSCREEN_HEAD=1
 # Choose Default Qt toolkit
 # https://wiki.archlinux.org/index.php/Qt#Using_environment_variables
 export QT_SELECT=5
+
+# Caffe development needs.
+export CAFFE_DIR="${HOME}/Projects/caffe"
+export PYTHONPATH="${CAFFE_DIR}/distribute/python/"
+export LD_LIBRARY_PATH="${CAFFE_DIR}/distribute/lib/"
