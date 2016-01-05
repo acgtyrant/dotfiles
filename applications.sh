@@ -1,8 +1,6 @@
 # Applications
 # https://wiki.archlinux.org/index.php/List_of_applications
 
-yaourt -S --noconfirm --needed pkgstats
-
 # Game
 yaourt -S --noconfirm --needed steam
 
@@ -36,11 +34,11 @@ yaourt -S --noconfirm --needed steam
 
   ## Image
     ### Image viewers
-    yaourt -S --noconfirm --needed feh 
+    yaourt -S --noconfirm --needed feh
   ## Graphics and image manipulation
     ### Raster editors TODO
   ## Screen capture TODO
-    scrot
+    yaourt -S --noconfirm --needed maim slop
   ## Audio
     ### Audio players TODO
     yaourt -S --noconfirm --needed deadbeef
@@ -48,7 +46,7 @@ yaourt -S --noconfirm --needed steam
     ### Video players TODO
     yaourt -S --noconfirm --needed mplayer gnome-mplayer vlc
     ### Subtitles TODO
-    yaourt -S --noconfirm --needed aegisub 
+    yaourt -S --noconfirm --needed aegisub
 
 # Utilities
 
