@@ -80,9 +80,6 @@ alias wps='wps -style gtk'
 alias et='et -style gtk'
 alias wpp='wpp -style gtk'
 
-alias g++='g++ -g -std=c++14'
-alias cc='gcc -std=c99'
-
 # Improve colored output by ls
 eval "$(dircolors -b)"
 
