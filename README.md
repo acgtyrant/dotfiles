@@ -1,13 +1,7 @@
 dotfiles
 ========
 
-Hi, it's my all config here, just take whatever you prefer. I hope they are helpful.
+I am [Using GNU Stow to manage my dotfiles](http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html), I arrange my all dotfiles here, and there are many comments and references to ArchWiki inside them, which are very helpful.
 
-However, you may notice that how difficulty to manage these dotfiles while they are so separate. So you can use stow to link them to the suitable place. Just read this [article][1] to see how do it.
-
-BTW, I take that arch_linux_config file as my personal guide to install arch linux, it is not perfect so far and may mislead you.
-
-Note that the FZTHK.TTF in Fonts is not free and open, DO NOT DOWNLOAD and SPREAD IT PLEASE! If you
-want to ues it, buy it yourself, thank you!
-
-  [1]: http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html
+By the way, I write some scripts to reinstall Arch Linux quickly, but they are
+not practical as so far.
