@@ -177,6 +177,7 @@ yaourt -S --noconfirm --needed cmatrix weatherboy whois create_ap openssh \
   ## C/C++
   yaourt -S --noconfirm --needed gdb cmake clang valgrind ctags cpplint
   yaourt -S --noconfirm --needed opencv boost boost-libs
+  yaourt -S --noconfirm --needed gperftools
   ## system profiler
   yaourt -S --noconfirm --needed strace lsof perf
   ## nodjes
