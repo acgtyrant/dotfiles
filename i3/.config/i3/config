@@ -197,6 +197,11 @@ bindsym Escape mode "default"
 
 bindsym $mod+r mode "resize"
 
+# Constraining floating window size
+# https://github.com/derf/feh/issues/219#issuecomment-173817516
+floating_minimum_size 10 x 10
+floating_maximum_size -1 x -1
+
 # Automatically starting applications on i3 startup
 exec --no-startup-id compton --config /home/acgtyrant/.config/compton.conf -b
 exec --no-startup-id google-chrome-stable
