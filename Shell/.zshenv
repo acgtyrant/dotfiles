@@ -41,3 +41,11 @@ export QT_SELECT=5
 export CAFFE_DIR="${HOME}/Projects/caffe"
 export PYTHONPATH="${CAFFE_DIR}/distribute/python/"
 export LD_LIBRARY_PATH="${CAFFE_DIR}/distribute/lib/"
+
+# gperftools result position.
+# See https://github.com/gperftools/gperftools/blob/master/README
+export CPUPROFILE=$HOME/tmp/gperf.out
+
+# CHROOT
+# https://wiki.archlinux.org/index.php/DeveloperWiki:Building_in_a_Clean_Chroot#Setting_Up_A_Chroot
+export CHROOT=$HOME/chroot
