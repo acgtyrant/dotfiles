@@ -69,7 +69,7 @@ multilib=true
   cd ..
   rm -r package-query.tar.gz package-query yaourt.tar.gz yaourt
   sleep 1; echo "Now you can use yaourt."
-  yaourt -S --needed --noconfirm pkgstats pkgfile pkgtools pkgdiff
+  yaourt -S --needed --noconfirm pkgstats pkgfile pkgtools pkgdiff devtools
 
   ## Mirrors
 
