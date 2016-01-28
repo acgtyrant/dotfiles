@@ -1,19 +1,19 @@
-[color]
-  ui = off
-  interactive = true
 [alias]
   s = status
   c = commit
   co = checkout
-[credential]
-  helper = store
+[color]
+  ui = off
+  interactive = true
 [core]
   logAllRefUpdates = true
   pager = tig
+[credential]
+  helper = store
+[http]
+  proxy = http://127.0.0.1:7777
+[merge]
+  tool = meld
 [user]
   name = acgtyrant
   email = acgtyrant@gmail.com
-[merge]
-  tool = meld
-[http]
-  proxy = http://127.0.0.1:7777
