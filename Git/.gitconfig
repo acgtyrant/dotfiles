@@ -14,6 +14,10 @@
   proxy = http://127.0.0.1:7777
 [merge]
   tool = meld
+[push]
+  default = simple
+  # ignore boring warning
+  # http://stackoverflow.com/questions/13148066/warning-push-default-is-unset-its-implicit-value-is-changing-in-git-2-0
 [user]
   name = acgtyrant
   email = acgtyrant@gmail.com
