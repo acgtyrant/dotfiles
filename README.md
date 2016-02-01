@@ -9,5 +9,9 @@ Let me explain some diretories.
 
 I follow [Desktop entries](https://wiki.archlinux.org/index.php/Desktop_entries) to set my [Default applications](https://wiki.archlinux.org/index.php/Default_applications#MIME_types_and_desktop_entries), and I do not use any DE, so there are only a `$HOME/.config/mimeapps.list` inside, at the same time, I set some environments to appoint default applications in the Shell sections.
 
-By the way, I write some scripts to reinstall Arch Linux quickly, but they are
-not practical as so far.
+## Git
+
+I use tig as the pager for git, and set some aliases. No `.gitignore`, I advise
+that set `.gitgnore` for every program by yourself, just pull `github/gitignore` immediately.
+
+By the way, I write some scripts to reinstall Arch Linux quickly, but they are not practical as so far.
