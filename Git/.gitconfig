@@ -1,12 +1,14 @@
 [alias]
-  s = status
+  a = add
+  b = branch
   c = commit
   co = checkout
+  d = diff
+  l = log
+  s = status
 [color]
   ui = off
-  interactive = true
 [core]
-  logAllRefUpdates = true
   pager = tig
 [credential]
   helper = store
