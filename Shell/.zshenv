@@ -6,7 +6,9 @@ export HISTSIZE=10000
 
 # ArchWiki: Environment Viriables
 # https://wiki.archlinux.org/index.php/Environment_variables#Examples
-export TERM="xterm-256color"
+# How are “xterm” and “screen” related?
+# http://unix.stackexchange.com/questions/140139/how-are-xterm-and-screen-related
+export TERM="screen"
 export SHELL="/bin/zsh"
 export PAGER="/bin/vimpager"
 export EDITOR="/bin/vim"
