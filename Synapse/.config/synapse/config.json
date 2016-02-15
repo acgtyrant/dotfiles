@@ -24,5 +24,24 @@
       "alt-paste" : "<Shift>Insert",
       "exit" : "<Control>q"
     }
+  },
+  "data-sink" : {
+    "global" : {
+      "disabled-plugins" : [
+        "SynapseChatActions",
+        "SynapseFileOpPlugin",
+        "SynapseGnomeBookmarksPlugin",
+        "SynapseHybridSearchPlugin",
+        "SynapseImgUrPlugin",
+        "SynapseLaunchpadPlugin",
+        "SynapseOpenSearchPlugin",
+        "SynapseZeitgeistRelated",
+        "SynapseSshPlugin",
+        "SynapseSystemManagementPlugin",
+        "SynapseZeitgeistPlugin",
+        "SynapseCalculatorPlugin",
+        "SynapseSelectionPlugin"
+      ]
+    }
   }
 }
