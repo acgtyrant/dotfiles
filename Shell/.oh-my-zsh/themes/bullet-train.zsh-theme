@@ -586,3 +586,5 @@ PROMPT="$PROMPT"'%{%f%b%k%}$(build_prompt)'
 PROMPT="$PROMPT"'%{${fg_bold[default]}%}'
 [[ $BULLETTRAIN_PROMPT_SEPARATE_LINE == false ]] && PROMPT="$PROMPT "
 PROMPT="$PROMPT"'$(prompt_char) %{$reset_color%}'
+
+RPROMPT=%k%f%F{green}''%k%f%F{white}%K{green}"%n"%k%f%F{black}%K{green}''%k%f%F{white}%K{black}"%m"
