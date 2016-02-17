@@ -203,20 +203,14 @@ floating_minimum_size 10 x 10
 floating_maximum_size -1 x -1
 
 # Automatically starting applications on i3 startup
-exec --no-startup-id compton --config /home/acgtyrant/.config/compton.conf -b
-exec --no-startup-id google-chrome-stable
-exec --no-startup-id google-chrome-stable --app=http://web.telegram.org --start-maximized
+exec --no-startup-id compton -b -c
 exec --no-startup-id termite -e tmuxen.sh
+exec --no-startup-id google-chrome-stable
+exec --no-startup-id thunderbird
 exec --no-startup-id fcitx &
-exec --no-startup-id /home/acgtyrant/bin/extendmirror.sh
-exec --no-startup-id /home/acgtyrant/Nutstore/shadowsocks-Linux64bit &
-exec --no-startup-id weatherboy -l 2132574 -a
 exec --no-startup-id synapse &
-exec --no-startup-id starcal2 &
-exec --no-startup-id nutstore &
 exec --no-startup-id rescuetime &
 exec --no-startup-id /opt/nutstore/bin/nutstore-pydaemon.py &
-exec --no-startup-id thunderbird
 exec --no-startup-id xautolock -time 7 -locker i3lock &
 
 # Set some arbitrary commands for specific windows
