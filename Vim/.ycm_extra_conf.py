@@ -5,19 +5,18 @@ import ycm_core
 # compilation database set (by default, one is not set).
 # CHANGE THIS LIST OF FLAGS. YES, THIS IS THE DROID YOU HAVE BEEN LOOKING FOR.
 flags = [
-    '-Wall',
-    '-Wextra',
-    '-Werror',
-    '-Wno-variadic-macros',
-    '-DUSE_CLANG_COMPLETER',
-    '-std=c++14',
-    '-x', 'c++',
-    '-I', '.',
-    '-I', './src/',
-    '-I', './include/',
-    '-isystem', '/usr/include',
-    '-isystem', '/usr/local/include',
-]
+        '-Wall',
+        '-Wextra',
+        '-Werror',
+        '-Wno-variadic-macros',
+        '-DUSE_CLANG_COMPLETER',
+        '-std=c++14',
+        '-x', 'c++',
+        '-I', '.',
+        '-I', './src/',
+        '-I', './include/',
+        '-isystem', '/usr/include',
+        '-isystem', '/usr/local/include']
 
 # Set this to the absolute path to the folder (NOT the file!) containing the
 # compile_commands.json file to use that instead of 'flags'. See here for
