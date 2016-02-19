@@ -94,7 +94,8 @@ yaourt -S --noconfirm --needed steam
   yaourt -S --noconfirm --needed texmate
   ## Translation and localization TODO
   ## Text editors
-  yaourt -S --noconfirm --needed vim gvim neovim gedit emacs
+  yaourt -S --noconfirm --needed gvim gedit emacs
+  yaourt -S --noconfirm --needed neovim python-neovim python2-neovim 
   ## Readers and Viewers
     ### PDF and DjVu
     yaourt -S --noconfirm --needed evince
@@ -172,6 +173,7 @@ yaourt -S --noconfirm --needed cmatrix weatherboy whois create_ap openssh \
   echo "add your key to git server!"
   ## python
   yaourt -S --noconfirm --needed python
+  yaourt -S --noconfirm --needed flake8 python2-flake8
   ## rust
   yaourt -S --noconfirm --needed rust
   ## C/C++
