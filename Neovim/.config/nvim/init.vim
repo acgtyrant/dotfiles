@@ -100,6 +100,7 @@
 
  "backup {
   set backup
+  set backupdir=~/.config/nvim/backup
   " do not backuo in the current dir
   set undofile
  "}
