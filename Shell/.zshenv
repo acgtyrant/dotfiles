@@ -9,6 +9,7 @@ export HISTSIZE=10000
 # How are “xterm” and “screen” related?
 # http://unix.stackexchange.com/questions/140139/how-are-xterm-and-screen-related
 export TERM="screen"
+export TERMINFO="$HOME/.terminfo"
 # Note that some variables may be full pathnames.
 # https://github.com/mobile-shell/mosh/issues/722#issuecomment-176266421
 export SHELL="/bin/zsh"
