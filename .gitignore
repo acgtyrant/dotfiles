@@ -1,11 +1,8 @@
 #Vim
-Vim/.vim/.vim_backup
-Vim/.vim/.vim_swap
-Vim/.vim/.vim_undo
-Vim/.vim/.viminfo
-Vim/.vim/view
-Vim/.vim/viminfo
-Vim/.vim/bundle
+Vim/.vim/
+
+#Neovim
+Neovim/.config/nvim
 
 # i3
 i3/.config/i3/i3log
