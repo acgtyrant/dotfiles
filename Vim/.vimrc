@@ -5,6 +5,7 @@
   inoremap jj <ESC>
   " easy
   nnoremap ; :
+  nnoremap tab %
 " }
 
 " https://github.com/VundleVim/Vundle.vim
@@ -88,6 +89,8 @@
       let g:airline_symbols.linenr = ''
       let g:airline_symbols.paste = 'Þ'
       let g:airline_whitespace_symbol = 'Ξ'
+    Plugin 'vim-airline/vim-airline-themes' "
+      let g:aireline_theme='molokai'
   " }
 
   call vundle#end()
