@@ -42,8 +42,8 @@ export SDL_VIDEO_FULLSCREEN_HEAD=1
 
 # Caffe development needs.
 export CAFFE_DIR="${HOME}/Projects/caffe"
-export PYTHONPATH="${CAFFE_DIR}/distribute/python/"
-export LD_LIBRARY_PATH="${CAFFE_DIR}/distribute/lib/"
+export PYTHONPATH="${CAFFE_DIR}/python/"
+export LD_LIBRARY_PATH="/usr/local/cuda/lib64:${CAFFE_DIR}/distribute/lib/"
 
 # https://github.com/lilydjwg/search-and-view
 export AGV_EDITOR="/bin/gvim"
