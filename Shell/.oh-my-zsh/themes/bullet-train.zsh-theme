@@ -16,6 +16,8 @@
 VIRTUAL_ENV_DISABLE_PROMPT=true
 
 # PROMPT
+# Note that BULLETTRAIN_PROMPT_SEPARATE_LINE and BULLETTRAIN_PROMPT_ADD_NEWLINE
+# does not work in RPROMPT
 if [ ! -n "${BULLETTRAIN_PROMPT_CHAR+1}" ]; then
   BULLETTRAIN_PROMPT_CHAR="\$"
 fi
@@ -148,8 +150,11 @@ fi
 if [ ! -n "${BULLETTRAIN_GIT_COLORIZE_DIRTY+1}" ]; then
   BULLETTRAIN_GIT_COLORIZE_DIRTY=false
 fi
-if [ ! -n "${BULLETTRAIN_GIT_COLORIZE_DIRTY_COLOR+1}" ]; then
-  BULLETTRAIN_GIT_COLORIZE_DIRTY_COLOR=yellow
+if [ ! -n "${BULLETTRAIN_GIT_COLORIZE_DIRTY_FG_COLOR+1}" ]; then
+  BULLETTRAIN_GIT_COLORIZE_DIRTY_FG_COLOR=black
+fi
+if [ ! -n "${BULLETTRAIN_GIT_COLORIZE_DIRTY_BG_COLOR+1}" ]; then
+  BULLETTRAIN_GIT_COLORIZE_DIRTY_BG_COLOR=yellow
 fi
 if [ ! -n "${BULLETTRAIN_GIT_BG+1}" ]; then
   BULLETTRAIN_GIT_BG=white
@@ -162,6 +167,20 @@ if [ ! -n "${BULLETTRAIN_GIT_EXTENDED+1}" ]; then
 fi
 if [ ! -n "${BULLETTRAIN_GIT_PROMPT_CMD+1}" ]; then
   BULLETTRAIN_GIT_PROMPT_CMD="\$(git_prompt_info)"
+fi
+
+# PERL
+if [ ! -n "${BULLETTRAIN_PERL_SHOW+1}" ]; then
+  BULLETTRAIN_PERL_SHOW=false
+fi
+if [ ! -n "${BULLETTRAIN_PERL_BG+1}" ]; then
+  BULLETTRAIN_PERL_BG=yellow
+fi
+if [ ! -n "${BULLETTRAIN_PERL_FG+1}" ]; then
+  BULLETTRAIN_PERL_FG=black
+fi
+if [ ! -n "${BULLETTRAIN_PERL_PREFIX+1}" ]; then
+  BULLETTRAIN_PERL_PREFIX=🐪
 fi
 
 # HG
@@ -192,12 +211,12 @@ else
   ZSH_THEME_GIT_PROMPT_SUFFIX=$BULLETTRAIN_GIT_SUFFIX
 fi
 if [ ! -n "${BULLETTRAIN_GIT_DIRTY+1}" ]; then
-  ZSH_THEME_GIT_PROMPT_DIRTY=" ✘"
+  ZSH_THEME_GIT_PROMPT_DIRTY=" %F{red}✘%F{black}"
 else
   ZSH_THEME_GIT_PROMPT_DIRTY=$BULLETTRAIN_GIT_DIRTY
 fi
 if [ ! -n "${BULLETTRAIN_GIT_CLEAN+1}" ]; then
-  ZSH_THEME_GIT_PROMPT_CLEAN=" ✔"
+  ZSH_THEME_GIT_PROMPT_CLEAN=" %F{green}✔%F{black}"
 else
   ZSH_THEME_GIT_PROMPT_CLEAN=$BULLETTRAIN_GIT_CLEAN
 fi
@@ -261,6 +280,27 @@ if [ ! -n "${BULLETTRAIN_EXEC_TIME_FG+1}" ]; then
   BULLETTRAIN_EXEC_TIME_FG=black
 fi
 
+# USER
+if [ ! -n "${BULLETTRAIN_USER_SHOW+1}" ]; then
+  BULLETTRAIN_USER_SHOW=true
+fi
+if [ ! -n "${BULLETTRAIN_USER_BG+1}" ]; then
+  BULLETTRAIN_USER_BG=green
+fi
+if [ ! -n "${BULLETTRAIN_USER_FG+1}" ]; then
+  BULLETTRAIN_USER_FG=white
+fi
+
+# HOST
+if [ ! -n "${BULLETTRAIN_HOST_SHOW+1}" ]; then
+  BULLETTRAIN_HOST_SHOW=true
+fi
+if [ ! -n "${BULLETTRAIN_HOST_BG+1}" ]; then
+  BULLETTRAIN_HOST_BG=black
+fi
+if [ ! -n "${BULLETTRAIN_HOST_FG+1}" ]; then
+  BULLETTRAIN_HOST_FG=white
+fi
 
 # ------------------------------------------------------------------------------
 # SEGMENT DRAWING
@@ -269,6 +309,7 @@ fi
 
 CURRENT_BG='NONE'
 SEGMENT_SEPARATOR=''
+SEGMENT_PLACE='LEFT'
 
 # Begin a segment
 # Takes two arguments, background and foreground. Both can be omitted,
@@ -277,10 +318,15 @@ prompt_segment() {
   local bg fg
   [[ -n $1 ]] && bg="%K{$1}" || bg="%k"
   [[ -n $2 ]] && fg="%F{$2}" || fg="%f"
-  if [[ $CURRENT_BG != 'NONE' && $1 != $CURRENT_BG ]]; then
-    echo -n " %{$bg%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR%{$fg%} "
-  else
-    echo -n "%{$bg%}%{$fg%} "
+  if [[ $SEGMENT_PLACE == 'LEFT' ]]; then
+    if [[ $CURRENT_BG != 'NONE' && $1 != $CURRENT_BG ]]; then
+      echo -n " %{$bg%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR%{$fg%} "
+    else
+      echo -n "%{$bg%}%{$fg%} "
+    fi
+  fi
+  if [[ $SEGMENT_PLACE == 'RIGHT' && -n $1 ]]; then
+      echo -n " %{%F{$1}%K{$CURRENT_BG}%}$SEGMENT_SEPARATOR%{$fg$bg%} "
   fi
   CURRENT_BG=$1
   [[ -n $3 ]] && echo -n $3
@@ -310,7 +356,6 @@ context() {
 }
 prompt_context() {
   [[ $BULLETTRAIN_CONTEXT_SHOW == false ]] && return
-
   local _context="$(context)"
   [[ -n "$_context" ]] && prompt_segment $BULLETTRAIN_CONTEXT_BG $BULLETTRAIN_CONTEXT_FG "$_context"
 }
@@ -351,7 +396,8 @@ prompt_git() {
 
   if $(git rev-parse --is-inside-work-tree >/dev/null 2>&1); then
     if [[ $BULLETTRAIN_GIT_COLORIZE_DIRTY == true && -n $(git status --porcelain --ignore-submodules) ]]; then
-      BULLETTRAIN_GIT_BG=$BULLETTRAIN_GIT_COLORIZE_DIRTY_COLOR
+      BULLETTRAIN_GIT_BG=$BULLETTRAIN_GIT_COLORIZE_DIRTY_BG_COLOR
+      BULLETTRAIN_GIT_FG=$BULLETTRAIN_GIT_COLORIZE_DIRTY_FG_COLOR
     fi
     prompt_segment $BULLETTRAIN_GIT_BG $BULLETTRAIN_GIT_FG
 
@@ -445,6 +491,18 @@ prompt_ruby() {
     prompt_segment $BULLETTRAIN_RUBY_BG $BULLETTRAIN_RUBY_FG $BULLETTRAIN_RUBY_PREFIX"  $(chruby | sed -n -e 's/ \* //p')"
   elif command -v rbenv > /dev/null 2>&1; then
     prompt_segment $BULLETTRAIN_RUBY_BG $BULLETTRAIN_RUBY_FG $BULLETTRAIN_RUBY_PREFIX" $(rbenv version | sed -e 's/ (set.*$//')"
+  fi
+}
+
+# PERL
+# PLENV: shows current PERL version active in the shell
+prompt_perl() {
+  if [[ $BULLETTRAIN_PERL_SHOW == false ]]; then
+    return
+  fi
+
+  if command -v plenv > /dev/null 2>&1; then
+    prompt_segment $BULLETTRAIN_PERL_BG $BULLETTRAIN_PERL_FG $BULLETTRAIN_PERL_PREFIX" $(plenv version | sed -e 's/ (set.*$//')"
   fi
 }
 
@@ -556,6 +614,25 @@ prompt_line_sep() {
 }
 
 # ------------------------------------------------------------------------------
+# RPROMPT COMPONENTS
+# Same as PROMPT COMPONENTS except place in RPROMPT, and they are stable while
+# PROMPT COMPONENTS change frequently
+# ------------------------------------------------------------------------------
+
+# User
+rprompt_user() {
+  [[ $BULLETTRAIN_USER_SHOW == false ]] && return
+  local _user="$(whoami)"
+  [[ -n "$_user" ]] && prompt_segment $BULLETTRAIN_USER_BG $BULLETTRAIN_USER_FG "$_user"
+}
+
+# Host
+rprompt_host() {
+  [[ $BULLETTRAIN_HOST_SHOW == false ]] && return
+  prompt_segment $BULLETTRAIN_HOST_BG $BULLETTRAIN_HOST_FG "%m"
+}
+
+# ------------------------------------------------------------------------------
 # MAIN
 # Entry point
 # ------------------------------------------------------------------------------
@@ -567,6 +644,7 @@ build_prompt() {
   prompt_custom
   prompt_context
   prompt_dir
+  prompt_perl
   prompt_ruby
   prompt_virtualenv
   prompt_nvm
@@ -587,4 +665,12 @@ PROMPT="$PROMPT"'%{${fg_bold[default]}%}'
 [[ $BULLETTRAIN_PROMPT_SEPARATE_LINE == false ]] && PROMPT="$PROMPT "
 PROMPT="$PROMPT"'$(prompt_char) %{$reset_color%}'
 
-RPROMPT=%k%f%F{green}''%k%f%F{white}%K{green}"%n"%k%f%F{black}%K{green}''%k%f%F{white}%K{black}"%m"
+build_rprompt() {
+  CURRENT_BG='NONE'
+  SEGMENT_SEPARATOR=''
+  SEGMENT_PLACE='RIGHT'
+  rprompt_user
+  rprompt_host
+}
+
+RPROMPT='$(build_rprompt)'
