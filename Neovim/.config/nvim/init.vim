@@ -1,10 +1,10 @@
 " More user-friendly mapping of key {
-  " Map leader key from backslash to comma, which is confortable to human.
   let mapleader = ","
-  " just hit j two times to exit
+  " map leader key from backslash to comma, which is confortable to human.
   inoremap jj <ESC>
-  " easy
+  " just hit j two times to exit.
   nnoremap ; :
+  " free your left little finger!
 " }
 
 " https://github.com/VundleVim/Vundle.vim
@@ -33,18 +33,11 @@
     Plug 'wakatime/vim-wakatime' " log your develop time
 
     " syntax support
-    "Plug 'Valloric/YouCompleteMe' " a code-completion engine
-      "let g:syntastic_always_populate_loc_list=1
-      "" support the syntastic plugin
-      "nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
-      "let g:ycm_key_list_select_completion = ['<C-TAB>', '<Down>']
-      "let g:ycm_key_list_previous_completion = ['<C-S-TAB>', '<Up>']
-      "nnoremap <F6> :YcmForceCompileAndDiagnostics<CR>
-      "let g:ycm_collect_identifiers_from_tags_files = 1
-      "let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
     Plug 'scrooloose/syntastic'
       let g:syntastic_cpp_compiler = 'clang++'
       let g:syntastic_cpp_compiler_options = ' -std=c++14 -stdlib=libc++'
+    Plug 'Shougo/deoplete.nvim'
+      let g:deoplete#enable_at_startup = 1
 
     " extra language support
     Plug 'rust-lang/rust.vim'
@@ -61,7 +54,7 @@
     Plug 'Yggdroot/indentLine' " highlight indent block
       let g:indentLine_color_term = 239
       let g:indentLine_color_gui = '#A4E57E'
-      let g:indentLine_char = '┆'
+      let g:indentLine_char = '│'
       let g:rainbow_active = 1
     Plug 'bling/vim-airline' " eat my big powerline!
       let g:airline_symbols = {}
@@ -101,7 +94,7 @@
  "backup {
   set backup
   set backupdir=~/.config/nvim/backup
-  " do not backuo in the current dir
+  " do not backup in the current dir
   set undofile
  "}
 
@@ -171,8 +164,4 @@
   set guioptions=a
   set guifont=hermit\ 11
   set showtabline=2
-  " Neovim-qt Guifont command
-  command -nargs=? Guifont call rpcnotify(0, 'Gui', 'SetFont', "<args>") | let g:Guifont="<args>"
-  Guifont Hermit:11
-  " Set the font to Hermit:h13 for Neovim-qt
 " }
