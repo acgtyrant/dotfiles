@@ -110,7 +110,6 @@
   set directory=~/.vim/.vim_swap//
   set undofile
   set undodir=~/.vim/.vim_undo/
-  set viminfo+=n~/.vim/.viminfo/
 " }
 
 " text typesetting {
