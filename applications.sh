@@ -44,7 +44,7 @@ yaourt -S --noconfirm --needed steam
     yaourt -S --noconfirm --needed deadbeef
   ## Video
     ### Video players TODO
-    yaourt -S --noconfirm --needed mplayer gnome-mplayer vlc
+    yaourt -S --noconfirm --needed mpv gnome-mpv vlc
     ### Subtitles TODO
     yaourt -S --noconfirm --needed aegisub
 
