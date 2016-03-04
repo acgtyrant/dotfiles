@@ -186,4 +186,4 @@ yaourt -S --noconfirm --needed cmatrix weatherboy whois create_ap openssh \
   yaourt -S --noconfirm --needed nodejs npm
   ## Others
   yaourt -S --noconfirm --needed cloc ack fdupes the_silver_searcher \
-      search-and-view-git stow python-powerline
+      search-and-view-git stow python-powerline python2-powerline
