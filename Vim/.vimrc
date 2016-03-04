@@ -43,15 +43,8 @@
     Plugin 'wakatime/vim-wakatime' " log your develop time
 
     " syntax support
-    Plugin 'Valloric/YouCompleteMe' " a code-completion engine
-      let g:syntastic_always_populate_loc_list=1
-      " support the syntastic plugin
-      nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
-      let g:ycm_key_list_select_completion = ['<C-TAB>', '<Down>']
-      let g:ycm_key_list_previous_completion = ['<C-S-TAB>', '<Up>']
-      nnoremap <F6> :YcmForceCompileAndDiagnostics<CR>
-      let g:ycm_collect_identifiers_from_tags_files = 1
-      let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+    Plugin 'Shougo/neocomplete.vim'
+      let g:neocomplete#enable_at_startup = 1
     Plugin 'scrooloose/syntastic'
       let g:syntastic_cpp_compiler = 'clang++'
       let g:syntastic_cpp_compiler_options = ' -std=c++14 -stdlib=libc++'
@@ -79,7 +72,6 @@
       let g:airline#extensions#branch#enabled =1
       let g:airline#extensions#syntastic#enabled=1
       let g:airline_detect_paste=1
-      let g:airline_theme='light'
       let g:airline_left_sep = ''
       let g:airline_left_alt_sep = ''
       let g:airline_right_sep = ''
