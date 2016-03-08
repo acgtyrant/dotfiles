@@ -114,7 +114,7 @@ multilib=true
   yaourt -S --noconfirm --needed lxrandr
 
   ## Windows managers
-  yaourt -S --noconfirm --needed i3 conky
+  yaourt -S --noconfirm --needed i3 conky xfce4-notifyd
   # https://wiki.archlinux.org/index.php/I3#Correct_handling_of_floating_dialogs
   yaourt -S --noconfirm --needed xorg-xprop
 
