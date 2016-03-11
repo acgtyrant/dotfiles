@@ -38,6 +38,7 @@
       let g:syntastic_cpp_compiler_options = ' -std=c++14 -stdlib=libc++'
     Plug 'Shougo/deoplete.nvim'
       let g:deoplete#enable_at_startup = 1
+    Plug 's3rvac/AutoFenc' " auto detect encoding
 
     " extra language support
     Plug 'rust-lang/rust.vim'
