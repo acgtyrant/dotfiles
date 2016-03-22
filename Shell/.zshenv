@@ -25,7 +25,7 @@ export HTTP_PROXY="http://127.0.0.1:7777"
 export HTTPS_PROXY="http://127.0.0.1:7777"
 
 # More PATH! More PATH! More PATH!
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 typeset -U PATH # ...And let any duplicate varaibles go!
 
 # Choose Default Qt toolkit
