@@ -12,11 +12,11 @@ export TERM="screen"
 export TERMINFO="$HOME/.terminfo"
 # Note that some variables may be full pathnames.
 # https://github.com/mobile-shell/mosh/issues/722#issuecomment-176266421
-export SHELL="/bin/zsh"
-export PAGER="/bin/vimpager"
-export EDITOR="/bin/vim"
-export VISUAL="/bin/vim"
-export BROWSER="/bin/google-chrome-stable"
+export SHELL="/usr/bin/zsh"
+export PAGER="/usr/bin/vimpager"
+export EDITOR="/usr/bin/vim"
+export VISUAL="/usr/bin/vim"
+export BROWSER="/usr/bin/google-chrome-stable"
 export XDG_CONFIG_HOME="$HOME/.config"
 # These addresses are assigned by cow.
 export http_proxy="http://127.0.0.1:7777"
