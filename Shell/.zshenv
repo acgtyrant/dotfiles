@@ -19,10 +19,10 @@ export VISUAL="/usr/bin/vim"
 export BROWSER="/usr/bin/google-chrome-stable"
 export XDG_CONFIG_HOME="$HOME/.config"
 # These addresses are assigned by cow.
-export http_proxy="http://127.0.0.1:7777"
-export https_proxy="http://127.0.0.1:7777"
-export HTTP_PROXY="http://127.0.0.1:7777"
-export HTTPS_PROXY="http://127.0.0.1:7777"
+#export http_proxy="http://127.0.0.1:7777"
+#export https_proxy="http://127.0.0.1:7777"
+#export HTTP_PROXY="http://127.0.0.1:7777"
+#export HTTPS_PROXY="http://127.0.0.1:7777"
 
 # More PATH! More PATH! More PATH!
 export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
