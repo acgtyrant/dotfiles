@@ -165,7 +165,7 @@ yaourt -S --noconfirm --needed cmatrix weatherboy whois create_ap openssh \
 # Development
 
   ## VCS
-  git gitg tig hub
+  yaourt -S --noconfirm --needed git gitg tig hub
   mkdir ~/.ssh
   ssh-keygen -t rsa -b 4096 -C "acgtyrant@gmail.com"
   eval "$(ssh-agent -s)"

@@ -41,6 +41,7 @@ multilib=true
   echo "Uncommnet multilab, testing and so on."
   if [ $multilib = true ]; then
     sed -i "s/#\[multilib\]\n#/\[mutilib\]\n" /etc/pacman.conf
+  fi
   if [ $testing = true ]; then
     sed -i "s/#\[testing\]\n#/\[testing\]\n" /etc/pacman.conf
     sed -i "s/#\[community-testing\]\n#/\[community-testing\]\n" /etc/pacman.conf
