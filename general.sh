@@ -158,6 +158,9 @@ multilib=true
 yaourt -S --noconfirm --needed gnome-nettols
 yaourt -S --noconfirm --needed dnsutils
 yaourt -S --noconfirm --needed net-tools
+yaourt -S --noconfirm --needed networkmanager network-manager-applet gnome-keyring
+systemctl enable NetworkManager.service
+systemctl start NetworkManager.service
 
   ## Clock synchronization TODO
   # https://wiki.archlinux.org/index.php/Time#Time_synchronization
