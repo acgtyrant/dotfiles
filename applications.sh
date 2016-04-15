@@ -181,6 +181,8 @@ yaourt -S --noconfirm --needed cmatrix weatherboy whois create_ap openssh \
   yaourt -S --noconfirm --needed python ipython
   yaourt -S --noconfirm --needed flake8 python2-flake8
   yaourt -S --noconfirm --needed ipython jupyter
+  # http://blog.csdn.net/gaoyingju/article/details/50449522#0-tsina-1-61768-397232819ff9a47a7b7e80a40613cfe1
+  pip install pep8-naming flake8-import-order flake8-todo flake8-quotes 
   ## rust
   yaourt -S --noconfirm --needed rust
   ## C/C++
