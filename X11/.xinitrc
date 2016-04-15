@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# https://wiki.archlinux.org/index.php/GNOME/Keyring#xinitrc_method
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+export SSH_AUTH_SOCK
+
 # https://wiki.archlinux.org/index.php/Xmodmap
 [[ -s ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
 # https://wiki.archlinux.org/index.php/X_resources#Adding_to_xinitrc
