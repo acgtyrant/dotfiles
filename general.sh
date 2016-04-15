@@ -121,6 +121,7 @@ multilib=true
 
   ## Display manager
   yaourt -S --noconfirm --needed xorg-xinit lxdm
+  systemctl enable lxdm.service
 
   ## Desktop environments
 
