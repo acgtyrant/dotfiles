@@ -40,8 +40,9 @@ export no_proxy="/var/run/docker.sock"
 # https://wiki.archlinux.org/index.php/NVIDIA#Gaming_using_TwinView
 export SDL_VIDEO_FULLSCREEN_HEAD=1
 
-# Caffe development needs.
+# Development needs.
 export CAFFE_DIR="${HOME}/Projects/caffe"
+export RP_DIR="${HOME}/Projects/RoadPerception/"
 export PYTHONPATH="${CAFFE_DIR}/python/"
 export LD_LIBRARY_PATH="/usr/local/cuda/lib64:${CAFFE_DIR}/distribute/lib/"
 
