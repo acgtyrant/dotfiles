@@ -38,7 +38,7 @@ yaourt -S --noconfirm --needed steam
   ## Graphics and image manipulation
     ### Raster editors TODO
   ## Screen capture TODO
-    yaourt -S --noconfirm --needed maim slop
+    yaourt -S --noconfirm --needed maim slop deepin-screenshot
   ## Audio
     ### Audio players TODO
     yaourt -S --noconfirm --needed deadbeef
@@ -72,7 +72,7 @@ yaourt -S --noconfirm --needed steam
   ## System monitoring
   yaourt -S --noconfirm --needed conky gnome-system-monitor htop
   ## System information viewers
-  yaourt -S --noconfirm --needed alsi gpu-g-bzr hardinfo
+  yaourt -S --noconfirm --needed alsi cpu-g-bzr hardinfo
   ## Power management see general.sh
   ## Clipboard managers TODO
   yaourt -S --noconfirm --needed xclip
@@ -120,7 +120,7 @@ yaourt -S --noconfirm --needed steam
   ## Anti malware TODO
   ## Backup programs see general.sh
   ## Screen lockers TODO
-  yaourt -S --noconfirm --needed xautolocki3lock
+  yaourt -S --noconfirm --needed xautolock i3lock
   ## Hash checkers
   yaourt -S --noconfirm --needed gtkhash gtkhash-nautilus
   ## Encryption, signing, steganography TODO
@@ -184,6 +184,9 @@ yaourt -S --noconfirm --needed cmatrix weatherboy whois create_ap openssh \
   yaourt -S --noconfirm --needed strace lsof perf
   ## nodjes
   yaourt -S --noconfirm --needed nodejs npm
+  ## Machine Learning
+  yaourt -S --noconfirm --needed boost google-glog hdf5 leveldb lmdb protobuf \
+      snappy gflags
   ## Others
   yaourt -S --noconfirm --needed cloc ack fdupes the_silver_searcher \
-      search-and-view-git stow python-powerline python2-powerline
+      search-and-view-git stow python-powerline python2-powerline nyancat
