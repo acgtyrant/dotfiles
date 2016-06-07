@@ -36,7 +36,44 @@
       " change the default comment symbol from /**/ to // in c
       let g:NERDCustomDelimiters = {'c': { 'leftAlt': '/*', 'rightAlt': '*/', 'left': '// '}}
     Plugin 'majutsushi/tagbar' " displays tags in a window, ordered by scope.
+      autocmd FileType tagbar setlocal relativenumber
       map <F3> :TagbarToggle<cr>
+      let tagbar_show_linenumbers=2
+			let g:tagbar_compact=1
+			" no compact help 
+      let g:tagbar_type_cpp = {
+				\ 'kinds' : [
+            \ 'c:classes:0:1',
+            \ 'd:macros:0:1',
+            \ 'e:enumerators:0:0', 
+            \ 'f:functions:0:1',
+            \ 'g:enumeration:0:1',
+            \ 'l:local:0:1',
+            \ 'm:members:0:1',
+            \ 'n:namespaces:0:1',
+            \ 'p:functions_prototypes:0:1',
+            \ 's:structs:0:1',
+            \ 't:typedefs:0:1',
+            \ 'u:unions:0:1',
+            \ 'v:global:0:1',
+            \ 'x:external:0:1'
+        \ ],
+        \ 'sro'        : '::',
+        \ 'kind2scope' : {
+            \ 'g' : 'enum',
+            \ 'n' : 'namespace',
+            \ 'c' : 'class',
+            \ 's' : 'struct',
+            \ 'u' : 'union'
+        \ },
+        \ 'scope2kind' : {
+            \ 'enum'      : 'g',
+            \ 'namespace' : 'n',
+            \ 'class'     : 'c',
+            \ 'struct'    : 's',
+            \ 'union'     : 'u'
+        \ }
+			\ }
     Plugin 'SirVer/ultisnips'
       let g:UltiSnipsListSnippets="<leader>j"
     Plugin 'jiangmiao/auto-pairs'
@@ -82,8 +119,9 @@
       let g:airline_symbols.linenr = ''
       let g:airline_symbols.paste = 'Þ'
       let g:airline_whitespace_symbol = 'Ξ'
-    Plugin 'vim-airline/vim-airline-themes' "
+    Plugin 'vim-airline/vim-airline-themes'
       let g:aireline_theme='molokai'
+    Plugin 'lilydjwg/colorizer'
   " }
 
   call vundle#end()
@@ -162,7 +200,6 @@
   cmap w!! w !sudo tee % >/dev/null
   " write forcibly as root
   autocmd FocusLost * silent! up
-  autocmd! bufwritepost vimrc source ~/.vimrc
   nnoremap <leader>w :w<cr>
   nnoremap <leader>e :q<cr>
   nnoremap <leader>n :bn<cr>
