@@ -174,6 +174,7 @@ yaourt -S --noconfirm --needed cmatrix weatherboy whois create_ap openssh \
   ## python
   yaourt -S --noconfirm --needed python
   yaourt -S --noconfirm --needed flake8 python2-flake8
+  yaourt -S --noconfirm --needed ipython jupyter
   ## rust
   yaourt -S --noconfirm --needed rust
   ## C/C++
@@ -189,4 +190,5 @@ yaourt -S --noconfirm --needed cmatrix weatherboy whois create_ap openssh \
       snappy gflags
   ## Others
   yaourt -S --noconfirm --needed cloc ack fdupes the_silver_searcher \
-      search-and-view-git stow python-powerline python2-powerline nyancat
+      search-and-view-git stow python-powerline python2-powerline nyancat \
+      enca dos2unix unix2dox
