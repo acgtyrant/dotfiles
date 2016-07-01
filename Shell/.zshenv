@@ -24,10 +24,6 @@ export XDG_CONFIG_HOME="$HOME/.config"
 #export HTTP_PROXY="http://127.0.0.1:7777"
 #export HTTPS_PROXY="http://127.0.0.1:7777"
 
-# More PATH! More PATH! More PATH!
-export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
-typeset -U PATH # ...And let any duplicate varaibles go!
-
 # Choose Default Qt toolkit
 # https://wiki.archlinux.org/index.php/Qt#Using_environment_variables
 export QT_SELECT=5
@@ -43,9 +39,6 @@ export SDL_VIDEO_FULLSCREEN_HEAD=1
 # Development needs.
 export CAFFE_DIR="${HOME}/Projects/caffe"
 export RP_DIR="${HOME}/Projects/RoadPerception"
-export PYTHONPATH="${CAFFE_DIR}/python:$PYTHONPATH"
-export PYTHONPATH="${RP_DIR}/python:$PYTHONPATH"
-export LD_LIBRARY_PATH="/usr/local/cuda/lib64:${CAFFE_DIR}/distribute/lib"
 
 # https://github.com/lilydjwg/search-and-view
 export AGV_EDITOR="/bin/gvim"
