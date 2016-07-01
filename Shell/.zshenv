@@ -43,7 +43,8 @@ export SDL_VIDEO_FULLSCREEN_HEAD=1
 # Development needs.
 export CAFFE_DIR="${HOME}/Projects/caffe"
 export RP_DIR="${HOME}/Projects/RoadPerception/"
-export PYTHONPATH="${CAFFE_DIR}/python/"
+export PYTHONPATH="${CAFFE_DIR}/python:$PYTHONPATH"
+export PYTHONPATH="${RP_DIR}/python:$PYTHONPATH"
 export LD_LIBRARY_PATH="/usr/local/cuda/lib64:${CAFFE_DIR}/distribute/lib/"
 
 # https://github.com/lilydjwg/search-and-view
