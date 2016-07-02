@@ -57,7 +57,7 @@ yaourt -S --noconfirm --needed steam
     yaourt -S --noconfirm --needed termite
   ## Files
     ### File managers
-    yaourt -S --noconfirm --needed ranger nautilus gvfs-smb
+    yaourt -S --noconfirm --needed ranger nautilus gvfs-smb gvfs-mtp
   ## Desktop search engines
   yaourt -S --noconfirm --needed catfish
   ## Archiving and compression tools
@@ -172,7 +172,7 @@ yaourt -S --noconfirm --needed cmatrix weatherboy whois create_ap openssh \
   ssh-add ~/.ssh/id_rsa
   echo "add your key to git server!"
   ## python
-  yaourt -S --noconfirm --needed python
+  yaourt -S --noconfirm --needed python ipython
   yaourt -S --noconfirm --needed flake8 python2-flake8
   yaourt -S --noconfirm --needed ipython jupyter
   ## rust
@@ -188,6 +188,11 @@ yaourt -S --noconfirm --needed cmatrix weatherboy whois create_ap openssh \
   ## Machine Learning
   yaourt -S --noconfirm --needed boost google-glog hdf5 leveldb lmdb protobuf \
       snappy gflags
+  ### Caffe
+  yaourt -s --noconfirm --needed cython python-numpy python-scipy \
+      python-matplotlib python-scikit-image python-h5py python-plyvel \
+      python-networkx python-nose python-pandas python-dateutil python-gflags \
+      python-yaml python-six python-pillow python-protobuf
   ## Others
   yaourt -S --noconfirm --needed cloc ack fdupes the_silver_searcher \
       search-and-view-git stow python-powerline python2-powerline nyancat \
