@@ -34,7 +34,7 @@ yaourt -S --noconfirm --needed steam
 
   ## Image
     ### Image viewers
-    yaourt -S --noconfirm --needed feh
+    yaourt -S --noconfirm --needed feh jpeginfo
   ## Graphics and image manipulation
     ### Raster editors TODO
   ## Screen capture TODO
@@ -44,7 +44,7 @@ yaourt -S --noconfirm --needed steam
     yaourt -S --noconfirm --needed deadbeef
   ## Video
     ### Video players TODO
-    yaourt -S --noconfirm --needed mpv gnome-mpv vlc
+    yaourt -S --noconfirm --needed mpv gnome-mpv vlc mediainfo
     ### Subtitles TODO
     yaourt -S --noconfirm --needed aegisub
 
@@ -196,4 +196,4 @@ yaourt -S --noconfirm --needed cmatrix weatherboy whois create_ap openssh \
   ## Others
   yaourt -S --noconfirm --needed cloc ack fdupes the_silver_searcher \
       search-and-view-git stow python-powerline python2-powerline nyancat \
-      enca dos2unix unix2dox
+      enca dos2unix unix2dox renameutils
