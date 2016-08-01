@@ -72,7 +72,7 @@ yaourt -S --noconfirm --needed steam
   ## System monitoring
   yaourt -S --noconfirm --needed conky gnome-system-monitor htop
   ## System information viewers
-  yaourt -S --noconfirm --needed alsi cpu-g-bzr hardinfo
+  yaourt -S --noconfirm --needed alsi cpu-g-bzr hardinfo lsb-release
   ## Power management see general.sh
   ## Clipboard managers TODO
   yaourt -S --noconfirm --needed xclip
