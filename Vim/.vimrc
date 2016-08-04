@@ -80,11 +80,12 @@
     Plugin 'wakatime/vim-wakatime' " log your develop time
 
     " syntax support
-    Plugin 'Shougo/neocomplete.vim'
-      let g:neocomplete#enable_at_startup = 1
-    Plugin 'scrooloose/syntastic'
-      let g:syntastic_cpp_compiler = 'clang++'
-      let g:syntastic_cpp_compiler_options = ' -std=c++14 -stdlib=libc++'
+    Plugin 'Valloric/YouCompleteMe'
+    "Plugin 'Shougo/neocomplete.vim'
+      "let g:neocomplete#enable_at_startup = 1
+    "Plugin 'scrooloose/syntastic'
+      "let g:syntastic_cpp_compiler = 'clang++'
+      "let g:syntastic_cpp_compiler_options = ' -std=c++14 -stdlib=libc++'
     Plugin 's3rvac/AutoFenc' " auto detect encoding
 
     " extra language support
@@ -158,8 +159,6 @@
   " and the line number is relative with the current line
   set ruler
   " show the line and column number of the cursor position
-  set textwidth=79
-  " wrap the line when it is more than textwidth
   set colorcolumn=80
   " highlight the longest column
   set cursorline
