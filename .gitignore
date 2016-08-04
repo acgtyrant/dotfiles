@@ -1,38 +1,15 @@
-#Vim
-Vim/.vim/
-
-#Neovim
-Neovim/.config/nvim
-
-# i3
-i3/.config/i3/i3log
-
-# Ranger
-Ranger
-
-# Tmux
-Tmux/.config/tmux-powerline
-
-# X11
-X11/.config/gtk-3.0/settings.ini
-X11/.config/gtk-3.0/servers
-
-# Default Applications
-Default Applications
-
-# Fcitx
-Fcitx
-
-# Cow
 Cow/.cow
-
-# HexChat
+Default Applications
+Fcitx
 HexChat
-
-# SSH
+i3/.config/i3/i3log
+Neovim/.config/nvim
+Python/.ipython/profile_default
+Ranger
 SSH/.ssh/id_rsa
 SSH/.ssh/id_rsa.pub
 SSH/.ssh/known_hosts
-
-# Python
-Python/.ipython/profile_default
+Tmux/.config/tmux-powerline
+Vim/.vim/
+X11/.config/gtk-3.0/servers
+X11/.config/gtk-3.0/settings.ini
