@@ -80,12 +80,11 @@
     Plugin 'wakatime/vim-wakatime' " log your develop time
 
     " syntax support
-    Plugin 'Valloric/YouCompleteMe'
-    "Plugin 'Shougo/neocomplete.vim'
-      "let g:neocomplete#enable_at_startup = 1
-    "Plugin 'scrooloose/syntastic'
-      "let g:syntastic_cpp_compiler = 'clang++'
-      "let g:syntastic_cpp_compiler_options = ' -std=c++14 -stdlib=libc++'
+    Plugin 'Shougo/neocomplete.vim'
+      let g:neocomplete#enable_at_startup = 1
+    Plugin 'scrooloose/syntastic'
+      let g:syntastic_cpp_compiler = 'clang++'
+      let g:syntastic_cpp_compiler_options = ' -std=c++14 -stdlib=libc++'
     Plugin 's3rvac/AutoFenc' " auto detect encoding
 
     " extra language support
