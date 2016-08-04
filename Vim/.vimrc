@@ -19,7 +19,7 @@
 
   " all plugins {
     " Vim plugins manager
-    Plugin 'VumdleVim/Vundle.vim'
+    Plugin 'VundleVim/Vundle.vim'
 
     " feature
     Plugin 'scrooloose/nerdtree' " a tree explorer
