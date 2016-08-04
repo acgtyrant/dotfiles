@@ -83,8 +83,19 @@
     Plugin 'Shougo/neocomplete.vim'
       let g:neocomplete#enable_at_startup = 1
     Plugin 'scrooloose/syntastic'
+      set statusline+=%#warningmsg#
+      set statusline+=%{SyntasticStatuslineFlag()}
+      set statusline+=%*
+
+      let g:syntastic_always_populate_loc_list = 1
+      let g:syntastic_auto_loc_list = 1
+      let g:syntastic_check_on_open = 1
+      let g:syntastic_check_on_wq = 0
+
+      let g:syntastic_cpp_checkers = ['clang-check', 'gcc']
       let g:syntastic_cpp_compiler = 'clang++'
       let g:syntastic_cpp_compiler_options = ' -std=c++14 -stdlib=libc++'
+      let g:syntastic_python_checkers = ['flake8']
     Plugin 's3rvac/AutoFenc' " auto detect encoding
 
     " extra language support
