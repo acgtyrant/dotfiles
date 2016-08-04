@@ -92,9 +92,9 @@
       let g:syntastic_check_on_open = 1
       let g:syntastic_check_on_wq = 0
 
-      let g:syntastic_cpp_checkers = ['clang_check', 'gcc']
+      let g:syntastic_cpp_checkers = ['clang_check']
       let g:syntastic_cpp_compiler = 'clang++'
-      let g:syntastic_cpp_compiler_options = ' -std=c++14 -stdlib=libc++'
+      let g:syntastic_cpp_compiler_options = '-std=c++14 -stdlib=libc++'
       let g:syntastic_python_checkers = ['flake8']
     Plugin 's3rvac/AutoFenc' " auto detect encoding
 
