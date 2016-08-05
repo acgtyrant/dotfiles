@@ -103,9 +103,6 @@
       let g:rustfmt_autosave = 1
       " format your code using [rustfmt][rfmt] every time a buffer is written
     Plugin 'cespare/vim-toml'
-    Plugin 'nvie/vim-flake8'
-      autocmd FileType python map <buffer> <F4> :call Flake8()<CR>
-      autocmd BufWritePost *.py call Flake8()
 
     " improve appreance
     Plugin 'luochen1990/rainbow'
