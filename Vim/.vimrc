@@ -78,6 +78,9 @@
       let g:UltiSnipsListSnippets="<leader>j"
     Plugin 'jiangmiao/auto-pairs'
     Plugin 'wakatime/vim-wakatime' " log your develop time
+    Plugin 'mileszs/ack.vim'
+      cnoreabbrev Ack Ack!
+      nnoremap <Leader>a :Ack!<Space>
 
     " syntax support
     Plugin 'Shougo/neocomplete.vim'
