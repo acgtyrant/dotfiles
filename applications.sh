@@ -57,7 +57,9 @@ yaourt -S --noconfirm --needed steam
     yaourt -S --noconfirm --needed termite
   ## Files
     ### File managers
-    yaourt -S --noconfirm --needed ranger nautilus gvfs-smb gvfs-mtp
+    # https://wiki.archlinux.org/index.php/File_manager_functionality#Thumbnail_previews
+    yaourt -S --noconfirm --needed ranger nautilus gvfs-smb gvfs-mtp \
+        thumbler poppler-glib ffmepgthumbnailer freetype2 libgsf raw-thumbnailer totem
   ## Desktop search engines
   yaourt -S --noconfirm --needed catfish
   ## Archiving and compression tools
