@@ -50,3 +50,20 @@ export CPUPROFILE=$HOME/tmp/gperf.out
 # CHROOT
 # https://wiki.archlinux.org/index.php/DeveloperWiki:Building_in_a_Clean_Chroot#Setting_Up_A_Chroot
 export CHROOT=$HOME/chroot
+
+# PATH
+PATH="${HOME}/bin:$PATH"
+PATH="${HOME}/.local/bin:$PATH"
+PATH="/opt/bin:$PATH"
+PATH="${CAFFE_DIR}/build/tools:$PATH"
+typeset -U PATH
+export PATH
+
+# PYTHONPATH
+PYTHONPATH="${CAFFE_DIR}/python:$PYTHONPATH"
+PYTHONPATH="${RP_DIR}/python:$PYTHONPATH"
+PYTHONPATH="${HOME}/.local/lib/python2.7/dist-packages:$PYTHONPATH"
+PYTHONPATH="${HOME}/.local/lib/python3.4/dist-packages:$PYTHONPATH"
+PYTHONPATH="${HOME}/.local/lib/python3.5/dist-packages:$PYTHONPATH"
+typeset -U PYTHONPATH
+export PYTHONPATH
