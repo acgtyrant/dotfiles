@@ -19,10 +19,20 @@ export VISUAL="/usr/bin/vim"
 export BROWSER="/usr/bin/google-chrome-stable"
 export XDG_CONFIG_HOME="$HOME/.config"
 # These addresses are assigned by cow.
-#export http_proxy="http://127.0.0.1:7777"
-#export https_proxy="http://127.0.0.1:7777"
-#export HTTP_PROXY="http://127.0.0.1:7777"
-#export HTTPS_PROXY="http://127.0.0.1:7777"
+proxy () {
+  export http_proxy="http://127.0.0.1:7777"
+  export https_proxy="http://127.0.0.1:7777"
+  export HTTP_PROXY="http://127.0.0.1:7777"
+  export HTTPS_PROXY="http://127.0.0.1:7777"
+  echo "http proxy on"
+}
+noproxy () {
+  unset http_proxy
+  unset https_proxy
+  unset HTTP_PROXY
+  unset HTTPS_PROXY
+  echo "http proxy off"
+}
 
 # Choose Default Qt toolkit
 # https://wiki.archlinux.org/index.php/Qt#Using_environment_variables
