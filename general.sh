@@ -120,7 +120,7 @@ multilib=true
   yaourt -S --noconfirm --needed xorg-xprop
 
   ## Display manager
-  yaourt -S --noconfirm --needed xorg-xinit
+  yaourt -S --noconfirm --needed xorg-xinit lxdm
 
   ## Desktop environments
 
