@@ -7,6 +7,10 @@ yaourt -S --noconfirm --needed steam
 # Internet
 
   ## Network Managers
+  yaourt -S --noconfirm --needed networkmanager network-manager-applet
+  yaourt -S --noconfirm --needed gnome-keyring libgnome-keyring
+  systemctl enable networkmanager
+  systemctl start networkmanager
   ## Web browsers
   yaourt -S --noconfirm --needed google-chrome chromium-pepper-flash firefox opera
   ## Downloaders
