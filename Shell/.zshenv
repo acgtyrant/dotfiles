@@ -77,3 +77,7 @@ PYTHONPATH="${HOME}/.local/lib/python3.4/dist-packages:$PYTHONPATH"
 PYTHONPATH="${HOME}/.local/lib/python3.5/dist-packages:$PYTHONPATH"
 typeset -U PYTHONPATH
 export PYTHONPATH
+
+# Java font.
+# https://wiki.archlinux.org/index.php/Java#Better_font_rendering
+export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"
