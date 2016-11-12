@@ -38,7 +38,7 @@ yaourt -S --noconfirm --needed steam
 
   ## Image
     ### Image viewers
-    yaourt -S --noconfirm --needed feh jpeginfo
+    yaourt -S --noconfirm --needed feh jpeginfo pinta
   ## Graphics and image manipulation
     ### Raster editors TODO
   ## Screen capture TODO
