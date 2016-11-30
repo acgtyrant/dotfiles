@@ -94,6 +94,31 @@ alias wps='wps -style gtk'
 alias et='et -style gtk'
 alias wpp='wpp -style gtk'
 
+# Use yaourt/pkgfile alias in Ubuntu
+# https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/archlinux/archlinux.plugin.zsh
+if (( $+commands[apt-get] )); then
+  alias yaupg='sudo apt update'
+  alias yain='sudo apt install'
+  alias yare='sudo apt remove'
+  if (( $+commands[apt-cache] )); then
+    alias yarep='apt-cache show'
+  else
+    alias yarep='aptitude show'
+  fi
+  alias yareps='apt search'
+  if (( $+commands[dpkg] )); then
+    alias yaloc='dpkg -s'
+  else
+    alias yaloc='aptitude show'
+  fi
+  if (( $+commands[aptitude] )); then
+    yalocs() {
+      aptitude search '~i(~n $1|-d $1)'
+    }
+  fi
+  alias pkgfile='apt-file search'
+fi
+
 # Improve colored output by ls
 # https://wiki.archlinux.org/index.php/Core_utilities#Colored_output_2
 eval "$(dircolors -b)"
