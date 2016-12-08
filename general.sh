@@ -110,7 +110,7 @@ multilib=true
   ## Display server TODO
   # https://wiki.archlinux.org/index.php/Xorg
   # https://wiki.archlinux.org/index.php/Wayland
-  yaourt -S --noconfirm --needed xorg-server xorg-xmodmap
+  yaourt -S --noconfirm --needed xorg-server xorg-xmodmap xsel
   yaourt -S --noconfirm --needed compton
   yaourt -S --noconfirm --needed lxrandr
 
