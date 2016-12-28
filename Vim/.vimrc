@@ -134,6 +134,10 @@
     Plugin 'vim-airline/vim-airline-themes'
       let g:aireline_theme='molokai'
     Plugin 'lilydjwg/colorizer'
+    " proto.vim
+    augroup filetype
+      au! BufRead,BufNewFile *.proto setfiletype proto
+    augroup end
   " }
 
   call vundle#end()
