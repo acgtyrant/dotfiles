@@ -16,7 +16,6 @@ export SHELL="/usr/bin/zsh"
 export PAGER="/usr/bin/vimpager"
 export EDITOR="/usr/bin/vim"
 export VISUAL="/usr/bin/vim"
-export BROWSER="/usr/bin/google-chrome-stable"
 export XDG_CONFIG_HOME="$HOME/.config"
 # These addresses are assigned by cow.
 proxy () {
