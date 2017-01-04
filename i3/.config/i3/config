@@ -141,7 +141,7 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 # Assigns #
-assign [class="(?i)Urxvt"] 1: Term
+assign [class="(?i)termite"] 1: Term
 assign [class="(?i)chromium"] 2: Web
 assign [class="(?i)google-chrome"] 2: Web
 assign [class="(?i)opera"] 2: Web
