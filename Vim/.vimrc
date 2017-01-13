@@ -185,6 +185,8 @@
 " }
 
 " general {
+  set nrformats=
+  " Do not use oct to increase of decrease number.
   set scrolloff=3
   " Minimal number of screen lines to keep above and below the cursor.
   set showcmd
