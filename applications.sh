@@ -62,12 +62,13 @@ yaourt -S --noconfirm --needed steam
   ## Files
     ### File managers
     # https://wiki.archlinux.org/index.php/File_manager_functionality#Thumbnail_previews
-    yaourt -S --noconfirm --needed ranger nautilus gvfs-smb gvfs-mtp \
+    yaourt -S --noconfirm --needed ranger highlight atool poppler transmission-cli
+    yaourt -S --noconfirm --needed nautilus gvfs-smb gvfs-mtp \
         thumbler poppler-glib ffmepgthumbnailer freetype2 libgsf raw-thumbnailer totem
   ## Desktop search engines
   yaourt -S --noconfirm --needed catfish
   ## Archiving and compression tools
-  yaourt -S --noconfirm --needed p7zip tar ### Graphical TODO
+  yaourt -S --noconfirm --needed bzip2 gzip p7zip tar unrar unzip xz zip ### Graphical TODO
   ## Comparison, diff, merge
   yaourt -S --noconfirm --needed meld
   ## Disk cleaning TODO
