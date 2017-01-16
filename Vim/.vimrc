@@ -182,6 +182,10 @@
   " highlight the current column in the cursor
   highlight Cursorcolumn cterm=NONE ctermbg=darkred ctermfg=white
   highlight Folded ctermbg=grey ctermfg=black
+  " distinguish tab, trail space and nbsp
+  " http://vi.stackexchange.com/a/430/5663
+  set list
+  set listchars=tab:␉·,trail:␠,nbsp:⎵
 " }
 
 " general {
