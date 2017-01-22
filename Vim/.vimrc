@@ -139,6 +139,8 @@
       au! BufRead,BufNewFile *.proto setfiletype proto
     augroup end
   " }
+    " show the number of matches and the index of the current match
+    Plugin 'google/vim-searchindex'
 
   call vundle#end()
   filetype plugin indent on     " required!
