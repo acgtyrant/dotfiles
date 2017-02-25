@@ -180,9 +180,9 @@ yaourt -S --noconfirm --needed cmatrix weatherboy whois create_ap openssh \
   ssh-add ~/.ssh/id_rsa
   echo "add your key to git server!"
   ## python
-  yaourt -S --noconfirm --needed python ipython
+  yaourt -S --noconfirm --needed python
   yaourt -S --noconfirm --needed flake8 python2-flake8
-  yaourt -S --noconfirm --needed ipython jupyter
+  yaourt -S --noconfirm --needed ipython jupyter jupyter-notebook
   # http://blog.csdn.net/gaoyingju/article/details/50449522#0-tsina-1-61768-397232819ff9a47a7b7e80a40613cfe1
   pip install pep8-naming flake8-import-order flake8-todo flake8-quotes 
   ## rust
@@ -205,5 +205,6 @@ yaourt -S --noconfirm --needed cmatrix weatherboy whois create_ap openssh \
       python-yaml python-six python-pillow python-protobuf
   ## Others
   yaourt -S --noconfirm --needed cloc ack fdupes the_silver_searcher \
-      search-and-view-git stow python-powerline python2-powerline nyancat \
+      search-and-view-git stow nyancat \
       enca dos2unix unix2dox renameutils
+  yaourt -S --noconfirm --needed powerline powerline2 powerline-common python-powerline python2-powerline 
