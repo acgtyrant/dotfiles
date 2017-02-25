@@ -102,7 +102,7 @@ yaourt -S --noconfirm --needed steam
   ## Translation and localization TODO
   ## Text editors
   yaourt -S --noconfirm --needed gvim gedit emacs
-  yaourt -S --noconfirm --needed neovim python-neovim python2-neovim 
+  yaourt -S --noconfirm --needed neovim python-neovim
   yaourt -S --noconfirm --needed typora
   ## Readers and Viewers
     ### PDF and DjVu
@@ -155,7 +155,7 @@ yaourt -S --noconfirm --needed steam
 ################################################################################
 
 ## Proxy TODO
-yaourt -S --noconfirm --needed shadowsocks python2-m2crypto cow-proxy
+yaourt -S --noconfirm --needed shadowsocks cow-proxy
 
 ## Cloud backup TODO
 yaourt -S --noconfirm --needed nutstore nautilus-nutstore
@@ -181,7 +181,7 @@ yaourt -S --noconfirm --needed cmatrix weatherboy whois create_ap openssh \
   echo "add your key to git server!"
   ## python
   yaourt -S --noconfirm --needed python
-  yaourt -S --noconfirm --needed flake8 python2-flake8
+  yaourt -S --noconfirm --needed flake8
   yaourt -S --noconfirm --needed ipython jupyter jupyter-notebook
   # http://blog.csdn.net/gaoyingju/article/details/50449522#0-tsina-1-61768-397232819ff9a47a7b7e80a40613cfe1
   pip install pep8-naming flake8-import-order flake8-todo flake8-quotes 
@@ -199,12 +199,15 @@ yaourt -S --noconfirm --needed cmatrix weatherboy whois create_ap openssh \
   yaourt -S --noconfirm --needed boost google-glog hdf5 leveldb lmdb protobuf \
       snappy gflags
   ### Caffe
-  yaourt -s --noconfirm --needed cython python-numpy python-scipy \
+  yaourt -S --noconfirm --needed cython python-numpy python-scipy \
       python-matplotlib python-scikit-image python-h5py python-plyvel \
       python-networkx python-nose python-pandas python-dateutil python-gflags \
       python-yaml python-six python-pillow python-protobuf
+  ### SciPy
+  yaourt -S --noconfirm --needed python-numpy python-scipy python-matplotlib \
+      ipython jupyter jupyter-nootbook python-pandas python-syumpy python-nose
   ## Others
   yaourt -S --noconfirm --needed cloc ack fdupes the_silver_searcher \
       search-and-view-git stow nyancat \
-      enca dos2unix unix2dox renameutils
-  yaourt -S --noconfirm --needed powerline powerline2 powerline-common python-powerline python2-powerline 
+      enca dos2unix unix2dox renameutils \
+      powerline python-powerline
