@@ -106,7 +106,7 @@ yaourt -S --noconfirm --needed steam
   yaourt -S --noconfirm --needed typora
   ## Readers and Viewers
     ### PDF and DjVu
-    yaourt -S --noconfirm --needed evince
+    yaourt -S --noconfirm --needed acroread
     ### Terminal pagers
     yaourt -S --noconfirm --needed less vimpager
     ### CHM
