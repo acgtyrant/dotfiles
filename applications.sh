@@ -182,7 +182,8 @@ yaourt -S --noconfirm --needed cmatrix weatherboy whois create_ap openssh \
   ## python
   yaourt -S --noconfirm --needed python
   yaourt -S --noconfirm --needed flake8
-  yaourt -S --noconfirm --needed ipython jupyter jupyter-notebook
+  yaourt -S --noconfirm --needed ipython jupyter jupyter-notebook mathjax
+  yaourt -S --noconfirm --needed python-pip python2-pip
   # http://blog.csdn.net/gaoyingju/article/details/50449522#0-tsina-1-61768-397232819ff9a47a7b7e80a40613cfe1
   pip install pep8-naming flake8-import-order flake8-todo flake8-quotes 
   ## rust
@@ -199,6 +200,9 @@ yaourt -S --noconfirm --needed cmatrix weatherboy whois create_ap openssh \
   yaourt -S --noconfirm --needed boost google-glog hdf5 leveldb lmdb protobuf \
       snappy gflags
   ### Caffe
+  yaourt -S --needed atlas-lapack
+  yaourt -S --noconfirm --needed cuda boost protobuf google-glog gflags hdf5 \
+      lmdb leveldb cudnn
   yaourt -S --noconfirm --needed cython python-numpy python-scipy \
       python-matplotlib python-scikit-image python-h5py python-plyvel \
       python-networkx python-nose python-pandas python-dateutil python-gflags \
