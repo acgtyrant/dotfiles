@@ -40,7 +40,10 @@
         "SynapseSystemManagementPlugin",
         "SynapseZeitgeistPlugin",
         "SynapseCalculatorPlugin",
-        "SynapseSelectionPlugin"
+        "SynapseSelectionPlugin",
+        "SynapseChromiumPlugin",
+        "SynapseLocatePlugin",
+        "SynapseDirectoryPlugin"
       ]
     }
   }
