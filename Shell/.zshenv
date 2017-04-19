@@ -19,10 +19,10 @@ export VISUAL="/usr/bin/vim"
 export XDG_CONFIG_HOME="$HOME/.config"
 # These addresses are assigned by cow.
 proxy () {
-  export http_proxy="http://127.0.0.1:7777"
-  export https_proxy="http://127.0.0.1:7777"
-  export HTTP_PROXY="http://127.0.0.1:7777"
-  export HTTPS_PROXY="http://127.0.0.1:7777"
+  export http_proxy="http://127.0.0.1:7779"
+  export https_proxy="http://127.0.0.1:7779"
+  export HTTP_PROXY="http://127.0.0.1:7779"
+  export HTTPS_PROXY="http://127.0.0.1:7779"
   echo "http proxy on"
 }
 noproxy () {
