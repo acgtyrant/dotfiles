@@ -65,6 +65,7 @@ PATH="${HOME}/bin:$PATH"
 PATH="${HOME}/.local/bin:$PATH"
 PATH="/opt/bin:$PATH"
 PATH="${CAFFE_DIR}/build/tools:$PATH"
+PATH="/usr/local/cuda/bin:$PATH"
 typeset -U PATH
 export PATH
 
