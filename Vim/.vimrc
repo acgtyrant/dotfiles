@@ -31,6 +31,7 @@
       " enable line numbers
       autocmd FileType nerdtree setlocal relativenumber
       " make sure relative line numbers are used
+      let NERDTreeIgnore = ['\.pyc$', '__pycache__', '\.egg$', '\.so$', 'CMakeCache.txt', 'CMakeFiles', 'CMakeScripts', 'cmake_install.cmake']
     Plugin 'scrooloose/nerdcommenter' " intensely orgasmic commenting.
       let NERD_c_alt_style=1
       " change the default comment symbol from /**/ to // in c
