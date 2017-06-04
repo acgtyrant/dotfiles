@@ -164,11 +164,11 @@ yaourt -S --noconfirm --needed nutstore nautilus-nutstore
 yaourt -S --noconfirm --needed teamviewer
 
 ## Safe plugins
-yaourt -S --noconfirm --needed upeditor	aliedit
+yaourt -S --noconfirm --needed upeditor aliedit
 
 ## Others
 yaourt -S --noconfirm --needed cmatrix weatherboy whois create_ap openssh \
-    linux-headers rescuetime autojump tree
+    linux-headers rescuetime autojump tree gnome-control-center
 
 # Development
 
