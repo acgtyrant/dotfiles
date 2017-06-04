@@ -15,7 +15,10 @@ I follow [Desktop entries](https://wiki.archlinux.org/index.php/Desktop_entries)
 
 ## Git
 
-I use tig as the pager for git, and set some aliases. No `.gitignore`, I advise
-that set `.gitgnore` for every program by yourself, just pull `github/gitignore` immediately.
+I use tig as the pager for git, and set some aliases.
+
+I use meld as the differ for git.
+
+No `.gitignore`, I advise that set `.gitgnore` for every program by yourself, just pull `github/gitignore` immediately.
 
 By the way, I write some scripts to reinstall Arch Linux quickly, but they are not practical as so far.
