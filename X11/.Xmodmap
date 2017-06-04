@@ -1,2 +1,6 @@
+! modifies CapsLock to Control, and Shift+CapsLock to CapsLock
+! https://wiki.archlinux.org/index.php/Xmodmap#Modifier_keys
 clear lock
+clear control
+add control = Caps_Lock Control_L Control_R
 keycode 66 = Control_L Caps_Lock NoSymbol NoSymbol
