@@ -7,10 +7,13 @@
   l = log
   s = status
 [color]
+  # be compatibility with tig
   ui = off
 [core]
   pager = tig
 [credential]
+  # store your credentials permanently
+  # https://stackoverflow.com/a/12240995/1546088
   helper = store
 [merge]
   tool = meld
