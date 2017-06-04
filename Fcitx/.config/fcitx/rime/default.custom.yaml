@@ -1,5 +1,0 @@
-patch:
-    "menu/page_size": 5
-    schema_list:
-    - schema: luna_pinyin
-    - schema: meow_emoji
