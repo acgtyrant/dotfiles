@@ -80,6 +80,9 @@
     Plugin 'jiangmiao/auto-pairs'
     Plugin 'wakatime/vim-wakatime' " log your develop time
     Plugin 'mileszs/ack.vim'
+      if executable('ag')
+        let g:ackprg = 'ag --vimgrep'
+      endif
       cnoreabbrev Ack Ack!
       nnoremap <Leader>a :Ack!<Space>
 
