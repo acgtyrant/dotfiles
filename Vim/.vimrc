@@ -80,11 +80,14 @@
     Plugin 'jiangmiao/auto-pairs'
     Plugin 'wakatime/vim-wakatime' " log your develop time
     Plugin 'mileszs/ack.vim'
+      " replace ack by ag
       if executable('ag')
         let g:ackprg = 'ag --vimgrep'
       endif
       cnoreabbrev Ack Ack!
-      nnoremap <Leader>a :Ack!<Space>
+      " <C-r><C-W> can input the cuurent word in the command line mode
+      " by the way, you can use C-w to delete the current word when you do not need it
+      nnoremap <Leader>a :Ack! <C-r><C-w>
 
     " syntax support
     Plugin 'Shougo/neocomplete.vim'
