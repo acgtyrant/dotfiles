@@ -75,6 +75,8 @@
             \ 'union'     : 'u'
         \ }
 			\ }
+      " do not sort tag by name
+      let g:tagbar_sort=0
     Plugin 'SirVer/ultisnips'
       let g:UltiSnipsListSnippets="<leader>j"
     Plugin 'jiangmiao/auto-pairs'
