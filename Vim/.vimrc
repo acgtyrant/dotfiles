@@ -90,6 +90,8 @@
       " <C-r><C-W> can input the cuurent word in the command line mode
       " by the way, you can use C-w to delete the current word when you do not need it
       nnoremap <Leader>a :Ack! <C-r><C-w>
+    Plugin 'brooth/far.vim'
+      nnoremap <Leader>f :Far <C-r><C-w>
 
     " syntax support
     Plugin 'Shougo/neocomplete.vim'
