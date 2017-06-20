@@ -7,10 +7,9 @@
   l = log
   s = status
 [color]
-  # be compatibility with tig
-  ui = off
+  ui = on
 [core]
-  pager = tig
+  pager = less
 [credential]
   # store your credentials permanently
   # https://stackoverflow.com/a/12240995/1546088
