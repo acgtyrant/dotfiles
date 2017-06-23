@@ -93,6 +93,7 @@
     Plugin 'brooth/far.vim'
       let g:far#source = 'ag'
       nnoremap <Leader>f :Far <C-r><C-w>
+    Plugin 'tpope/vim-fugitive'
 
     " syntax support
     Plugin 'Shougo/neocomplete.vim'
