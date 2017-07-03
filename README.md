@@ -11,7 +11,7 @@ I follow [Desktop entries](https://wiki.archlinux.org/index.php/Desktop_entries)
 
 ## Git
 
-I use tig as the pager for git, and set some aliases.
+I use less as the pager for git, and set some aliases.
 
 I use meld as the differ for git.
 
