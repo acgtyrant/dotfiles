@@ -5,10 +5,6 @@ I am [Using GNU Stow to manage my dotfiles](http://brandon.invergo.net/news/2012
 
 Let me explain some diretories.
 
-## Compton
-
-The default config is enough. unless you want to disable shadowing of some windows.
-
 ## Default Applications
 
 I follow [Desktop entries](https://wiki.archlinux.org/index.php/Desktop_entries) to set my [Default applications](https://wiki.archlinux.org/index.php/Default_applications#MIME_types_and_desktop_entries), and I do not use any DE, so there are only a `$HOME/.config/mimeapps.list` inside, at the same time, I set some environments to appoint default applications in the Shell sections.
