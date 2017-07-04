@@ -1,39 +1,9 @@
 # See `man termite.config`
 [options]
-scroll_on_output = false
-scroll_on_keystroke = true
-audible_bell = false
-mouse_autohide = true
-allow_bold = true
-dynamic_title = true
-urgent_on_bell = true
-clickable_url = true
 font = Hermit 11
+# Length of the scrollback buffer, 0 disabled the scrollback buffer
+# # and setting it to a negative value means "infinite scrollback"
 scrollback_lines = 65536
-search_wrap = true
-icon_name = terminal
-geometry = 640x480
-resize_grip = true
-visible_bell = true
-
-# "system", "on" or "off"
-cursor_blink = system
-
-# "block", "underline" or "ibeam"
-cursor_shape = block
-
-# $BROWSER is used by default
-browser = google-chrome
-
-# set size hints for the window
-#size_hints = false
-
-# emit escape sequences for other keys modified by Control
-#modify_other_keys = false
-
-# word characters used for word selection
-# (default if unset: all graphic non-punctuation/space characters)
-word_chars = -A-Za-z0-9,./?%&#:_=+@~
 
 # Solarized-dark
 [colors]
@@ -60,12 +30,4 @@ color14 = #93a1a1
 color15 = #fdf6e3
 
 [hints]
-#font = Monospace 12
-#foreground = #dcdccc
-#background = #3f3f3f
-#padding = 2
-#border = #3f3f3f
-#border_width = 0.5
-#roundness = 2.0
-
-# vim: ft=dosini
+font = Hermit 11
