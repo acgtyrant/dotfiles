@@ -1,8 +1,6 @@
 " More user-friendly mapping of key {
   " Map leader key from backslash to comma, which is confortable to human.
   let mapleader = ","
-  " just hit j two times to exit
-  inoremap jj <ESC>
   " easy
   nnoremap ; :
   nnoremap <Tab> %
