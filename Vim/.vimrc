@@ -5,7 +5,7 @@
   inoremap jj <ESC>
   " easy
   nnoremap ; :
-  nnoremap tab %
+  nnoremap <Tab> %
 " }
 
 " https://github.com/VundleVim/Vundle.vim
