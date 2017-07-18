@@ -1,0 +1,10 @@
+# style formatter
+autopep8
+# interactive shell
+ipython
+# the Powerline support for IPython
+powerline-status
+# notebook
+jupyter
+# C-Extensions for Python
+cython
