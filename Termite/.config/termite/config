@@ -1,8 +1,14 @@
 # See `man termite.config`
 [options]
-font = Hermit 11
-# Length of the scrollback buffer, 0 disabled the scrollback buffer
-# # and setting it to a negative value means "infinite scrollback"
+scroll_on_output = false
+scroll_on_keystroke = true
+audible_bell = false
+mouse_autohide = true
+allow_bold = true
+dynamic_title = true
+urgent_on_bell = true
+clickable_url = true
+font = Fira Code
 scrollback_lines = 65536
 
 # Solarized-dark

@@ -23,7 +23,7 @@ set $dmenu dmenu_run -fn 'Menlo-10' -nf '#FFFFFF' -sb '#00002A' -nb '#447C73' -p
 # chose a FreeType font, such as:
 
 # font
-font xft: WenQuanYi Micro Hei 11
+font xft: Fira Code 11
 
 # colors
 client.focused              #688060 #688060 #303030 #ffcfaf
