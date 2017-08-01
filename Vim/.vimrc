@@ -26,11 +26,8 @@
       " open a NERDTree automatically when vim starts up if no files were specified
       autocmd StdinReadPre * let s:std_in=1
       autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-      " enable line numbers
       let NERDTreeShowLineNumbers=1
-      " make sure relative line numbers are used
       autocmd FileType nerdtree setlocal relativenumber
-      " ignore tmpfile
       let NERDTreeIgnore = ['\.pyc$', '__pycache__', '\.egg$', '\.so$', 'CMakeCache.txt', 'CMakeFiles', 'CMakeScripts', 'cmake_install.cmake']
     " intensely orgasmic commenting.
     Plugin 'scrooloose/nerdcommenter'
@@ -39,68 +36,38 @@
       let g:NERDCustomDelimiters = {'c': { 'leftAlt': '/*', 'rightAlt': '*/', 'left': '// '}}
     " displays tags in a window, ordered by scope.
     Plugin 'majutsushi/tagbar'
-      autocmd FileType tagbar setlocal relativenumber
       map <F3> :TagbarToggle<cr>
       let tagbar_show_linenumbers=2
-      let g:tagbar_compact=1
-      " no compact help
-      let g:tagbar_type_cpp = {
-        \ 'kinds' : [
-            \ 'c:classes:0:1',
-            \ 'd:macros:0:1',
-            \ 'e:enumerators:0:0', 
-            \ 'f:functions:0:1',
-            \ 'g:enumeration:0:1',
-            \ 'l:local:0:1',
-            \ 'm:members:0:1',
-            \ 'n:namespaces:0:1',
-            \ 'p:functions_prototypes:0:1',
-            \ 's:structs:0:1',
-            \ 't:typedefs:0:1',
-            \ 'u:unions:0:1',
-            \ 'v:global:0:1',
-            \ 'x:external:0:1'
-        \ ],
-        \ 'sro'        : '::',
-        \ 'kind2scope' : {
-            \ 'g' : 'enum',
-            \ 'n' : 'namespace',
-            \ 'c' : 'class',
-            \ 's' : 'struct',
-            \ 'u' : 'union'
-        \ },
-        \ 'scope2kind' : {
-            \ 'enum'      : 'g',
-            \ 'namespace' : 'n',
-            \ 'class'     : 'c',
-            \ 'struct'    : 's',
-            \ 'union'     : 'u'
-        \ }
-      \ }
+      autocmd FileType tagbar setlocal relativenumber
       " do not sort tag by name
       let g:tagbar_sort=0
-    Plugin 'SirVer/ultisnips'
-      let g:UltiSnipsListSnippets="<leader>j"
+    " auto complete pairs
     Plugin 'jiangmiao/auto-pairs'
     " log your develop time
     Plugin 'wakatime/vim-wakatime'
+    " more powerful search
     Plugin 'mileszs/ack.vim'
-      " replace ack by ag
       if executable('ag')
         let g:ackprg = 'ag --vimgrep'
       endif
       cnoreabbrev Ack Ack!
       " <C-r><C-W> can input the cuurent word in the command line mode
-      " by the way, you can use C-w to delete the current word when you do not need it
+      " by the way, you can use <C-w> to delete the current word when you do not need it
       nnoremap <Leader>a :Ack! <C-r><C-w>
+    " more powerful replace
     Plugin 'brooth/far.vim'
       let g:far#source = 'ag'
       nnoremap <Leader>f :Far <C-r><C-w>
-    Plugin 'tpope/vim-fugitive'
+    " show the number of matches and the index of the current match
+    Plugin 'google/vim-searchindex'
+    " auto detect encoding
+    Plugin 's3rvac/AutoFenc'
 
     " syntax support
+    " complete
     Plugin 'Shougo/neocomplete.vim'
       let g:neocomplete#enable_at_startup = 1
+    " syntax checker
     Plugin 'scrooloose/syntastic'
       set statusline+=%#warningmsg#
       set statusline+=%{SyntasticStatuslineFlag()}
@@ -116,10 +83,6 @@
       let g:syntastic_cpp_compiler = 'clang++'
       let g:syntastic_cpp_compiler_options = '-std=c++14 -stdlib=libc++'
       let g:syntastic_python_checkers = ['flake8']
-    " auto detect encoding
-    Plugin 's3rvac/AutoFenc'
-    " show the number of matches and the index of the current match
-    Plugin 'google/vim-searchindex'
 
     " extra language support
     Plugin 'rust-lang/rust.vim'
@@ -132,6 +95,7 @@
     augroup end
 
     " improve appreance
+    " colorful pairs
     Plugin 'luochen1990/rainbow'
     " color theme
     Plugin 'tomasr/molokai'
@@ -140,7 +104,6 @@
       let g:indentLine_color_term = 239
       let g:indentLine_color_gui = '#A4E57E'
       let g:indentLine_char = '┆'
-      let g:rainbow_active = 1
     " eat my big powerline!
     Plugin 'bling/vim-airline'
       let g:airline_symbols = {}
@@ -159,6 +122,7 @@
       let g:airline_whitespace_symbol = 'Ξ'
     Plugin 'vim-airline/vim-airline-themes'
       let g:aireline_theme='molokai'
+    " highlight color code by itself
     Plugin 'lilydjwg/colorizer'
   " }
 
@@ -171,12 +135,13 @@
   " do not scroll synchronously
   set noscrollbind
   " split windows so easy
-  nnoremap <leader>s <C-w>v<C-w>l
+  nnoremap <leader>v <C-w>v<C-w>l
+  nnoremap <leader>s <C-w>s<C-w>j
+  " move between windows so easy
   nnoremap <C-h> <C-w>h
   nnoremap <C-j> <C-w>j
   nnoremap <C-k> <C-w>k
   nnoremap <C-l> <C-w>l
-  " move between windows so easy
 " }
 
 " backup {
@@ -211,12 +176,13 @@
 " }
 
 " general {
-  " Do not use oct to increase of decrease number.
+  " do not use oct to increase of decrease number
   set nrformats=
-  " Minimal number of screen lines to keep above and below the cursor.
+  " minimal number of screen lines to keep above and below the cursor
   set scrolloff=3
-  " Show (partial) command in the last line of the screen.
+  " show (partial) command in the last line of the screen
   set showcmd
+  " enhance command-line completion
   set wildmenu
   " complete till longest common string
   set wildmode=longest
@@ -229,43 +195,47 @@
   set mouse=a
   set history=1000
   set undolevels=1000
-  " delay which wait for a key code to complete
-  set ttimeoutlen=50
+  " automatically read file when it is changed outside of Vim
   set autoread
   " support a fast terminal
   set ttyfast
+  " https://vi.stackexchange.com/questions/2162/why-doesnt-the-backspace-key-work-in-insert-mode
   set backspace=indent,eol,start
-  set modelines=0
+  " ignore file’s mode lines; use vimrc configurations instead
+  set nomodeline
   set foldmethod=indent
+  " display a confirmation dialog when closing an unsaved file
   set confirm
+  " redraw screen only when we need to
   set lazyredraw
   " write forcibly as root
   cmap w!! w !sudo tee % >/dev/null
   autocmd FocusLost * silent! up
   nnoremap <leader>w :w<cr>
   nnoremap <leader>e :q<cr>
-  nnoremap <leader>n :bn<cr>
-  nnoremap <leader>p :bp<cr>
-  nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
   set pastetoggle=<F2>
 
-  nnoremap <Leader>rtw :%s/\s\+$//e<CR>
   " remove trailing whitespace
+  nnoremap <Leader>rtw :%s/\s\+$//e<CR>
   " }
 
 " searching/moving {
   set ignorecase
+  " override the ignorecase option if the search pattern contains upper case characters
   set smartcase
   " so you do not need add 'g' after every replace command
   set gdefault
+  " search dynamically
   set incsearch
+  " awhen a bracket is inserted, briefly jump to the matching one
   set showmatch
-  " show highlighting of search mapping
   set hlsearch
+  " cancle highlight search so easy
   nnoremap <leader><space> :nohlsearch<cr>
 " }
 
 " indentation {
+" " best indent config
   set autoindent
   set tabstop=2
   set expandtab
