@@ -61,7 +61,6 @@ export CPUPROFILE=$HOME/tmp/gperf.out
 export CHROOT=$HOME/chroot
 
 # PATH
-PATH="${HOME}/bin:$PATH"
 PATH="${HOME}/.local/bin:$PATH"
 PATH="/opt/bin:$PATH"
 PATH="${CAFFE_DIR}/build/tools:$PATH"
