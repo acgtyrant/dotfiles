@@ -62,6 +62,8 @@
     Plugin 'google/vim-searchindex'
     " auto detect encoding
     Plugin 's3rvac/AutoFenc'
+    " git feature
+    Plugin 'tpope/vim-fugitive'
 
     " syntax support
     " complete
