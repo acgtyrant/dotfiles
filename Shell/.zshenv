@@ -45,10 +45,6 @@ export no_proxy="/var/run/docker.sock"
 # https://wiki.archlinux.org/index.php/NVIDIA#Gaming_using_TwinView
 export SDL_VIDEO_FULLSCREEN_HEAD=1
 
-# Development needs.
-export CAFFE_DIR="${HOME}/Projects/caffe"
-export RP_DIR="${HOME}/Projects/RoadPerception"
-
 # https://github.com/lilydjwg/search-and-view
 export AGV_EDITOR="/bin/gvim"
 
@@ -61,13 +57,18 @@ export CPUPROFILE=$HOME/tmp/gperf.out
 export CHROOT=$HOME/chroot
 
 # PATH
-PATH="${HOME}/.local/bin:$PATH"
-PATH="/opt/bin:$PATH"
-PATH="${CAFFE_DIR}/build/tools:$PATH"
-PATH="/usr/local/cuda/bin:$PATH"
-typeset -U PATH
-export PATH
+PATH="$PATH:${HOME}/.local/bin"
 
 # Java font.
 # https://wiki.archlinux.org/index.php/Java#Better_font_rendering
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"
+
+# Development needs.
+export CAFFE_DIR="${HOME}/Projects/caffe"
+PATH="$PATH:${CAFFE_DIR}/build/tools"
+PATH="$PATH:/usr/local/cuda/bin"  # for Ubuntu cuda
+export RP_DIR="${HOME}/Projects/RoadPerception"
+
+# remove duplicated value in PATH
+typeset -U PATH
+export PATH
