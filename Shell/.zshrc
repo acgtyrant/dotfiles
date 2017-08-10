@@ -77,7 +77,6 @@ alias nv='nvim'
 alias qv='nvim-qt'
 
 alias sw='sudo wifi-menu'
-alias git='hub'
 alias less='vimpager'
 
 # Enables ssh trusted X11 forwarding.
