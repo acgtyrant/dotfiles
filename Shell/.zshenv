@@ -56,18 +56,18 @@ export CPUPROFILE=$HOME/tmp/gperf.out
 # https://wiki.archlinux.org/index.php/DeveloperWiki:Building_in_a_Clean_Chroot#Setting_Up_A_Chroot
 export CHROOT=$HOME/chroot
 
-# PATH
-PATH="$PATH:${HOME}/.local/bin"
-
 # Java font.
 # https://wiki.archlinux.org/index.php/Java#Better_font_rendering
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"
 
 # Development needs.
 export CAFFE_DIR="${HOME}/Projects/caffe"
-PATH="$PATH:${CAFFE_DIR}/build/tools"
-PATH="$PATH:/usr/local/cuda/bin"  # for Ubuntu cuda
+PATH="${CAFFE_DIR}/build/tools:$PATH"
+PATH="/usr/local/cuda/bin:$PATH"  # for Ubuntu cuda
 export RP_DIR="${HOME}/Projects/RoadPerception"
+
+# PATH
+PATH="${HOME}/.local/bin:$PATH"
 
 # remove duplicated value in PATH
 typeset -U PATH
