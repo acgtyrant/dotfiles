@@ -93,6 +93,7 @@ alias wps='wps -style gtk'
 alias et='et -style gtk'
 alias wpp='wpp -style gtk'
 
+# https://coderwall.com/p/ohk6cg/remote-access-to-ipython-notebooks-via-ssh
 alias jupyter-server='ipython notebook --no-browser'
 alias jupyter-local='ssh -N -f -L localhost:8888:localhost:8888'
 
