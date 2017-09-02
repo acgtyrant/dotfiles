@@ -93,6 +93,9 @@ alias wps='wps -style gtk'
 alias et='et -style gtk'
 alias wpp='wpp -style gtk'
 
+alias jupyter-server='ipython notebook --no-browser'
+alias jupyter-local='ssh -N -f -L localhost:8888:localhost:8888'
+
 # Use yaourt/pkgfile alias in Ubuntu
 # https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/archlinux/archlinux.plugin.zsh
 if (( $+commands[apt-get] )); then
