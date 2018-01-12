@@ -8,3 +8,5 @@ powerline-status
 jupyter
 # C-Extensions for Python
 cython
+# Python Development Workflow for Humans.
+pipenv
