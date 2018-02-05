@@ -66,6 +66,7 @@ PATH="${CAFFE_DIR}/build/tools:$PATH"
 PATH="/usr/local/cuda/bin:$PATH"  # for Ubuntu cuda
 export RP_DIR="${HOME}/Projects/RoadPerception"
 export LD_LIBRARY_PATH="/usr/local/cuda-8.0/lib64:$LD_LIBRARY_PATH"
+export PYTHON_PATH="/home/acgtyrant/Projects/caffe/python:$PYTHON_PATH"
 
 # PATH
 PATH="${HOME}/.local/bin:$PATH"
