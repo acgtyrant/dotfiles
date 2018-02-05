@@ -68,9 +68,9 @@ export RP_DIR="${HOME}/Projects/RoadPerception"
 LD_LIBRARY_PATH="/usr/local/cuda-8.0/lib64:$LD_LIBRARY_PATH"
 typeset -U LD_LIBRARY_PATH
 export LD_LIBRARY_PATH
-PYTHON_PATH="/home/acgtyrant/Projects/caffe/python:$PYTHON_PATH"
-typeset -U PYTHON_PATH
-export PYTHON_PATH
+PYTHONPATH="/home/acgtyrant/Projects/caffe/python:$PYTHON_PATH"
+typeset -U PYTHONPATH
+export PYTHONPATH
 
 # PATH
 PATH="${HOME}/.local/bin:$PATH"
