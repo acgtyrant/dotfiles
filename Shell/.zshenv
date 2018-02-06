@@ -2,7 +2,7 @@
 # http://jorge.fbarr.net/2011/03/24/making-your-bash-history-more-efficient/
 export HISTTIMEFORMAT="%h %d %H:%M:%S> "
 export HISTCONTROL="ignoreboth"
-export HISTSIZE=10000
+export HISTSIZE=1000000
 
 # ArchWiki: Environment Viriables
 # https://wiki.archlinux.org/index.php/Environment_variables#Examples
