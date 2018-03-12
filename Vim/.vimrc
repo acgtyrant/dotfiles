@@ -107,7 +107,6 @@ endif
   Plug 'bling/vim-airline'
     let g:airline_symbols = {}
     let g:airline_powerline_fonts=1
-    let g:airline#extensions#tabline#enabled = 1
     let g:airline#extensions#branch#enabled =1
     let g:airline#extensions#syntastic#enabled=1
     let g:airline_detect_paste=1
@@ -125,6 +124,7 @@ endif
   " highlight color code by itself
   Plug 'lilydjwg/colorizer'
 
+  " https://www.v2ex.com/t/388940
   Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
     let g:Lf_ShortcutF = '<C-P>'
 
@@ -217,12 +217,6 @@ endif
 
   " remove trailing whitespace
   nnoremap <Leader>rtw :%s/\s\+$//e<CR>
-" }
-
-" buffer {
-  " https://medium.com/usevim/vim-101-set-hidden-f78800142855
-  set hidden
-
 " }
 
 " searching/moving {
