@@ -123,7 +123,7 @@
       let g:airline_symbols.paste = 'Þ'
       let g:airline_whitespace_symbol = 'Ξ'
     Plugin 'vim-airline/vim-airline-themes'
-      let g:aireline_theme='molokai'
+      let g:airline_theme='molokai'
     " highlight color code by itself
     Plugin 'lilydjwg/colorizer'
   " }
