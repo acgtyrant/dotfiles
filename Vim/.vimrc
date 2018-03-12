@@ -110,6 +110,7 @@
     Plugin 'bling/vim-airline'
       let g:airline_symbols = {}
       let g:airline_powerline_fonts=1
+      let g:airline#extensions#tabline#enabled = 1
       let g:airline#extensions#branch#enabled =1
       let g:airline#extensions#syntastic#enabled=1
       let g:airline_detect_paste=1
@@ -219,7 +220,13 @@
 
   " remove trailing whitespace
   nnoremap <Leader>rtw :%s/\s\+$//e<CR>
-  " }
+" }
+
+" buffer {
+  " https://medium.com/usevim/vim-101-set-hidden-f78800142855
+  set hidden
+
+" }
 
 " searching/moving {
   set ignorecase
