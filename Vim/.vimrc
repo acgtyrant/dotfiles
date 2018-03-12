@@ -6,132 +6,126 @@
   nnoremap <Tab> %
 " }
 
-" https://github.com/VundleVim/Vundle.vim
-" Vundle manage Vundle and plugins firstly {
-  set nocompatible               " be improved
-  filetype off                   " required!
-  set rtp+=~/.vim/bundle/Vundle.vim
-  call vundle#begin()
-  " alternatively, pass a path where Vundle should install plugins
-  " call vundle#begin('~/some/path/here')
+" https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-  " all plugins {
-    " Vim plugins manager
-    Plugin 'VundleVim/Vundle.vim'
+" Plugins {
+  call plug#begin()
 
-    " feature
-    " a tree explorer
-    Plugin 'scrooloose/nerdtree'
-      map <F1> :NERDTreeToggle<cr>
-      " open a NERDTree automatically when vim starts up if no files were specified
-      autocmd StdinReadPre * let s:std_in=1
-      autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-      let NERDTreeShowLineNumbers=1
-      autocmd FileType nerdtree setlocal relativenumber
-      let NERDTreeIgnore = ['\.pyc$', '__pycache__', '\.egg$', '\.so$', 'CMakeCache.txt', 'CMakeFiles', 'CMakeScripts', 'cmake_install.cmake']
-    " intensely orgasmic commenting.
-    Plugin 'scrooloose/nerdcommenter'
-      " change the default comment symbol from /**/ to // in c
-      let NERD_c_alt_style=1
-      let g:NERDCustomDelimiters = {'c': { 'leftAlt': '/*', 'rightAlt': '*/', 'left': '// '}}
-    " displays tags in a window, ordered by scope.
-    Plugin 'majutsushi/tagbar'
-      map <F3> :TagbarToggle<cr>
-      let tagbar_show_linenumbers=2
-      autocmd FileType tagbar setlocal relativenumber
-      " do not sort tag by name
-      let g:tagbar_sort=0
-    " auto complete pairs
-    Plugin 'jiangmiao/auto-pairs'
-    " log your develop time
-    Plugin 'wakatime/vim-wakatime'
-    " more powerful search
-    Plugin 'mileszs/ack.vim'
-      if executable('ag')
-        let g:ackprg = 'ag --vimgrep'
-      endif
-      cnoreabbrev Ack Ack!
-      " <C-r><C-W> can input the cuurent word in the command line mode
-      " by the way, you can use <C-w> to delete the current word when you do not need it
-      nnoremap <Leader>a :Ack! <C-r><C-w>
-    " more powerful replace
-    Plugin 'brooth/far.vim'
-      let g:far#source = 'ag'
-      nnoremap <Leader>f :Far <C-r><C-w>
-    " show the number of matches and the index of the current match
-    Plugin 'google/vim-searchindex'
-    " auto detect encoding
-    Plugin 's3rvac/AutoFenc'
-    " git feature
-    Plugin 'tpope/vim-fugitive'
+  " feature
+  " a tree explorer
+  Plug 'scrooloose/nerdtree'
+    map <F1> :NERDTreeToggle<cr>
+    " open a NERDTree automatically when vim starts up if no files were specified
+    autocmd StdinReadPre * let s:std_in=1
+    autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+    let NERDTreeShowLineNumbers=1
+    autocmd FileType nerdtree setlocal relativenumber
+    let NERDTreeIgnore = ['\.pyc$', '__pycache__', '\.egg$', '\.so$', 'CMakeCache.txt', 'CMakeFiles', 'CMakeScripts', 'cmake_install.cmake']
+  " intensely orgasmic commenting.
+  Plug 'scrooloose/nerdcommenter'
+    " change the default comment symbol from /**/ to // in c
+    let NERD_c_alt_style=1
+    let g:NERDCustomDelimiters = {'c': { 'leftAlt': '/*', 'rightAlt': '*/', 'left': '// '}}
+  " displays tags in a window, ordered by scope.
+  Plug 'majutsushi/tagbar'
+    map <F3> :TagbarToggle<cr>
+    let tagbar_show_linenumbers=2
+    autocmd FileType tagbar setlocal relativenumber
+    " do not sort tag by name
+    let g:tagbar_sort=0
+  " auto complete pairs
+  Plug 'jiangmiao/auto-pairs'
+  " log your develop time
+  Plug 'wakatime/vim-wakatime'
+  " more powerful search
+  Plug 'mileszs/ack.vim'
+    if executable('ag')
+      let g:ackprg = 'ag --vimgrep'
+    endif
+    cnoreabbrev Ack Ack!
+    " <C-r><C-W> can input the cuurent word in the command line mode
+    " by the way, you can use <C-w> to delete the current word when you do not need it
+    nnoremap <Leader>a :Ack! <C-r><C-w>
+  " more powerful replace
+  Plug 'brooth/far.vim'
+    let g:far#source = 'ag'
+    nnoremap <Leader>f :Far <C-r><C-w>
+  " show the number of matches and the index of the current match
+  Plug 'google/vim-searchindex'
+  " auto detect encoding
+  Plug 's3rvac/AutoFenc'
+  " git feature
+  Plug 'tpope/vim-fugitive'
 
-    " syntax support
-    " complete
-    Plugin 'Shougo/neocomplete.vim'
-      let g:neocomplete#enable_at_startup = 1
-    " syntax checker
-    Plugin 'scrooloose/syntastic'
-      set statusline+=%#warningmsg#
-      set statusline+=%{SyntasticStatuslineFlag()}
-      set statusline+=%*
+  " syntax support
+  " complete
+  Plug 'Shougo/neocomplete.vim'
+    let g:neocomplete#enable_at_startup = 1
+  " syntax checker
+  Plug 'scrooloose/syntastic'
+    set statusline+=%#warningmsg#
+    set statusline+=%{SyntasticStatuslineFlag()}
+    set statusline+=%*
 
-      let g:syntastic_always_populate_loc_list = 1
-      let g:syntastic_auto_loc_list = 2
-      let g:syntastic_loc_list_height=5
-      let g:syntastic_check_on_open = 1
-      let g:syntastic_check_on_wq = 0
+    let g:syntastic_always_populate_loc_list = 1
+    let g:syntastic_auto_loc_list = 2
+    let g:syntastic_loc_list_height=5
+    let g:syntastic_check_on_open = 1
+    let g:syntastic_check_on_wq = 0
 
-      let g:syntastic_cpp_checkers = ['clang_check']
-      let g:syntastic_cpp_compiler = 'clang++'
-      let g:syntastic_cpp_compiler_options = '-std=c++14 -stdlib=libc++'
-      let g:syntastic_python_checkers = ['flake8']
+    let g:syntastic_cpp_checkers = ['clang_check']
+    let g:syntastic_cpp_compiler = 'clang++'
+    let g:syntastic_cpp_compiler_options = '-std=c++14 -stdlib=libc++'
+    let g:syntastic_python_checkers = ['flake8']
 
-    " extra language support
-    Plugin 'rust-lang/rust.vim'
-      " format your code using [rustfmt][rfmt] every time a buffer is written
-      let g:rustfmt_autosave = 1
-    Plugin 'cespare/vim-toml'
-    " proto.vim
-    augroup filetype
-      au! BufRead,BufNewFile *.proto setfiletype proto
-    augroup end
+  " extra language support
+  Plug 'rust-lang/rust.vim'
+    " format your code using [rustfmt][rfmt] every time a buffer is written
+    let g:rustfmt_autosave = 1
+  Plug 'cespare/vim-toml'
+  " proto.vim
+  augroup filetype
+    au! BufRead,BufNewFile *.proto setfiletype proto
+  augroup end
 
-    " improve appreance
-    " colorful pairs
-    Plugin 'luochen1990/rainbow'
-    " color theme
-    Plugin 'tomasr/molokai'
-    " highlight indent block
-    Plugin 'Yggdroot/indentLine'
-      let g:indentLine_color_term = 239
-      let g:indentLine_color_gui = '#A4E57E'
-      let g:indentLine_char = '┆'
-    " eat my big powerline!
-    Plugin 'bling/vim-airline'
-      let g:airline_symbols = {}
-      let g:airline_powerline_fonts=1
-      let g:airline#extensions#tabline#enabled = 1
-      let g:airline#extensions#branch#enabled =1
-      let g:airline#extensions#syntastic#enabled=1
-      let g:airline_detect_paste=1
-      let g:airline_left_sep = ''
-      let g:airline_left_alt_sep = ''
-      let g:airline_right_sep = ''
-      let g:airline_right_alt_sep = ''
-      let g:airline_symbols.branch = ''
-      let g:airline_symbols.readonly = ''
-      let g:airline_symbols.linenr = ''
-      let g:airline_symbols.paste = 'Þ'
-      let g:airline_whitespace_symbol = 'Ξ'
-    Plugin 'vim-airline/vim-airline-themes'
-      let g:airline_theme='molokai'
-    " highlight color code by itself
-    Plugin 'lilydjwg/colorizer'
-  " }
+  " improve appreance
+  " colorful pairs
+  Plug 'luochen1990/rainbow'
+  " color theme
+  Plug 'tomasr/molokai'
+  " highlight indent block
+  Plug 'Yggdroot/indentLine'
+    let g:indentLine_color_term = 239
+    let g:indentLine_color_gui = '#A4E57E'
+    let g:indentLine_char = '┆'
+  " eat my big powerline!
+  Plug 'bling/vim-airline'
+    let g:airline_symbols = {}
+    let g:airline_powerline_fonts=1
+    let g:airline#extensions#tabline#enabled = 1
+    let g:airline#extensions#branch#enabled =1
+    let g:airline#extensions#syntastic#enabled=1
+    let g:airline_detect_paste=1
+    let g:airline_left_sep = ''
+    let g:airline_left_alt_sep = ''
+    let g:airline_right_sep = ''
+    let g:airline_right_alt_sep = ''
+    let g:airline_symbols.branch = ''
+    let g:airline_symbols.readonly = ''
+    let g:airline_symbols.linenr = ''
+    let g:airline_symbols.paste = 'Þ'
+    let g:airline_whitespace_symbol = 'Ξ'
+  Plug 'vim-airline/vim-airline-themes'
+    let g:airline_theme='molokai'
+  " highlight color code by itself
+  Plug 'lilydjwg/colorizer'
 
-  call vundle#end()
-  filetype plugin indent on     " required!
-  syntax on
+  call plug#end()
 " }
 
 " windows {
