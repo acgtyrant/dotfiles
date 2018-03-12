@@ -59,8 +59,6 @@ endif
   Plug 'google/vim-searchindex'
   " auto detect encoding
   Plug 's3rvac/AutoFenc'
-  " git feature
-  Plug 'tpope/vim-fugitive'
 
   " syntax support
   " complete
