@@ -125,6 +125,9 @@ endif
   " highlight color code by itself
   Plug 'lilydjwg/colorizer'
 
+  Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+    let g:Lf_ShortcutF = '<C-P>'
+
   call plug#end()
 " }
 
