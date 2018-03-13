@@ -119,9 +119,13 @@ endif
   " highlight color code by itself
   Plug 'lilydjwg/colorizer'
 
-  " https://www.v2ex.com/t/388940
-  Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
-    let g:Lf_ShortcutF = '<C-P>'
+  Plug 'ctrlpvim/ctrlp.vim'
+    let g:ctrlp_custom_ignore = {
+      \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site)$',
+      \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
+      \}
+    let g:ctrlp_working_path_mode = 'r'
+    nnoremap <C-p> :CtrlPMixed<cr>
 
   call plug#end()
 " }
