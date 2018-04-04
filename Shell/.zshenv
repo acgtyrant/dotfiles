@@ -76,3 +76,9 @@ export PYTHONPATH
 PATH="${HOME}/.local/bin:$PATH"
 typeset -U PATH
 export PATH
+
+# Locale
+# https://github.com/robbyrussell/oh-my-zsh/issues/5790#issuecomment-273468677
+export LANG=zh_CN.UTF-8
+export LANGUAGE=en_US
+export LC_CTYPE=en_US.UTF-8
