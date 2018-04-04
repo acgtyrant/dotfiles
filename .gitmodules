@@ -1,3 +1,6 @@
 [submodule "Git/Projects/gitignore"]
 	path = Git/Projects/gitignore
 	url = https://github.com/github/gitignore.git
+[submodule "Shell/.oh-my-zsh"]
+	path = Shell/.oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh.git
