@@ -80,5 +80,5 @@ export PATH
 # Locale
 # https://github.com/robbyrussell/oh-my-zsh/issues/5790#issuecomment-273468677
 export LANG=zh_CN.UTF-8
-export LANGUAGE=en_US
+export LANGUAGE=zh_CN
 export LC_CTYPE=en_US.UTF-8
