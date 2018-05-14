@@ -206,7 +206,7 @@ floating_maximum_size -1 x -1
 exec --no-startup-id compton -b -c
 exec --no-startup-id termite -e tmuxen.sh
 exec --no-startup-id chromium
-exec --no-startup-id thunderbird
+exec --no-startup-id mailspring
 exec --no-startup-id fcitx &
 exec --no-startup-id synapse &
 exec --no-startup-id rescuetime &
