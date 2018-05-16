@@ -153,6 +153,7 @@ assign [class="(?i)Hexchat"] 4: Media
 assign [class="(?i)mplayer"] 4: Media
 assign [class="(?i)Dota"] 4: Media
 assign [class="(?i)crossover"] 5: Others
+assign [class="(?i)mailspring"] 5: Others
 
 # Startups shortcut
 bindsym $mod+c exec chromium
