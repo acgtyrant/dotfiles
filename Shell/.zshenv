@@ -7,7 +7,7 @@ export HISTSIZE=1000000
 # https://wiki.archlinux.org/index.php/Environment_variables#Examples
 # How are “xterm” and “screen” related?
 # http://unix.stackexchange.com/questions/140139/how-are-xterm-and-screen-related
-export TERM="screen"
+export TERM="screen-256color"
 export TERMINFO="$HOME/.terminfo"
 # Note that some variables may be full pathnames.
 # https://github.com/mobile-shell/mosh/issues/722#issuecomment-176266421

@@ -216,6 +216,8 @@ endif
 
   " remove trailing whitespace
   nnoremap <Leader>rtw :%s/\s\+$//e<CR>
+  colorscheme tyrant
+  set t_Co=256
 " }
 
 " searching/moving {
