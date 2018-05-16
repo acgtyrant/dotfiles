@@ -251,11 +251,11 @@ for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 
 # Automatically putting workspaces on specific screens
-workspace "1: Term" output HDMI1
-workspace "2: Web" output HDMI1
-workspace "3: Editor" output HDMI1
-workspace "4: Media" output HDMI1
-workspace "5: Other" output HDMI1
+workspace "1: Term" output DVI-D-0
+workspace "2: Web" output HDMI-0
+workspace "3: Editor" output DVI-D-0
+workspace "4: Media" output DVI-D-0
+workspace "5: Other" output HDMI-0
 
 # Scratchpad
 bindsym $mod+minus move scratchpad
