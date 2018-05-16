@@ -1,6 +1,5 @@
 # Making your BASH history more efficient
 # http://jorge.fbarr.net/2011/03/24/making-your-bash-history-more-efficient/
-export HISTTIMEFORMAT="%h %d %H:%M:%S> "
 export HISTCONTROL="ignoreboth"
 export HISTSIZE=1000000
 
@@ -82,3 +81,8 @@ export PATH
 export LANG=zh_CN.UTF-8
 export LANGUAGE=zh_CN
 export LC_CTYPE=en_US.UTF-8
+
+# https://github.com/robbyrussell/oh-my-zsh/issues/6109#issuecomment-359274801
+# However this alias does not work in .zshrc so I have to move it here
+HIST_FORMAT="'%Y-%m-%d %T:'$(echo -e '\t')"
+alias history="fc -t "$HIST_FORMAT" -il 1"
