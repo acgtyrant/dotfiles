@@ -119,9 +119,9 @@ bindsym $mod+space focus mode_toggle
 # switch to workspace
 bindsym $mod+1 workspace 1: Term
 bindsym $mod+2 workspace 2: Web
-bindsym $mod+3 workspace 3: Editor
-bindsym $mod+4 workspace 4: Media
-bindsym $mod+5 workspace 5: Others
+bindsym $mod+3 workspace 3: Media
+bindsym $mod+4 workspace 4: Others
+bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
@@ -131,9 +131,9 @@ bindsym $mod+0 workspace 10
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1: Term
 bindsym $mod+Shift+2 move container to workspace 2: Web
-bindsym $mod+Shift+3 move container to workspace 3: Editor
-bindsym $mod+Shift+4 move container to workspace 4: Media
-bindsym $mod+Shift+5 move container to workspace 5: Others
+bindsym $mod+Shift+3 move container to workspace 3: Media
+bindsym $mod+Shift+4 move container to workspace 4: Others
+bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
@@ -145,15 +145,14 @@ assign [class="(?i)termite"] 1: Term
 assign [class="(?i)chromium"] 2: Web
 assign [class="(?i)google-chrome"] 2: Web
 assign [class="(?i)opera"] 2: Web
-assign [class="(?i)Canopy"] 3: Editor
-assign [class="(?i)gVim"] 3: Editor
-assign [class="(?i)Steam"] 4: Media
-assign [class="(?i)Pidgin"] 4: Media
-assign [class="(?i)Hexchat"] 4: Media
-assign [class="(?i)mplayer"] 4: Media
-assign [class="(?i)Dota"] 4: Media
-assign [class="(?i)crossover"] 5: Others
-assign [class="(?i)mailspring"] 5: Others
+assign [class="(?i)Steam"] 3: Media
+assign [class="(?i)Pidgin"] 3: Media
+assign [class="(?i)Hexchat"] 3: Media
+assign [class="(?i)mplayer"] 3: Media
+assign [class="(?i)Dota"] 3: Media
+assign [class="(?i)Zotero"] 3: Media
+assign [class="(?i)crossover"] 4: Others
+assign [class="(?i)mailspring"] 4: Others
 
 # Startups shortcut
 bindsym $mod+c exec chromium
@@ -214,6 +213,7 @@ exec --no-startup-id rescuetime &
 exec --no-startup-id /opt/nutstore/bin/nutstore-pydaemon.py &
 exec --no-startup-id xautolock -time 7 -locker i3lock &
 exec --no-startup-id nm-applet &
+exec --no-startup-id zotero &
 
 # Set some arbitrary commands for specific windows
 for_window [class="URxvt"] border 1pixel
@@ -254,9 +254,8 @@ for_window [window_role="task_dialog"] floating enable
 # Automatically putting workspaces on specific screens
 workspace "1: Term" output DVI-D-0
 workspace "2: Web" output HDMI-0
-workspace "3: Editor" output DVI-D-0
-workspace "4: Media" output DVI-D-0
-workspace "5: Other" output HDMI-0
+workspace "3: Media" output DVI-D-0
+workspace "4: Other" output HDMI-0
 
 # Scratchpad
 bindsym $mod+minus move scratchpad
