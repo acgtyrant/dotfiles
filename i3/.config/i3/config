@@ -255,7 +255,7 @@ for_window [window_role="task_dialog"] floating enable
 workspace "1: Term" output DVI-D-0
 workspace "2: Web" output HDMI-0
 workspace "3: Media" output DVI-D-0
-workspace "4: Other" output HDMI-0
+workspace "4: Others" output HDMI-0
 
 # Scratchpad
 bindsym $mod+minus move scratchpad
