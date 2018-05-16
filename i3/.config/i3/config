@@ -167,7 +167,7 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec $HOME/.config/i3/exitmenu
 # lock i3
-bindsym $mod+Ctrl+l exec i3lock
+bindsym $mod+Ctrl+l exec i3lock --image $HOME/lock -t
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -211,7 +211,7 @@ exec --no-startup-id fcitx &
 exec --no-startup-id synapse &
 exec --no-startup-id rescuetime &
 exec --no-startup-id /opt/nutstore/bin/nutstore-pydaemon.py &
-exec --no-startup-id xautolock -time 7 -locker i3lock &
+exec --no-startup-id xautolock -time 7 -locker i3lock --image $HOME/lock -t &
 exec --no-startup-id nm-applet &
 exec --no-startup-id zotero &
 
