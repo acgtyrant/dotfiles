@@ -214,6 +214,10 @@ exec --no-startup-id /opt/nutstore/bin/nutstore-pydaemon.py &
 exec --no-startup-id xautolock -time 7 -locker i3lock --image $HOME/lock -t &
 exec --no-startup-id nm-applet &
 exec --no-startup-id zotero &
+# https://faq.i3wm.org/question/2332/flexible-monitor-setup.1.html
+exec --no-startup-id xrandr --output DVI-D-0 --primary --mode 1920x1080 --pos 1440x0 --rotate normal --output HDMI-0 --mode 1440x900 --pos 0x0 --rotate normal --output DP-5 --off --output DP-4 --off --output DP-3 --off --output DP-2 --off --output DP-1 --off --output DP-0 --off
+# https://wiki.archlinux.org/index.php/Feh#Set_the_wallpaper
+exec --no-startup-id ~/.fehbg
 
 # Set some arbitrary commands for specific windows
 for_window [class="URxvt"] border 1pixel

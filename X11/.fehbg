@@ -1,2 +1,2 @@
 #!/bin/sh
-'feh' '--bg-fill' '/home/acgtyrant/background' 
+feh --bg-fill '/home/acgtyrant/background' 
