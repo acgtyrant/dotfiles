@@ -8,7 +8,8 @@ yaourt -S --noconfirm --needed steam
 
   ## Network Managers
   yaourt -S --noconfirm --needed networkmanager network-manager-applet
-  yaourt -S --noconfirm --needed gnome-keyring libgnome-keyring
+  # https://wiki.archlinux.org/index.php/GNOME/Keyring TODO
+  yaourt -S --noconfirm --needed gnome-keyring libgnome-keyring seahorse
   systemctl enable networkmanager
   systemctl start networkmanager
   ## Web browsers
