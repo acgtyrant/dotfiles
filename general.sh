@@ -111,6 +111,7 @@ multilib=true
   # https://wiki.archlinux.org/index.php/Xorg
   # https://wiki.archlinux.org/index.php/Wayland
   yaourt -S --noconfirm --needed xorg-server xorg-xmodmap xsel
+  # https://wiki.archlinux.org/index.php/Compton TODO
   yaourt -S --noconfirm --needed compton
   # https://wiki.archlinux.org/index.php/Xrandr
   yaourt -S --noconfirm --needed arandr
