@@ -43,7 +43,7 @@ yaourt -S --noconfirm --needed steam
   ## Graphics and image manipulation
     ### Raster editors TODO
   ## Screen capture TODO
-    yaourt -S --noconfirm --needed maim slop deepin-screenshot
+    yaourt -S --noconfirm --needed deepin-screenshot
   ## Audio
     ### Audio players TODO
     yaourt -S --noconfirm --needed deadbeef
