@@ -112,7 +112,8 @@ multilib=true
   # https://wiki.archlinux.org/index.php/Wayland
   yaourt -S --noconfirm --needed xorg-server xorg-xmodmap xsel
   yaourt -S --noconfirm --needed compton
-  yaourt -S --noconfirm --needed lxrandr
+  # https://wiki.archlinux.org/index.php/Xrandr
+  yaourt -S --noconfirm --needed arandr
 
   ## Windows managers
   yaourt -S --noconfirm --needed i3 conky xfce4-notifyd
