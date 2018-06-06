@@ -218,6 +218,9 @@ endif
   nnoremap <Leader>rtw :%s/\s\+$//e<CR>
   colorscheme tyrant
   set t_Co=256
+
+  " http://www.skywind.me/blog/archives/2084
+  set tags=./.tags;,.tags
 " }
 
 " searching/moving {
