@@ -114,6 +114,7 @@ endif
   Plug 'luochen1990/rainbow'
   " color theme
   Plug 'tomasr/molokai'
+  Plug 'octol/vim-cpp-enhanced-highlight'
   " highlight indent block
   Plug 'Yggdroot/indentLine'
     let g:indentLine_color_term = 239
