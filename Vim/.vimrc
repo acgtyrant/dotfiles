@@ -148,6 +148,8 @@ endif
     let g:ctrlp_working_path_mode = 'r'
     nnoremap <C-p> :CtrlPMixed<cr>
 
+  Plug 'mhinz/vim-signify'
+
   call plug#end()
 " }
 
