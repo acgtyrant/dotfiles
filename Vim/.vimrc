@@ -71,21 +71,33 @@ endif
   Plug 'Shougo/neocomplete.vim'
     let g:neocomplete#enable_at_startup = 1
   " syntax checker
-  Plug 'scrooloose/syntastic'
-    set statusline+=%#warningmsg#
-    set statusline+=%{SyntasticStatuslineFlag()}
-    set statusline+=%*
+  Plug 'w0rp/ale'
+  let g:ale_linters_explicit = 1
+  let g:ale_completion_delay = 500
+  let g:ale_echo_delay = 20
+  let g:ale_lint_delay = 500
+  let g:ale_echo_msg_format = '[%linter%] %code: %%s'
+  let g:ale_lint_on_text_changed = 'normal'
+  let g:ale_lint_on_insert_leave = 1
+  let g:airline#extensions#ale#enabled = 1
 
-    let g:syntastic_always_populate_loc_list = 1
-    let g:syntastic_auto_loc_list = 2
-    let g:syntastic_loc_list_height=5
-    let g:syntastic_check_on_open = 1
-    let g:syntastic_check_on_wq = 0
+  let g:ale_c_gcc_options = '-Wall -O2 -std=c99'
+  let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++14'
+  let g:ale_c_cppcheck_options = ''
+  let g:ale_cpp_cppcheck_options = ''
 
-    let g:syntastic_cpp_checkers = ['clang_check']
-    let g:syntastic_cpp_compiler = 'clang++'
-    let g:syntastic_cpp_compiler_options = '-std=c++14 -stdlib=libc++'
-    let g:syntastic_python_checkers = ['flake8']
+  " Check Python files with flake8 and pylint.
+  let b:ale_linters = ['flake8', 'pylint']
+  " Fix Python files with autopep8 and yapf.
+  let b:ale_fixers = ['autopep8', 'yapf']
+
+  let g:ale_sign_error = "\ue009\ue009"
+  hi! clear SpellBad
+  hi! clear SpellCap
+  hi! clear SpellRare
+  hi! SpellBad gui=undercurl guisp=red
+  hi! SpellCap gui=undercurl guisp=blue
+  hi! SpellRare gui=undercurl guisp=magenta
 
   " extra language support
   Plug 'rust-lang/rust.vim'
