@@ -68,8 +68,10 @@ endif
 
   " syntax support
   " complete
-  Plug 'Shougo/neocomplete.vim'
-    let g:neocomplete#enable_at_startup = 1
+  Plug 'Shougo/deoplete.nvim'
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
+    let g:deoplete#enable_at_startup = 1
   " syntax checker
   Plug 'w0rp/ale'
   let g:ale_linters_explicit = 1
