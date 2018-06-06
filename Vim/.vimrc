@@ -29,6 +29,15 @@ endif
     let NERD_c_alt_style=1
     let g:NERDCustomDelimiters = {'c': { 'leftAlt': '/*', 'rightAlt': '*/', 'left': '// '}}
   " displays tags in a window, ordered by scope.
+  Plug 'ludovicchabant/vim-gutentags'
+  let g:gutentags_project_root = ['.root', '.svn', '.git', '.hg', '.project']
+  let g:gutentags_ctags_tagfile = '.tags'
+  " place all tags in ~/.cache/tags
+  let s:vim_tags = expand('~/.cache/tags')
+  let g:gutentags_cache_dir = s:vim_tags
+  let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
+  let g:gutentags_ctags_extra_args += ['--c++-kinds=+px']
+  let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
   Plug 'majutsushi/tagbar'
     map <F3> :TagbarToggle<cr>
     let tagbar_show_linenumbers=2
