@@ -76,31 +76,31 @@ endif
   Plug 'w0rp/ale'
   " TODO explicit every linter for language
   " let g:ale_linters_explicit = 1
-  let g:ale_completion_delay = 500
-  let g:ale_echo_delay = 20
-  let g:ale_lint_delay = 500
-  let g:ale_echo_msg_format = '[%linter%] %code: %%s'
-  let g:ale_lint_on_text_changed = 'normal'
-  let g:ale_lint_on_insert_leave = 1
-  let g:airline#extensions#ale#enabled = 1
+    let g:ale_completion_delay = 500
+    let g:ale_echo_delay = 20
+    let g:ale_lint_delay = 500
+    let g:ale_echo_msg_format = '[%linter%] %code: %%s'
+    let g:ale_lint_on_text_changed = 'normal'
+    let g:ale_lint_on_insert_leave = 1
+    let g:airline#extensions#ale#enabled = 1
 
-  let g:ale_c_gcc_options = '-Wall -O2 -std=c99'
-  let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++14'
-  let g:ale_c_cppcheck_options = ''
-  let g:ale_cpp_cppcheck_options = ''
+    let g:ale_c_gcc_options = '-Wall -O2 -std=c99'
+    let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++14'
+    let g:ale_c_cppcheck_options = ''
+    let g:ale_cpp_cppcheck_options = ''
 
-  " Check Python files with flake8 and pylint.
-  let b:ale_linters = ['flake8', 'pylint']
-  " Fix Python files with autopep8 and yapf.
-  let b:ale_fixers = ['autopep8', 'yapf']
+    " Check Python files with flake8 and pylint.
+    let b:ale_linters = ['flake8', 'pylint']
+    " Fix Python files with autopep8 and yapf.
+    let b:ale_fixers = ['autopep8', 'yapf']
 
-  let g:ale_sign_error = "\ue009\ue009"
-  hi! clear SpellBad
-  hi! clear SpellCap
-  hi! clear SpellRare
-  hi! SpellBad gui=undercurl guisp=red
-  hi! SpellCap gui=undercurl guisp=blue
-  hi! SpellRare gui=undercurl guisp=magenta
+    let g:ale_sign_error = "\ue009\ue009"
+    hi! clear SpellBad
+    hi! clear SpellCap
+    hi! clear SpellRare
+    hi! SpellBad gui=undercurl guisp=red
+    hi! SpellCap gui=undercurl guisp=blue
+    hi! SpellRare gui=undercurl guisp=magenta
 
   " extra language support
   Plug 'rust-lang/rust.vim'
@@ -145,22 +145,22 @@ endif
   Plug 'lilydjwg/colorizer'
 
   Plug 'Yggdroot/LeaderF'
-  let g:Lf_ShortcutF = '<c-p>'
-  let g:Lf_ShortcutB = '<m-n>'
-  noremap <c-n> :LeaderfMru<cr>
-  noremap <m-p> :LeaderfFunction!<cr>
-  noremap <m-n> :LeaderfBuffer<cr>
-  noremap <m-m> :LeaderfTag<cr>
-  let g:Lf_StlSeparator = { 'left': '', 'right': '', 'font': ''  }
- 
-  let g:Lf_RootMarkers = ['.project', '.root', '.svn', '.git']
-  let g:Lf_WorkingDirectoryMode = 'Ac'
-  let g:Lf_WindowHeight = 0.30
-  let g:Lf_CacheDirectory = expand('~/.vim/cache')
-  let g:Lf_ShowRelativePath = 0
-  let g:Lf_HideHelp = 1
-  let g:Lf_StlColorscheme = 'powerline'
-  let g:Lf_PreviewResult = {'Function':0, 'BufTag':0}
+    let g:Lf_ShortcutF = '<c-p>'
+    let g:Lf_ShortcutB = '<m-n>'
+    noremap <c-n> :LeaderfMru<cr>
+    noremap <m-p> :LeaderfFunction!<cr>
+    noremap <m-n> :LeaderfBuffer<cr>
+    noremap <m-m> :LeaderfTag<cr>
+    let g:Lf_StlSeparator = { 'left': '', 'right': '', 'font': ''  }
+   
+    let g:Lf_RootMarkers = ['.project', '.root', '.svn', '.git']
+    let g:Lf_WorkingDirectoryMode = 'Ac'
+    let g:Lf_WindowHeight = 0.30
+    let g:Lf_CacheDirectory = expand('~/.vim/cache')
+    let g:Lf_ShowRelativePath = 0
+    let g:Lf_HideHelp = 1
+    let g:Lf_StlColorscheme = 'powerline'
+    let g:Lf_PreviewResult = {'Function':0, 'BufTag':0}
 
   Plug 'mhinz/vim-signify'
 
