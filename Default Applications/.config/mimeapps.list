@@ -1,6 +1,6 @@
 [Default Applications]
 
-application/pdf=acroread.desktop
+application/pdf=llpp.desktop
 
 image/bmp=feh.desktop
 image/gif=eog.desktop
