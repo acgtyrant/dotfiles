@@ -20,7 +20,7 @@ set $mod Mod4
 # chose a FreeType font, such as:
 
 # font
-font xft: WenQuanYi Micro Hei 11
+font xft: Sarasa Term SC 12
 
 # colors
 client.focused          #4c7899 #285577 #ffffff #2e9ef4 #285577
@@ -298,7 +298,7 @@ bindsym XF86Battery exec gnome-power-statistics
 bar {
   #position bottom
   #mode dock
-  font xft: 方正兰亭黑_GBK 11
+  font xft: Sarasa Term SC 12
   tray_output primary
   colors {
       background #3f3f3f
