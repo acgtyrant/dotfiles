@@ -211,8 +211,7 @@ systemctl start NetworkManager.service
 
   ## Fonts
   echo "Installing fonts..."
-  yaourt -S --noconfirm --needed wqy-zenhei wqy-microhei otf-hermit \
-      ttf-ubuntu-font-family
+  yaourt -S --noconfirm --needed noto-fonts ttf-sarasa-gothic
   sleep 1; echo "Done."
 
   ## GTK and Qt themes
