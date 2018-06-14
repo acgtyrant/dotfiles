@@ -64,12 +64,6 @@ bindsym Print exec scrot -e 'mv $f ~/ScreenShot.png && feh ~/ScreenShot.png'
 # scrot & gimp - select window or rectangle
 bindsym Mod1+Print exec scrot -s -e 'mv $f ~/SceenShot && feh ~/ScreenShot/$f'
 
-# alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
-
 # change border
 bindsym $mod+t border normal
 bindsym $mod+y border 1pixel
