@@ -78,12 +78,6 @@ bindsym $mod+u border none
 new_window pixel 0
 # hide_edge_borders both
 
-# split in horizontal orientation
-bindsym $mod+Shift+v split h
-
-# split in vertical orientation
-bindsym $mod+v split v
-
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
 
