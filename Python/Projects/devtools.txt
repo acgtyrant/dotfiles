@@ -10,3 +10,5 @@ jupyter
 cython
 # Python Development Workflow for Humans.
 pipenv
+# corrects errors in previous console commands
+thefuck
