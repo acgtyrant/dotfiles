@@ -29,6 +29,9 @@ font pango:Sarasa Term SC 12
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# start an terminal
+bindsym $mod+Return exec termite
+
 # colors
 client.focused          #4c7899 #285577 #ffffff #2e9ef4 #285577
 client.focused_inactive #333333 #5f676a #ffffff #484e50 #5f676a
@@ -42,9 +45,6 @@ client.background       #ffffff
 bindsym Print exec scrot -e 'mv $f ~/ScreenShot.png && feh ~/ScreenShot.png'
 # scrot & gimp - select window or rectangle
 bindsym Mod1+Print exec scrot -s -e 'mv $f ~/SceenShot && feh ~/ScreenShot/$f'
-
-# start an improved terminal
-bindsym $mod+Return exec termite
 
 # kill focused window
 bindsym $mod+q kill
