@@ -44,6 +44,12 @@ bindsym $mod+Shift+d exec gksu dmenu_run
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
 # colors
 client.focused          #4c7899 #285577 #ffffff #2e9ef4 #285577
 client.focused_inactive #333333 #5f676a #ffffff #484e50 #5f676a
@@ -57,12 +63,6 @@ client.background       #ffffff
 bindsym Print exec scrot -e 'mv $f ~/ScreenShot.png && feh ~/ScreenShot.png'
 # scrot & gimp - select window or rectangle
 bindsym Mod1+Print exec scrot -s -e 'mv $f ~/SceenShot && feh ~/ScreenShot/$f'
-
-# change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
