@@ -6,5 +6,5 @@
 for server in aa yy zz dd tuba 102 103
 do
   echo $server
-  ssh $server nvidia-smi pmon -c 1
+  timeout 3s ssh $server nvidia-smi pmon -c 1
 done
