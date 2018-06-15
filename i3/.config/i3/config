@@ -160,39 +160,7 @@ exec --no-startup-id xrandr --output DVI-D-0 --primary --mode 1920x1080 --pos 14
 # https://wiki.archlinux.org/index.php/Feh#Set_the_wallpaper
 exec --no-startup-id ~/.fehbg
 
-# Set some arbitrary commands for specific windows
-for_window [class="URxvt"] border 1pixel
-for_window [class="Canopy"] border 1pixel
-for_window [class="Mirage"] floating enable
-for_window [class="MPlayer"] floating enable
-for_window [class="Thunar"] floating enable
-for_window [class="Manager"] floating enable
-for_window [class="Orage"] floating enable
-for_window [class="Wine"] floating enable
-for_window [class="Calculator"] floating enable
-for_window [class="Hexchat"] floating disable
-for_window [class="Hangouts"] floating enable
-#for_window [class="Steam"] floating enable
-for_window [class="Dropbox"] floating enable
-for_window [class="opencc-gbgui"] floating enable
-for_window [instance="QQ.exe"] floating enable
-for_window [instance="QQ.exe"] border none
-for_window [class="tray"] floating enable
-for_window [instance="qq"] floating enable
-for_window [class="Panel"] floating enable
-for_window [title="Panel"] floating enable
-for_window [instance="Panel"] floating enable
-for_window [title="Settings"] floating enable
-for_window [instance="Settings"] floating enable
-for_window [class="Notes"] floating enable
-for_window [title="Notes"] floating enable
-for_window [instance="Notes"] floating enable
-for_window [title="feh"] floating enable
-for_window [instance="Download"] floating enable
-for_window [title="Pman"] floating enable
-for_window [title="chat"] floating enable
-for_window [title="Preferences"] floating enable
-for_window [title="File Operations"] floating enable
+# Set some arbitrary commands for specific windows.
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 
