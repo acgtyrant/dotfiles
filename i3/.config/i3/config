@@ -114,8 +114,9 @@ bindsym $mod+t border normal
 bindsym $mod+y border 1pixel
 bindsym $mod+u border none
 
-new_window pixel 0
-# hide_edge_borders both
+# no border
+default_border none
+default_floating_border none
 
 # defalt container layout
 workspace_layout tabbed
