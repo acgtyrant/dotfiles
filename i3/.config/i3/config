@@ -95,6 +95,8 @@ bindsym $mod+Shift+0 move container to workspace 10
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec $HOME/.config/i3/exitmenu
 
 # colors
 client.focused          #4c7899 #285577 #ffffff #2e9ef4 #285577
@@ -141,8 +143,6 @@ bindsym $mod+g exec gvim
 bindsym $mod+o exec opera
 bindsym $mod+` exec lxtask
 
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec $HOME/.config/i3/exitmenu
 # lock i3
 bindsym $mod+Ctrl+l exec i3lock --image $HOME/lock -t
 
