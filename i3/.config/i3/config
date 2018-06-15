@@ -31,18 +31,15 @@ floating_modifier $mod
 
 # start an terminal
 bindsym $mod+Return exec termite
-
-# kill focused window
-bindsym $mod+q kill
-
+# start a browser
+bindsym $mod+c exec chromium
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
 # If it need athority, just run this instead:
 bindsym $mod+Shift+d exec gksu dmenu_run
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+
+# kill focused window
+bindsym $mod+q kill
 
 # change focus
 bindsym $mod+h focus left
@@ -136,12 +133,6 @@ assign [class="(?i)Dota"] 3: Media
 assign [class="(?i)Zotero"] 3: Media
 assign [class="(?i)crossover"] 4: Others
 assign [class="(?i)mailspring"] 4: Others
-
-# Startups shortcut
-bindsym $mod+c exec chromium
-bindsym $mod+g exec gvim
-bindsym $mod+o exec opera
-bindsym $mod+` exec lxtask
 
 # lock i3
 bindsym $mod+Ctrl+l exec i3lock --image $HOME/lock -t
