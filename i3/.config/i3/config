@@ -131,23 +131,6 @@ assign [class="Thunderbird"] 4: Others
 floating_minimum_size 10 x 10
 floating_maximum_size -1 x -1
 
-# Automatically starting applications on i3 startup
-exec --no-startup-id compton -b -c
-exec --no-startup-id termite -e tmuxen.sh
-exec --no-startup-id chromium
-exec --no-startup-id mailspring
-exec --no-startup-id fcitx &
-exec --no-startup-id synapse &
-exec --no-startup-id rescuetime &
-exec --no-startup-id /opt/nutstore/bin/nutstore-pydaemon.py &
-exec --no-startup-id xautolock -time 7 -locker i3lock --image $HOME/lock -t &
-exec --no-startup-id nm-applet &
-exec --no-startup-id zotero &
-# https://faq.i3wm.org/question/2332/flexible-monitor-setup.1.html
-exec --no-startup-id xrandr --output DVI-D-0 --primary --mode 1920x1080 --pos 1440x0 --rotate normal --output HDMI-0 --mode 1440x900 --pos 0x0 --rotate normal --output DP-5 --off --output DP-4 --off --output DP-3 --off --output DP-2 --off --output DP-1 --off --output DP-0 --off
-# https://wiki.archlinux.org/index.php/Feh#Set_the_wallpaper
-exec --no-startup-id ~/.fehbg
-
 # Set some arbitrary commands for specific windows.
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
@@ -205,3 +188,18 @@ bar {
   workspace_buttons yes
   status_command $HOME/.config/i3/i3bar-conky
 }
+
+# Automatically starting applications on i3 startup.
+exec compton -b -c
+exec termite -e tmuxen.sh
+exec chromium
+exec fcitx
+exec synapse
+exec rescuetime
+exec xautolock -time 7 -locker i3lock --image $HOME/lock -t
+#exec nm-applet
+exec zotero
+# https://faq.i3wm.org/question/2332/flexible-monitor-setup.1.html
+exec xrandr --output DVI-D-0 --primary --mode 1920x1080 --pos 1440x0 --rotate normal --output HDMI-0 --mode 1440x900 --pos 0x0 --rotate normal --output DP-5 --off --output DP-4 --off --output DP-3 --off --output DP-2 --off --output DP-1 --off --output DP-0 --off
+# https://wiki.archlinux.org/index.php/Feh#Set_the_wallpaper
+exec ~/.fehbg
