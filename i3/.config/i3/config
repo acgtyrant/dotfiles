@@ -67,6 +67,18 @@ bindsym $mod+e layout toggle split
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
+# switch to workspace
+bindsym $mod+1 workspace 1: Term
+bindsym $mod+2 workspace 2: Web
+bindsym $mod+3 workspace 3: Media
+bindsym $mod+4 workspace 4: Others
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+
 # colors
 client.focused          #4c7899 #285577 #ffffff #2e9ef4 #285577
 client.focused_inactive #333333 #5f676a #ffffff #484e50 #5f676a
@@ -91,18 +103,6 @@ new_window pixel 0
 
 # defalt container layout
 workspace_layout tabbed
-
-# switch to workspace
-bindsym $mod+1 workspace 1: Term
-bindsym $mod+2 workspace 2: Web
-bindsym $mod+3 workspace 3: Media
-bindsym $mod+4 workspace 4: Others
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1: Term
