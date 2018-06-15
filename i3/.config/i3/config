@@ -92,12 +92,6 @@ new_window pixel 0
 # defalt container layout
 workspace_layout tabbed
 
-# focus the parent container
-#bindsym $mod+a focus parent
-
-# focus the child container
-#bindsym $mod+d focus child
-
 # switch to workspace
 bindsym $mod+1 workspace 1: Term
 bindsym $mod+2 workspace 2: Web
