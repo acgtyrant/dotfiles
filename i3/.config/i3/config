@@ -146,34 +146,6 @@ bindsym $mod+` exec lxtask
 # lock i3
 bindsym $mod+Ctrl+l exec i3lock --image $HOME/lock -t
 
-# resize window (you can also use the mouse for that)
-mode "resize" {
-
-bindsym h resize shrink left 8 px or 8 ppt
-bindsym Shift+H resize grow left 8 px or 8 ppt
-bindsym j resize shrink down 8 px or 8 ppt
-bindsym Shift+J resize grow down 8 px or 8 ppt
-bindsym k resize shrink up 8 px or 8 ppt
-bindsym Shift+K resize grow up 8 px or 8 ppt
-bindsym l resize shrink right 8 px or 8 ppt
-bindsym Shift+L resize grow right 8 px or 8 ppt
-
-bindsym Left resize shrink left 8 px or 8 ppt
-bindsym Shift+Left resize grow left 8 px or 8 ppt
-bindsym Down resize shrink down 8 px or 8 ppt
-bindsym Shift+Down resize grow down 8 px or 8 ppt
-bindsym Up resize shrink up 8 px or 8 ppt
-bindsym Shift+Up resize grow up 8 px or 8 ppt
-bindsym Right resize shrink right 8 px or 8 ppt
-bindsym Shift+Right resize grow right 8 px or 8 ppt
-
-bindsym Return mode "default"
-bindsym Escape mode "default"
-
-}
-
-bindsym $mod+r mode "resize"
-
 # Constraining floating window size
 # https://github.com/derf/feh/issues/219#issuecomment-173817516
 floating_minimum_size 10 x 10
