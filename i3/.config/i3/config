@@ -92,9 +92,6 @@ new_window pixel 0
 # defalt container layout
 workspace_layout tabbed
 
-# change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
-
 # focus the parent container
 #bindsym $mod+a focus parent
 
