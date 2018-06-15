@@ -37,7 +37,18 @@ bindsym $mod+c exec chromium
 bindsym $mod+d exec dmenu_run
 # If it need athority, just run this instead:
 bindsym $mod+Shift+d exec gksu dmenu_run
+# lock i3
+bindsym $mod+Ctrl+l exec i3lock --image $HOME/lock -t
 
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
 # kill focused window
 bindsym $mod+q kill
 
@@ -52,17 +63,6 @@ bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
-
-# enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
-
-# change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
-
-# toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
 
 # switch to workspace
 bindsym $mod+1 workspace 1: Term
@@ -109,11 +109,6 @@ bindsym Print exec scrot -e 'mv $f ~/ScreenShot.png && feh ~/ScreenShot.png'
 # scrot & gimp - select window or rectangle
 bindsym Mod1+Print exec scrot -s -e 'mv $f ~/SceenShot && feh ~/ScreenShot/$f'
 
-# change border
-bindsym $mod+t border normal
-bindsym $mod+y border 1pixel
-bindsym $mod+u border none
-
 # no border
 default_border none
 default_floating_border none
@@ -130,9 +125,6 @@ assign [class="MPlayer"] 3: Media
 assign [class="Steam"] 3: Media
 assign [class="Zotero"] 3: Media
 assign [class="Thunderbird"] 4: Others
-
-# lock i3
-bindsym $mod+Ctrl+l exec i3lock --image $HOME/lock -t
 
 # Constraining floating window size
 # https://github.com/derf/feh/issues/219#issuecomment-173817516
@@ -177,10 +169,6 @@ focus_follows_mouse no
 
 # Automatically bach-and-forth when switching to the current workspace
 workspace_auto_back_and_forth yes
-
-# Switch between the current and the previously focused one
-bindsym $mod+b workspace back_and_forth
-bindsym $mod+Shift+b move container to workspace back_and_forth
 
 # Move the current workspace to the next output
 # (effectively toggles when you only have two outputs)
