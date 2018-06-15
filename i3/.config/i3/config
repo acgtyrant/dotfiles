@@ -121,19 +121,15 @@ default_floating_border none
 # defalt container layout
 workspace_layout tabbed
 
-# Assigns #
-assign [class="(?i)termite"] 1: Term
-assign [class="(?i)chromium"] 2: Web
-assign [class="(?i)google-chrome"] 2: Web
-assign [class="(?i)opera"] 2: Web
-assign [class="(?i)Steam"] 3: Media
-assign [class="(?i)Pidgin"] 3: Media
-assign [class="(?i)Hexchat"] 3: Media
-assign [class="(?i)mplayer"] 3: Media
-assign [class="(?i)Dota"] 3: Media
-assign [class="(?i)Zotero"] 3: Media
-assign [class="(?i)crossover"] 4: Others
-assign [class="(?i)mailspring"] 4: Others
+# Automatically putting clients on specific workspaces.
+assign [class="Termite"] 1: Term
+assign [class="Chromium"] 2: Web
+assign [class="Google-chrome"] 2: Web
+assign [class="Nautilus"] 3: Media
+assign [class="MPlayer"] 3: Media
+assign [class="Steam"] 3: Media
+assign [class="Zotero"] 3: Media
+assign [class="Thunderbird"] 4: Others
 
 # lock i3
 bindsym $mod+Ctrl+l exec i3lock --image $HOME/lock -t
