@@ -59,6 +59,11 @@ bindsym $mod+Shift+l move right
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
 # colors
 client.focused          #4c7899 #285577 #ffffff #2e9ef4 #285577
 client.focused_inactive #333333 #5f676a #ffffff #484e50 #5f676a
@@ -80,11 +85,6 @@ bindsym $mod+u border none
 
 new_window pixel 0
 # hide_edge_borders both
-
-# change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
 
 # defalt container layout
 workspace_layout tabbed
