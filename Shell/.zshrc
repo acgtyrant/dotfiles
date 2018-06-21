@@ -70,11 +70,8 @@ source /usr/share/doc/pkgfile/command-not-found.zsh
 # For a full list of active aliases, run `alias`.
 
 alias l='ls --color=auto'
-alias vi='vim'
+alias vi='nvim'
 alias cl='clang'
-alias gv='gvim'
-alias nv='nvim'
-alias qv='nvim-qt'
 
 alias sw='sudo wifi-menu'
 alias less='vimpager'
