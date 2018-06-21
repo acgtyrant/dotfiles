@@ -65,6 +65,9 @@ endif
   Plug 'google/vim-searchindex'
   " auto detect encoding
   Plug 's3rvac/AutoFenc'
+  " do not search forward when match it
+  " https://stackoverflow.com/a/13682379/1546088
+  Plug 'vim-scripts/star-search'
 
   " syntax support
   " complete
