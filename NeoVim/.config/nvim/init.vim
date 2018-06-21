@@ -189,6 +189,7 @@ endif
 " backup {
   " put all your tmp file in ~/.vim!
   set backup
+  set backupdir=~/.local/share/nvim/backup
   set undofile
 " }
 
