@@ -109,7 +109,7 @@ yaourt -S --noconfirm --needed steam
     ### PDF and DjVu
     yaourt -S --noconfirm --needed llpp
     ### Terminal pagers
-    yaourt -S --noconfirm --needed less vimpager
+    yaourt -S --noconfirm --needed less
     ### CHM
     ### Comic book
     yaourt -S --noconfirm --needed mcomix

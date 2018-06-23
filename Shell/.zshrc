@@ -74,7 +74,7 @@ alias vi='nvim'
 alias cl='clang'
 
 alias sw='sudo wifi-menu'
-alias less='vimpager'
+alias less='vi -R'
 
 # Enables ssh trusted X11 forwarding.
 alias ssh='ssh -Y'
