@@ -118,8 +118,11 @@ endif
   " improve appreance
   " colorful pairs
   Plug 'luochen1990/rainbow'
-  " color theme
-  Plug 'tomasr/molokai'
+  " my colorscheme
+  Plug 'morhetz/gruvbox'
+    let g:gruvbox_italic=1
+    let g:gruvbox_constrast_dark='hard'
+    let g:gruvbox_constrast_light='hard'
   Plug 'octol/vim-cpp-enhanced-highlight'
   " highlight indent block
   Plug 'Yggdroot/indentLine'
@@ -239,8 +242,11 @@ endif
 
   " remove trailing whitespace
   nnoremap <Leader>rtw :%s/\s\+$//e<CR>
-  colorscheme tyrant
-  set t_Co=256
+
+  " set theme
+  set termguicolors
+  set background=dark
+  colorscheme gruvbox
 
   " http://www.skywind.me/blog/archives/2084
   set tags=./.tags;,.tags
