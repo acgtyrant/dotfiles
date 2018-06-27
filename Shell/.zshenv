@@ -9,7 +9,7 @@ export TERMINFO="$HOME/.terminfo"
 # Note that some variables may be full pathnames.
 # https://github.com/mobile-shell/mosh/issues/722#issuecomment-176266421
 export SHELL="/usr/bin/zsh"
-export PAGER="/home/acgtyrant/.local/bin/nvim -R"
+export PAGER="/usr/bin/less"
 export EDITOR="/usr/bin/vim"
 export VISUAL="/usr/bin/vim"
 export XDG_CONFIG_HOME="$HOME/.config"
