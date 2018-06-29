@@ -121,6 +121,3 @@ fi
 # Improve colored output by ls
 # https://wiki.archlinux.org/index.php/Core_utilities#Colored_output_2
 eval "$(dircolors -b)"
-
-# https://github.com/nvbn/thefuck#manual-installation
-eval $(thefuck --alias kao)

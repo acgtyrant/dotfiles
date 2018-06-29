@@ -10,7 +10,5 @@ jupyter
 cython
 # Python Development Workflow for Humans.
 pipenv
-# corrects errors in previous console commands
-thefuck
 # https://github.com/zchee/deoplete-jedi/wiki/Setting-up-Python-for-Neovim#simple-setup
 neovim
