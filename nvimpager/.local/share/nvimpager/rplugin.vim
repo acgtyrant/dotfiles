@@ -1,0 +1,1 @@
+/home/acgtyrant/.local/share/nvim/rplugin.vim
