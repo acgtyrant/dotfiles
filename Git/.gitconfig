@@ -8,8 +8,9 @@
   s = status
 [color]
   ui = on
+  pager = no
 [core]
-  pager = less
+  pager = nvimpager
 [credential]
   # store your credentials permanently
   # https://stackoverflow.com/a/12240995/1546088

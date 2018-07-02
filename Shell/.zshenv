@@ -8,7 +8,7 @@ export HISTSIZE=1000000
 # Note that some variables may be full pathnames.
 # https://github.com/mobile-shell/mosh/issues/722#issuecomment-176266421
 export SHELL="/usr/bin/zsh"
-export PAGER="/usr/bin/less"
+export PAGER="$HOME/.local/bin/nvimpager"
 export EDITOR="/usr/bin/vim"
 export VISUAL="/usr/bin/vim"
 export XDG_CONFIG_HOME="$HOME/.config"
