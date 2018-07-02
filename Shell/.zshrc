@@ -121,3 +121,8 @@ fi
 # Improve colored output by ls
 # https://wiki.archlinux.org/index.php/Core_utilities#Colored_output_2
 eval "$(dircolors -b)"
+
+alias fixssh='eval `tmux showenv -s SSH_AUTH_SOCK`'
+if { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
+  eval fixssh
+fi
