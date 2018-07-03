@@ -6,6 +6,8 @@
   d = diff
   l = log
   s = status
+  f = fetch
+  g = log --graph --all --oneline
 [color]
   ui = on
   pager = no
