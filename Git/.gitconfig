@@ -24,3 +24,5 @@
 [user]
   name = acgtyrant
   email = acgtyrant@gmail.com
+[log]
+	decorate = auto
