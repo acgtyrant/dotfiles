@@ -82,3 +82,7 @@ export LC_CTYPE=en_US.UTF-8
 # However this alias does not work in .zshrc so I have to move it here
 HIST_FORMAT="'%Y-%m-%d %T:'$(echo -e '\t')"
 alias history="fc -t "$HIST_FORMAT" -il 1"
+
+# produce millisecond result for time
+# https://unix.stackexchange.com/a/453339/34173
+TIMEFMT=$'\n================\nCPU\t%P\nuser\t%*U\nsystem\t%*S\ntotal\t%*E'
