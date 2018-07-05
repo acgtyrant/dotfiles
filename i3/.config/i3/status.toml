@@ -1,0 +1,44 @@
+theme = "slick"
+icons = "awesome"
+
+[[block]]
+block = "net"
+device = "enp2s0"
+speed_down = true
+speed_up = true
+interval = 1
+
+[[block]]
+block = "nvidia_gpu"
+label = "GTX 1080"
+show_utilization = false
+show_memory = true
+show_temperature = false
+interval = 1
+
+[[block]]
+block = "memory"
+display_type = "memory"
+interval = 1
+format_mem = "{Mug}GB/{MTg}GB"
+
+[[block]]
+block = "load"
+interval = 1
+format = "{1m} {5m} {15m}"
+
+[[block]]
+block = "time"
+interval = 1
+format = "%F %T"
+
+[[block]]
+block = "disk_space"
+path = "/"
+alias = "/"
+info_type = "available"
+unit = "GB"
+interval = 20
+warning = 20.0
+alert = 10.0
+
