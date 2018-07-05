@@ -28,3 +28,6 @@
   email = acgtyrant@gmail.com
 [log]
 	decorate = auto
+[status]
+  # showStash only work for 2.14.0 and later
+  showStash = true
