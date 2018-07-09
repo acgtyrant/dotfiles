@@ -172,6 +172,7 @@ bindsym XF86Battery exec gnome-power-statistics
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available
 bar {
+  tray_output primary
   font pango: Sarasa Term SC 14
   status_command $HOME/abs/i3status-rust/target/release/i3status-rs $HOME/.config/i3/status.toml
   colors {
