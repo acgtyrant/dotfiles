@@ -102,6 +102,8 @@ endif
     hi! SpellCap gui=undercurl guisp=blue
     hi! SpellRare gui=undercurl guisp=magenta
 
+    let g:airline#extensions#ale#enabled = 1
+
   " extra language support
   Plug 'rust-lang/rust.vim'
     " format your code using [rustfmt][rfmt] every time a buffer is written
