@@ -92,10 +92,7 @@ endif
     let g:ale_c_cppcheck_options = ''
     let g:ale_cpp_cppcheck_options = ''
 
-    " Check Python files with flake8 and pylint.
-    let b:ale_linters = ['flake8', 'pylint']
-    " Fix Python files with autopep8 and yapf.
-    let b:ale_fixers = ['autopep8', 'yapf']
+    let g:ale_linters = {'python': ['flake8']}
 
     let g:ale_sign_error = "\ue009\ue009"
     hi! clear SpellBad
