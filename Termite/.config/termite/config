@@ -1,6 +1,6 @@
 # See `man termite.config`
 [options]
-font = Sarasa Term SC 12
+font = Sarasa Term SC 14
 # Length of the scrollback buffer, 0 disabled the scrollback buffer
 # # and setting it to a negative value means "infinite scrollback"
 scrollback_lines = 65536
