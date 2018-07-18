@@ -9,14 +9,6 @@ speed_up = true
 interval = 1
 
 [[block]]
-block = "nvidia_gpu"
-label = "GTX 1080"
-show_utilization = false
-show_memory = true
-show_temperature = false
-interval = 1
-
-[[block]]
 block = "memory"
 display_type = "memory"
 interval = 1
