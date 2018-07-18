@@ -3,7 +3,7 @@ icons = "awesome"
 
 [[block]]
 block = "net"
-device = "enp2s0"
+device = "wlp4s0"
 speed_down = true
 speed_up = true
 interval = 1
