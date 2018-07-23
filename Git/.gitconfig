@@ -7,7 +7,7 @@
   l = log
   s = status
   f = fetch
-  g = log --graph --all --format="\"%h %d %cr %s\""
+  g = log --graph --all --format="\"%h %d %ci %s\""
 [color]
   ui = on
   pager = no
