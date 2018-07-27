@@ -94,7 +94,7 @@ endif
 
     let g:ale_linters = {'python': ['flake8']}
 
-    let g:ale_sign_error = "\ue009\ue009"
+    let g:ale_sign_error = "‼"
     hi! clear SpellBad
     hi! clear SpellCap
     hi! clear SpellRare
@@ -214,7 +214,7 @@ endif
   " distinguish tab, trail space and nbsp
   " http://vi.stackexchange.com/a/430/5663
   set list
-  set listchars=tab:␉·,trail:␠,nbsp:⎵
+  set listchars=tab:␉·,trail:␠,nbsp:¬
 " }
 
 " general {
