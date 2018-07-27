@@ -7,7 +7,10 @@
   l = log
   s = status
   f = fetch
-  g = log --graph --all --format="\"%h %d %ci %s\""
+  # use custom committer date format and unify to a time zone
+  # https://stackoverflow.com/a/32990187/1546088
+  # https://stackoverflow.com/a/34778736/1546088
+  g = log --graph --all --date=format-local:'%Y-%m-%d %H:%M:%S' --format="\"%h %d %cd %s\""
 [color]
   ui = on
   pager = no
