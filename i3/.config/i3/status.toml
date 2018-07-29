@@ -34,3 +34,7 @@ interval = 20
 warning = 20.0
 alert = 10.0
 
+[[block]]
+block = "battery"
+interval = 10
+show = "both"
