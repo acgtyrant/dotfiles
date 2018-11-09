@@ -7,4 +7,4 @@ do
   ss -lpn | grep -q ":$PORT " || break
 done
 echo $PORT
-parallel ::: "ssh -N -L $PORT:localhost:$2 $1" "chromium http://localhost:$PORT"
+parallel ::: "ssh -N -L $PORT:localhost:$2 $1" "sleep 0.5; chromium http://localhost:$PORT"
