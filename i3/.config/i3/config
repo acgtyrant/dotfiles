@@ -124,6 +124,7 @@ assign [class="Nautilus"] 3: Media
 assign [class="MPlayer"] 3: Media
 assign [class="Steam"] 3: Media
 assign [class="Zotero"] 3: Media
+assign [class="goldendict"] 3: Media
 assign [class="Thunderbird"] 4: Others
 
 # Constraining floating window size
