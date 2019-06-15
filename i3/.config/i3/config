@@ -200,6 +200,6 @@ exec thunderbird
 exec redshift-gtk
 exec goldendict
 # https://faq.i3wm.org/question/2332/flexible-monitor-setup.1.html
-exec xrandr --output DVI-D-0 --mode 1920x1080 --pos 1920x0 --rotate normal --output HDMI-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-5 --off --output DP-4 --off --output DP-3 --off --output DP-2 --off --output DP-1 --off --output DP-0 --off
+exec xrandr --output DVI-D-0 --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-0 --primary --mode 1920x1080 --pos 1920x0 --rotate normal --output DP-5 --off --output DP-4 --off --output DP-3 --off --output DP-2 --off --output DP-1 --off --output DP-0 --off
 # https://wiki.archlinux.org/index.php/Feh#Set_the_wallpaper
 exec ~/.fehbg
