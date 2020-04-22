@@ -15,3 +15,4 @@ X11/.config/gtk-3.0/servers
 X11/.config/gtk-3.0/settings.ini
 Python/Projects
 NeoVim/.config/nvim/plugged
+NeoVim/.config/nvim/.netrwhist
