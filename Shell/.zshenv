@@ -8,16 +8,16 @@ export HISTSIZE=1000000
 # Note that some variables may be full pathnames.
 # https://github.com/mobile-shell/mosh/issues/722#issuecomment-176266421
 export SHELL="/usr/bin/zsh"
-export PAGER="$HOME/.local/bin/nvimpager"
+export PAGER="/usr/bin/nvimpager"
 export EDITOR="$HOME/.local/bin/nvim"
 export VISUAL="$HOME/.local/bin/nvim"
 export XDG_CONFIG_HOME="$HOME/.config"
 # These addresses are assigned by cow.
 proxy () {
-  export http_proxy="http://127.0.0.1:7779"
-  export https_proxy="http://127.0.0.1:7779"
-  export HTTP_PROXY="http://127.0.0.1:7779"
-  export HTTPS_PROXY="http://127.0.0.1:7779"
+  export http_proxy="http://127.0.0.1:8123"
+  export https_proxy="http://127.0.0.1:8123"
+  export HTTP_PROXY="http://127.0.0.1:8123"
+  export HTTPS_PROXY="http://127.0.0.1:8123"
   echo "http proxy on"
 }
 noproxy () {

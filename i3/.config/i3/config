@@ -34,7 +34,7 @@ bindsym $mod+Return exec termite
 # start a browser
 bindsym $mod+c exec chromium
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec dmenu_run -fn 'Dorid Sans Mono-9'
 # If it need athority, just run this instead:
 bindsym $mod+Shift+d exec gksu dmenu_run
 # lock i3
@@ -88,6 +88,8 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
+bindsym $mod+Shift+s exec $HOME/.local/bin/swap_i3_workspaces
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -105,7 +107,7 @@ client.background       #ffffff
 
 # Take a screenshot
 # scrot & gimp - root
-bindsym Print exec scrot -e 'mv $f ~/ScreenShot.png && feh ~/ScreenShot.png'
+bindsym Print exec scrot -fs 'mv $f ~/ScreenShot.png && feh ~/ScreenShot.png'
 # scrot & gimp - select window or rectangle
 bindsym Mod1+Print exec scrot -s -e 'mv $f ~/SceenShot && feh ~/ScreenShot/$f'
 
@@ -120,11 +122,11 @@ workspace_layout tabbed
 assign [class="Termite"] 1: Term
 assign [class="Chromium"] 2: Web
 assign [class="Google-chrome"] 2: Web
-assign [class="Nautilus"] 3: Media
 assign [class="MPlayer"] 3: Media
 assign [class="Steam"] 3: Media
-assign [class="Zotero"] 3: Media
-assign [class="GoldenDict"] 3: Media
+assign [class="Zotero"] 4: Others
+assign [class="Nautilus"] 4: Others
+assign [class="GoldenDict"] 4: Others
 assign [class="Thunderbird"] 4: Others
 
 # Constraining floating window size
@@ -138,9 +140,9 @@ for_window [window_role="task_dialog"] floating enable
 
 # Automatically putting workspaces on specific screens
 workspace "1: Term" output DP-0
-workspace "2: Web" output DVI-D-0
-workspace "3: Media" output DP-0
-workspace "4: Others" output DVI-D-0
+workspace "2: Web" output HDMI-0
+workspace "3: Media" output HDMI-0
+workspace "4: Others" output DP-0
 
 # Scratchpad
 bindsym $mod+minus move scratchpad
@@ -153,10 +155,6 @@ focus_follows_mouse no
 
 # Automatically bach-and-forth when switching to the current workspace
 workspace_auto_back_and_forth yes
-
-# Move the current workspace to the next output
-# (effectively toggles when you only have two outputs)
-bindsym $mod+x move container to output HDMI1
 
 # volume control
 bindsym XF86AudioLowerVolume exec /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ '-5%'
@@ -198,10 +196,9 @@ exec nm-applet
 exec redshift-gtk
 exec goldendict
 # https://faq.i3wm.org/question/2332/flexible-monitor-setup.1.html
-exec xrandr --output DVI-D-0 --mode 1920x1080 --pos 0x840 --rotate normal --output HDMI-0 --primary --mode 1920x1080 --pos 3000x840 --rotate normal --output DP-0 --mode 1920x1080 --pos 1920x0 --rotate left --output DP-1 --off --output DP-2 --off --output DP-3 --off --output DP-4 --off --output DP-5 --off
+exec xrandr --output DVI-D-0 --off --output HDMI-0 --primary --mode 1920x1080 --pos 1080x644 --rotate normal --output DP-0 --mode 1920x1080 --pos 0x0 --rotate left --output DP-1 --off --output DP-2 --off --output DP-3 --off --output DP-4 --off --output DP-5 --off
 # https://wiki.archlinux.org/index.php/Feh#Set_the_wallpaper
-exec ~/.fehbg
-exec electron-ssr
+exec qv2ray
 
 # use two wallpapers for each screen by Nitrogen
 # https://faq.i3wm.org/question/6247/assigning-individual-wallpaper-to-monitors.1.html
